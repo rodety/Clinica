@@ -1,0 +1,10 @@
+#ifndef CLINICA_DATABASE_H
+#define CLINICA_DATABASE_H
+
+
+
+
+
+
+#endif // CLINICA_DATABASE_H
+

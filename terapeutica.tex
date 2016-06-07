@@ -1,0 +1,65 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage{anysize}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage[light,math]{iwona}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\marginsize{1cm}{0cm}{0cm}{0cm} 
+\pagestyle{empty} 
+\begin{document} 
+\begin{minipage}{10cm}
+\end{minipage}
+\hfill
+\begin{minipage}{10cm}
+\begin{flushleft}
+\scalebox{1.4}[1.5]{
+\begin{tabular}{|p{3cm}p{2.3cm}|}
+\hline 
+\multicolumn{2}{|l|}{\scriptsize{\textbf{PACIENTE}}}\\
+\multicolumn{2}{|p{5.3cm}|}{\scriptsize{Apellidos: Condory Fernandez}}\\ 
+\multicolumn{2}{|p{5.3cm}|}{\scriptsize{Nombres: Milton Raul}}\\ 
+\multicolumn{2}{|p{5.3cm}|}{\scriptsize{M\'edico Tratante: }}\\ 
+\hline 
+\multicolumn{2}{|p{5.3cm}|}{\scriptsize{Servicio: }}\\
+\hline 
+\scriptsize{Historia Cl\'inica: a-20}&\scriptsize{Cama: 0} \\ 
+\hline 
+\end{tabular}}
+\end{flushleft}
+\end{minipage}
+
+\vspace{0.3cm}
+\begin{center}
+\LARGE{\textbf{TERAPEUTICA MEDICA}}
+\end{center}
+\begin{center}
+\begin{longtable}{ |p{2cm}| p{2cm}| p{8cm}| p{2cm}| p{2cm}|}
+\hline
+\textbf{F. INICIO} & \textbf{H. INICIO}& \textbf{TERAPEUTICA}& \textbf{F. FINAL}& \textbf{H. FINAL}\\\endfirsthead
+\hline
+\textbf{F. INICIO} & \textbf{H. INICIO}& \textbf{TERAPEUTICA}& \textbf{F. FINAL}& \textbf{H. FINAL}\\\hline
+\endhead
+\endfoot
+\endlastfoot
+\hline
+2013-01-15&00:00:00&&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&fdfg&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&dgdfg&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&fgdfg&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&ggg&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&ggg&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&gdfgdf&2013-01-15&00:00:00\\
+\hline
+2013-01-15&00:00:00&gdfgdf&2013-01-15&00:00:00\\
+\hline
+\end{longtable}
+\end{center}
+\end{document}

@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>caja_ui</class>
+ <widget class="QWidget" name="caja_ui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>859</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_6">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Activos</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Categoria Ingresos</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Descripcion Ingreso</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Fecha Desde:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Hasta:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="comboBox_5">
+           <item>
+            <property name="text">
+             <string>Quirurgicos</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Quirurgicos</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Dermatologicos y Dermaesteticos</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Varices</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Corporales</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Celulitis</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboBox_6">
+           <item>
+            <property name="text">
+             <string>Cirugía Plástica Reparadora</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cirugía Plastica Estetica</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Aumento de Senos o Mastoplastia de Aumento</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Reducción de Senos en Hombres &quot;Ginecomastia&quot;</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Implantes Faciales: Remodelación de Pómulos, </string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cirugía de Orejas u Otoplastia</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Rejuvenecimiento de Párpados o Blefaroplastia</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Estiramiento Facial o Lifting</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Estiramiento de la Frente o Lifting Frontal</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Implante de Cabello</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Liposucción o Lipoescultura</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Remodelación de la Naríz o Rinoplastia</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Revisión de Cicatrices</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Abdominoplastia y/o Dermolipectomia</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Tratamientos de Várices con Láser</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QDateEdit" name="dateEdit">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QDateEdit" name="dateEdit_5">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QPushButton" name="newAlert_alerta_2">
+           <property name="text">
+            <string>&amp;Nuevo Ingreso</string>
+           </property>
+           <property name="icon">
+            <iconset resource="rc.qrc">
+             <normaloff>:/new/add1-.png</normaloff>:/new/add1-.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QPushButton" name="eliminar_alerta">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Eli&amp;minar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="rc.qrc">
+             <normaloff>:/new/close.png</normaloff>:/new/close.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTableWidget" name="tableWidget">
+         <column>
+          <property name="text">
+           <string>Fecha</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Descripcion</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Moneda</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Total Soles</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Total Soles</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_6"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Total Dolares</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_7"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Total Tarjeta</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_8"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Pasivos</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>Categoria Egresos</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Descripcion Egreso</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Fecha Desde:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Hasta:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="comboBox_7">
+           <item>
+            <property name="text">
+             <string>Gasto Corriente</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Sueldos</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Hogar</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboBox_8">
+           <item>
+            <property name="text">
+             <string>Energia Electrica</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Internet</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Telefono</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Agua</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Jardinero</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QDateEdit" name="dateEdit_2">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QDateEdit" name="dateEdit_6">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QPushButton" name="newAlert_alerta_3">
+           <property name="text">
+            <string>&amp;Nuevo Ingreso</string>
+           </property>
+           <property name="icon">
+            <iconset resource="rc.qrc">
+             <normaloff>:/new/add1-.png</normaloff>:/new/add1-.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QPushButton" name="eliminar_alerta_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Eli&amp;minar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="rc.qrc">
+             <normaloff>:/new/close.png</normaloff>:/new/close.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTableWidget" name="tableWidget_2">
+         <column>
+          <property name="text">
+           <string>Fecha</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Descripcion</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Moneda</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Total Soles</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="lineEdit_9"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_10"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLineEdit" name="lineEdit_11"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>Total Soles</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>Total Dolares</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Total Tarjeta</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Reporte Activos</string>
+      </attribute>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>60</y>
+         <width>621</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="rc.qrc">:/new/Activos.PNG</pixmap>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>817</width>
+         <height>49</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Categoria Ingresos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>Descripcion Ingreso</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Fecha Desde:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Hasta:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="comboBox_9">
+          <item>
+           <property name="text">
+            <string>Quirurgicos</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Quirurgicos</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Dermatologicos y Dermaesteticos</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Varices</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Corporales</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Celulitis</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBox_10">
+          <item>
+           <property name="text">
+            <string>Cirugía Plástica Reparadora</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cirugía Plastica Estetica</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Aumento de Senos o Mastoplastia de Aumento</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reducción de Senos en Hombres &quot;Ginecomastia&quot;</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Implantes Faciales: Remodelación de Pómulos, </string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cirugía de Orejas u Otoplastia</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Rejuvenecimiento de Párpados o Blefaroplastia</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Estiramiento Facial o Lifting</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Estiramiento de la Frente o Lifting Frontal</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Implante de Cabello</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Liposucción o Lipoescultura</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Remodelación de la Naríz o Rinoplastia</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Revisión de Cicatrices</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Abdominoplastia y/o Dermolipectomia</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Tratamientos de Várices con Láser</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QDateEdit" name="dateEdit_7">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QDateEdit" name="dateEdit_8">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>Reporte Pasivos</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>817</width>
+         <height>49</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Categoria Egresos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Descripcion Egreso</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_21">
+          <property name="text">
+           <string>Fecha Desde:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_22">
+          <property name="text">
+           <string>Hasta:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="comboBox_11">
+          <item>
+           <property name="text">
+            <string>Gasto Corriente</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sueldos</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Hogar</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBox_12">
+          <item>
+           <property name="text">
+            <string>Energia Electrica</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Internet</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Telefono</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Agua</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jardinero</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QDateEdit" name="dateEdit_3">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QDateEdit" name="dateEdit_9">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>60</y>
+         <width>661</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="rc.qrc">:/new/Pasivos.PNG</pixmap>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Reporte General</string>
+      </attribute>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>70</y>
+         <width>661</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="rc.qrc">:/new/Reporte.PNG</pixmap>
+       </property>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>20</y>
+         <width>174</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>Fecha Desde:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Hasta:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QDateEdit" name="dateEdit_4">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDateEdit" name="dateEdit_10">
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

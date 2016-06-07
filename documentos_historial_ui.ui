@@ -1,0 +1,3379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>documentos_historial_ui</class>
+ <widget class="QWidget" name="documentos_historial_ui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>867</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>867</width>
+    <height>621</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>867</width>
+    <height>621</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Documentos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="rc.qrc">
+    <normaloff>:/new/PatientFile.png</normaloff>:/new/PatientFile.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_16">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_15">
+     <property name="verticalSpacing">
+      <number>1</number>
+     </property>
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Paciente :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_Patient">
+         <property name="font">
+          <font>
+           <kerning>true</kerning>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QDateEdit" name="dateEdit_FechaCreacion">
+         <property name="displayFormat">
+          <string>yyyy/MM/dd</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_127">
+         <property name="text">
+          <string>Médico Tratante :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="lineEdit_dni_medico_consulta">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="pushButton_consultarMedico">
+         <property name="text">
+          <string>Consultar</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_medicoGlobal"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_128">
+         <property name="text">
+          <string>Dni :</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QTabWidget" name="Documentos">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_Antecedentes">
+        <attribute name="title">
+         <string>Antecedentes</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Médico tratante :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_medico_Antecedentes"/>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_13">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Servicio :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_servicioAntecedentes">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Fecha de ingreso :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDateEdit" name="dateEdit_FechaIngresoAntecedentes">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>N° Cama</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLineEdit" name="lineEdit_bedNumber_antecedentes">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="3">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Antecedentes Patológicos Personales :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="6">
+            <widget class="QTextEdit" name="textEdit_AntecedentesPatologicosPersonales">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Fecha de última mestruación :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QDateEdit" name="dateEdit_menstruacion">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Tabaco :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QComboBox" name="comboBox_tabaco">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string>No</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Si</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_126">
+             <property name="text">
+              <string>Alcohol :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="4">
+            <widget class="QComboBox" name="comboBox_alcohol">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <item>
+              <property name="text">
+               <string>No</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Si</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Régimen catamental :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="5">
+            <widget class="QLineEdit" name="lineEdit_RegimenCatamental"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Medicación actual :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="6">
+            <widget class="QTextEdit" name="textEdit_MedicacionActual">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" colspan="3">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Antecendetes Patológicos familiares :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0" colspan="6">
+            <widget class="QTextEdit" name="textEdit_AntecedentesPatologicosFamiliares">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100000</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Observaciones :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="3">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Operaciones :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="3">
+            <widget class="QTextEdit" name="textEdit_Observaciones">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="3" colspan="3">
+            <widget class="QTextEdit" name="textEdit_Operaciones">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_AceptAntecedentes">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_SaveAntecedentes">
+             <property name="text">
+              <string>Guardar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_CancelAntecedentes">
+             <property name="text">
+              <string>Cancelar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_ReporteOperatorio">
+        <attribute name="title">
+         <string>Reporte Operatorio</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_AceptReporteOperatorio">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_SaveReporteOperatorio">
+             <property name="text">
+              <string>Guardar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_CancelReporteOperatorio">
+             <property name="text">
+              <string>Cancelar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Médico tratante :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>Inicio de operación</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>Cirujano :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>N° Cama</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_Cirujano"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Primer Ayudante :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_Ayudante1"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Segundo Ayudante :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_Ayudante2"/>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Tipo de anestesia :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Inicio de anestesia :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>Cuenta de gasa :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="4">
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>Drenes :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_29">
+             <property name="text">
+              <string>Apósitos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="4">
+            <widget class="QLabel" name="label_30">
+             <property name="text">
+              <string>Otros :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_TipoAnestecia"/>
+           </item>
+           <item row="13" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_CuentaGasa"/>
+           </item>
+           <item row="13" column="5" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Drenes"/>
+           </item>
+           <item row="14" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Apositos"/>
+           </item>
+           <item row="14" column="5" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Otros"/>
+           </item>
+           <item row="17" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>1.DX Pre Operatorio :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0">
+            <widget class="QLabel" name="label_60">
+             <property name="text">
+              <string>ORDEN :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0" colspan="7">
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="3">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="18" column="0" colspan="3">
+            <widget class="QTextEdit" name="textEdit_DXPreOperatorio">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="18" column="4" colspan="3">
+            <widget class="QTextEdit" name="textEdit_DXPostOperatorio">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="4" colspan="3">
+            <widget class="QTextEdit" name="textEdit_Hallazgo">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="17" column="4">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>2. DX Post-Operatorio :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="0" colspan="3">
+            <widget class="QTextEdit" name="textEdit_Procedimiento">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="22" column="0">
+            <widget class="QLabel" name="label_58">
+             <property name="text">
+              <string>3. Procedimiento :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="22" column="4">
+            <widget class="QLabel" name="label_61">
+             <property name="text">
+              <string>4. Hallazgo :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_medico_ReporteOperatorio">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_bedNumber_reporteOperatorio">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>Fin de operación</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_129">
+             <property name="text">
+              <string>Fecha :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_130">
+             <property name="text">
+              <string>Fecha :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QLabel" name="label_131">
+             <property name="text">
+              <string>Hora :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QLabel" name="label_132">
+             <property name="text">
+              <string>Hora :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDateEdit" name="dateEdit_Inicio_operacion">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QDateEdit" name="dateEdit_fin_operacion">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QTimeEdit" name="timeEdit_inicio_operacion">
+             <property name="displayFormat">
+              <string>hh:mm:ss </string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QTimeEdit" name="timeEdit_fin_operacion">
+             <property name="displayFormat">
+              <string>hh:mm:ss </string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Fin de anestesia :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="2">
+            <widget class="QDateEdit" name="dateEdit_inicio_Anestecia">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="2">
+            <widget class="QDateEdit" name="dateEdit_fin_Anestecia">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QLabel" name="label_133">
+             <property name="text">
+              <string>Fecha :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="1">
+            <widget class="QLabel" name="label_136">
+             <property name="text">
+              <string>Fecha :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="4">
+            <widget class="QLabel" name="label_137">
+             <property name="text">
+              <string>Hora :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="4">
+            <widget class="QLabel" name="label_138">
+             <property name="text">
+              <string>Hora :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="5">
+            <widget class="QTimeEdit" name="timeEdit_inicio_Anestecia">
+             <property name="displayFormat">
+              <string>hh:mm:ss </string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="5">
+            <widget class="QTimeEdit" name="timeEdit_fin_anestecia">
+             <property name="displayFormat">
+              <string>hh:mm:ss </string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_Anestesiologo"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_139">
+             <property name="text">
+              <string>Anestesiólogo:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_Instrumentista"/>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_140">
+             <property name="text">
+              <string>Instrumentista:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_141">
+             <property name="text">
+              <string>Circulante:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_Circulante"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_ExamenClinicoI">
+        <attribute name="title">
+         <string>Examen Clínico Parte I</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_31">
+             <property name="text">
+              <string>Médico tratante :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>N° Cama</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>Talla :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_35">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Servicio</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="lineEdit_Talla">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_37">
+             <property name="text">
+              <string>Temperatura :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="lineEdit_Temperatura">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_38">
+             <property name="text">
+              <string>Estado General :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>Facies :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>Piel y Anexos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="3">
+            <widget class="QLabel" name="label_42">
+             <property name="text">
+              <string>Color :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_43">
+             <property name="text">
+              <string>Celular subcutaneo :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_EstadoGeneral"/>
+           </item>
+           <item row="11" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_PielAnexos"/>
+           </item>
+           <item row="11" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Color"/>
+           </item>
+           <item row="12" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_CelularSubcutaneo"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_32">
+             <property name="text">
+              <string>Fecha :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_49">
+             <property name="text">
+              <string>Pulso :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QLabel" name="label_50">
+             <property name="text">
+              <string>Mental :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Fascies"/>
+           </item>
+           <item row="8" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Mental"/>
+           </item>
+           <item row="5" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Pulso"/>
+           </item>
+           <item row="7" column="0" colspan="6">
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0">
+            <widget class="QLabel" name="label_53">
+             <property name="text">
+              <string>Ojos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="18" column="0">
+            <widget class="QLabel" name="label_55">
+             <property name="text">
+              <string>Fondo de ojo :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Ojos"/>
+           </item>
+           <item row="18" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_FondoOjo"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_62">
+             <property name="text">
+              <string>Respiración :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Respiracion"/>
+           </item>
+           <item row="4" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Biotipo"/>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="label_48">
+             <property name="text">
+              <string>Biotipo :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="lineEdit_PesoHabitual">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>Peso habitual :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QLineEdit" name="lineEdit_Peso">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="label_47">
+             <property name="text">
+              <string>Peso :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_45">
+             <property name="text">
+              <string> metros</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QLabel" name="label_46">
+             <property name="text">
+              <string>kilogramos</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_63">
+             <property name="text">
+              <string> kilogramos</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="label_65">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="Line" name="line_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0" colspan="6">
+            <widget class="Line" name="line_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="3">
+            <widget class="QLabel" name="label_44">
+             <property name="text">
+              <string>Osteo-Mio-Articular :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_OsteoMoArticular"/>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_51">
+             <property name="text">
+              <string>Sistema linfático :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_SistemaLinfatico"/>
+           </item>
+           <item row="14" column="3">
+            <widget class="QLabel" name="label_52">
+             <property name="text">
+              <string>Cabeza :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Cabeza"/>
+           </item>
+           <item row="16" column="3">
+            <widget class="QLabel" name="label_54">
+             <property name="text">
+              <string>Pupilas :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Pupilas"/>
+           </item>
+           <item row="18" column="3">
+            <widget class="QLabel" name="label_66">
+             <property name="text">
+              <string>Nariz :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="19" column="0">
+            <widget class="QLabel" name="label_67">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Oidos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="21" column="0">
+            <widget class="QLabel" name="label_68">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Boca:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="20" column="0" colspan="6">
+            <widget class="Line" name="line_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="22" column="0">
+            <widget class="QLabel" name="label_70">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Labios :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="22" column="3">
+            <widget class="QLabel" name="label_71">
+             <property name="text">
+              <string>Mucosa :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="0">
+            <widget class="QLabel" name="label_72">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Lengua :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="3">
+            <widget class="QLabel" name="label_73">
+             <property name="text">
+              <string>Dientes :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="24" column="0">
+            <widget class="QLabel" name="label_74">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Paladar :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="24" column="3">
+            <widget class="QLabel" name="label_75">
+             <property name="text">
+              <string>Amigdalas y faringe :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="0">
+            <widget class="QLabel" name="label_76">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Cuello :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="25" column="0" colspan="6">
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="3">
+            <widget class="QLabel" name="label_77">
+             <property name="text">
+              <string>Tiroides:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="27" column="3">
+            <widget class="QLabel" name="label_79">
+             <property name="text">
+              <string>Mamas:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="29" column="0">
+            <widget class="QLabel" name="label_80">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="28" column="0" colspan="6">
+            <widget class="Line" name="line_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="18" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Nariz"/>
+           </item>
+           <item row="19" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Oidos"/>
+           </item>
+           <item row="22" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Labios"/>
+           </item>
+           <item row="23" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Lengua"/>
+           </item>
+           <item row="24" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Paladar"/>
+           </item>
+           <item row="26" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Cuello"/>
+           </item>
+           <item row="24" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_AdmigdalasFaringe"/>
+           </item>
+           <item row="22" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Mucosa"/>
+           </item>
+           <item row="23" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Dientes"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDateEdit" name="dateEdit_Fecha_ExamenClinico">
+             <property name="displayFormat">
+              <string>yyyy/MM/dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_medico_examenClinico"/>
+           </item>
+           <item row="0" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_servicio_examenClinico">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLineEdit" name="lineEdit_bedNumber_ExamenClinico">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="27" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Mamas"/>
+           </item>
+           <item row="27" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Torax"/>
+           </item>
+           <item row="27" column="0">
+            <widget class="QLabel" name="label_78">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Torax:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Tiroides"/>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_ExamenClinicoII">
+        <attribute name="title">
+         <string>Examen Clínico Parte II</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_12">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_81">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Cardiovascular :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_83">
+             <property name="text">
+              <string>Presión arterial :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_PresionArterial">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_85">
+             <property name="text">
+              <string>Frecuencia :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Frecuencia">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_86">
+             <property name="text">
+              <string>Pulso cardiaco :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_87">
+             <property name="text">
+              <string>Pedio :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QLabel" name="label_88">
+             <property name="text">
+              <string>Otros :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_89">
+             <property name="text">
+              <string>Corazón choque de punta :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QLabel" name="label_90">
+             <property name="text">
+              <string>Ruidos cardiacos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_91">
+             <property name="text">
+              <string>Soplos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_PulsoCardiaco"/>
+           </item>
+           <item row="9" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_CorazonCoquePUnta"/>
+           </item>
+           <item row="9" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_RuidosCardiacos"/>
+           </item>
+           <item row="10" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Soplos"/>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="label_93">
+             <property name="text">
+              <string>Ritmo :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QLabel" name="label_94">
+             <property name="text">
+              <string>Femoral :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Pedio"/>
+           </item>
+           <item row="6" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Femoral"/>
+           </item>
+           <item row="3" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Ritmo"/>
+           </item>
+           <item row="5" column="0" colspan="6">
+            <widget class="Line" name="line_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_95">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Respiratorio :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_96">
+             <property name="text">
+              <string>Tipo de Respiración :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_TipoRespiracion"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_97">
+             <property name="text">
+              <string>Amplitud :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Amplitud"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_99">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Pulso :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="6">
+            <widget class="Line" name="line_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QLabel" name="label_105">
+             <property name="text">
+              <string>Ruidos Adventicios :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_RuidosAdventicios"/>
+           </item>
+           <item row="14" column="3">
+            <widget class="QLabel" name="label_109">
+             <property name="text">
+              <string>Frecuencia Respiratoria :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0">
+            <widget class="QLabel" name="label_110">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Retracciones :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="17" column="0">
+            <widget class="QLabel" name="label_111">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Palpacio :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0" colspan="6">
+            <widget class="Line" name="line_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="18" column="0">
+            <widget class="QLabel" name="label_112">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Movilidad :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="18" column="3">
+            <widget class="QLabel" name="label_113">
+             <property name="text">
+              <string>Vibraciones vocales :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="19" column="0">
+            <widget class="QLabel" name="label_114">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Percusión :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="19" column="3">
+            <widget class="QLabel" name="label_115">
+             <property name="text">
+              <string>Auscultación :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="20" column="0">
+            <widget class="QLabel" name="label_116">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Abdomen - Inspeccion :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="21" column="0">
+            <widget class="QLabel" name="label_118">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Piel :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="21" column="3">
+            <widget class="QLabel" name="label_119">
+             <property name="text">
+              <string>Deformaciones :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="0">
+            <widget class="QLabel" name="label_120">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Movilidad :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="23" column="3">
+            <widget class="QLabel" name="label_121">
+             <property name="text">
+              <string>Circulación colateral :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="label_82">
+             <property name="text">
+              <string>Pared :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Pared"/>
+           </item>
+           <item row="7" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_OtrosExamenCLinico"/>
+           </item>
+           <item row="15" column="3">
+            <widget class="QLabel" name="label_84">
+             <property name="text">
+              <string>Abovedamientos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Frecuencia_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Retracciones"/>
+           </item>
+           <item row="15" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Abovedameintos"/>
+           </item>
+           <item row="18" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Movilidad"/>
+           </item>
+           <item row="19" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Percusion"/>
+           </item>
+           <item row="21" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_PielAbdomen"/>
+           </item>
+           <item row="18" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_VibracionesVocales"/>
+           </item>
+           <item row="19" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Auscultacion_palpacio"/>
+           </item>
+           <item row="21" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Deformaciones"/>
+           </item>
+           <item row="23" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Movilidad_2"/>
+           </item>
+           <item row="23" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_CirculacionColateral"/>
+           </item>
+           <item row="24" column="0">
+            <widget class="QLabel" name="label_92">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Palpación :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="25" column="0">
+            <widget class="QLabel" name="label_98">
+             <property name="text">
+              <string>Pared :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="25" column="3">
+            <widget class="QLabel" name="label_100">
+             <property name="text">
+              <string>Sensibilidad :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="0">
+            <widget class="QLabel" name="label_101">
+             <property name="text">
+              <string>Tensión Abdominal :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="26" column="3">
+            <widget class="QLabel" name="label_102">
+             <property name="text">
+              <string>Puntos Dolorosos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="27" column="0">
+            <widget class="QLabel" name="label_103">
+             <property name="text">
+              <string>Palpación profunda :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="28" column="0">
+            <widget class="QLabel" name="label_104">
+             <property name="text">
+              <string>Percusión :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="28" column="3">
+            <widget class="QLabel" name="label_108">
+             <property name="text">
+              <string>Auscultación</string>
+             </property>
+            </widget>
+           </item>
+           <item row="28" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Percusion_2"/>
+           </item>
+           <item row="26" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_TensionAbdominal"/>
+           </item>
+           <item row="25" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Pared_2"/>
+           </item>
+           <item row="25" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Sensibilidad"/>
+           </item>
+           <item row="26" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_PuntosDolorosos"/>
+           </item>
+           <item row="28" column="4" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Auscultacion_palpacion"/>
+           </item>
+           <item row="27" column="1" colspan="5">
+            <widget class="QLineEdit" name="lineEdit_PalpacionProfunda"/>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_ExamenClinicoIII">
+        <attribute name="title">
+         <string>Examen Clínico Parte III</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_13">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_117">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Hígado :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_122">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Bazo :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Bazo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_123">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Tacto Vaginal :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_TactoVaginal">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_124">
+             <property name="text">
+              <string>Neurologico :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="3">
+            <widget class="Line" name="line_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_134">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Genitales :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Genitales"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_135">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Tacto Rectal :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0" colspan="3">
+            <widget class="Line" name="line_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0" rowspan="2" colspan="3">
+            <widget class="Line" name="line_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_TactoRectal"/>
+           </item>
+           <item row="8" column="0" colspan="3">
+            <widget class="QTextEdit" name="textEdit_Neurologico">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_Higado"/>
+           </item>
+           <item row="10" column="0" colspan="3">
+            <widget class="QTextEdit" name="textEdit_ImpresionesDiagnosticas">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="18" column="0">
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_125">
+             <property name="text">
+              <string>Impresiones Diagnosticas :</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_AceptExamenClinico">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_SaveExamenClinico">
+             <property name="text">
+              <string>Guardar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_CancelExamenClinico">
+             <property name="text">
+              <string>Cancelar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_TerapeuticaMedica">
+        <attribute name="title">
+         <string>Terapeútica Médica</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_14">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_56">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Médico tratante :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="label_64">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="6">
+            <widget class="QTableWidget" name="tableWidget_Terapeutica">
+             <column>
+              <property name="text">
+               <string>Fecha de inicio</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Hora</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Terapéutica</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Fecha de Suspensión</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Hora</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_69">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_medico_Terapeutica">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QLineEdit" name="lineEdit_servicio_Terapeutica">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QLineEdit" name="lineEdit_bedNumber_Terapeutica">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="label_57">
+             <property name="text">
+              <string>N° Cama</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_59">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Servicio</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QPushButton" name="pushButton_addItem_terapeutica">
+             <property name="text">
+              <string>Agregar Item</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="pushButton_quitar_Item">
+             <property name="text">
+              <string>Quitar Item</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_AceptTerapeuticaMedica">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_SaveTerapeuticaMedica">
+             <property name="text">
+              <string>Guardar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_CancelTerapeuticaMedica">
+             <property name="text">
+              <string>Cancelar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Epicrisis</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_38">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_37">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_19">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_143">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Médico tratante :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_medico_Epicrisis">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="label_142">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Servicio</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLineEdit" name="lineEdit_servicio_Epicrisis">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLabel" name="label_144">
+               <property name="text">
+                <string>N° Cama</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLineEdit" name="lineEdit_bedNumber_Epicrisis">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <spacer name="horizontalSpacer_29">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>100</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QGridLayout" name="gridLayout_18">
+             <item row="0" column="3">
+              <widget class="QDateEdit" name="dateEdit_fechaAlta_Epicrisis">
+               <property name="displayFormat">
+                <string>yyyy/MM/dd</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="5">
+              <widget class="QLabel" name="label_147">
+               <property name="minimumSize">
+                <size>
+                 <width>215</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Dias de Hospitalización :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="QLineEdit" name="lineEdit_diasHospitalizacion_Epicrisis"/>
+             </item>
+             <item row="0" column="4">
+              <spacer name="horizontalSpacer_23">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>70</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="label_146">
+               <property name="text">
+                <string>Fecha de Alta :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDateEdit" name="dateEdit_fechaIngreso_Epicrisis">
+               <property name="displayFormat">
+                <string>yyyy/MM/dd</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_145">
+               <property name="text">
+                <string>Fecha Ingreso :</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_17">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_148">
+             <property name="text">
+              <string>1 . RESUMEN HISTORIA CLINICA :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QTextEdit" name="textEdit_resumHistoriaClinica_Epicrisis">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>10000</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_149">
+             <property name="text">
+              <string>2 . RESUMEN EXAMEN CLINICO :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QTextEdit" name="textEdit_resuExamClinico_Epicrisis">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>100</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_150">
+             <property name="text">
+              <string>3 . EXAMENES AUXILIARES :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QTextEdit" name="textEdit_examenesAux_Epicrisis">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_151">
+             <property name="text">
+              <string>4 . DIAGNOSTICO INGRESO :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QTextEdit" name="textEdit_DiagINgreso_Epicrisis">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_152">
+             <property name="text">
+              <string>5 .TRATAMIENTO :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QTextEdit" name="textEdit_tratamineto_Epicrisis">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_153">
+             <property name="text">
+              <string>6 . EVOLUCION</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QTextEdit" name="textEdit_evolucion_Epicrisis">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_154">
+             <property name="text">
+              <string>7 . DIAGNOSTICO FINAL </string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="0">
+            <widget class="QTextEdit" name="textEdit_diagFinal_Epicrisis">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0">
+            <widget class="QLabel" name="label_155">
+             <property name="text">
+              <string>8 . INDICACIONES</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="0">
+            <widget class="QTextEdit" name="textEdit_indicaciones_Epicrisis">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_AceptEpicrisis">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton_SaveEpicrisis">
+             <property name="text">
+              <string>Guardar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButton_CancelEpicrisis">
+             <property name="text">
+              <string>Cancelar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2">
+            <spacer name="verticalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>R.Q.C</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_43">
+         <item row="0" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_40">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_314">
+             <property name="text">
+              <string>Procedencia</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_precedenciaRQCV"/>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_308">
+           <property name="text">
+            <string>ANTECEDENTES :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_39">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_309">
+             <property name="text">
+              <string>HTA :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_htaRQCV"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_310">
+             <property name="text">
+              <string>ASMA :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_asmaRQCV"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_311">
+             <property name="text">
+              <string>TBC :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_tbcRQCV"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_312">
+             <property name="text">
+              <string>DM :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="lineEdit_dmRQCV"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_313">
+             <property name="text">
+              <string>MOTIVO DEL RQVC :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="lineEdit_motivoRQCV"/>
+           </item>
+          </layout>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_315">
+           <property name="text">
+            <string>EXAMEN CLINICO :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_41">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="label_316">
+             <property name="text">
+              <string>P.A : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4" colspan="3">
+            <widget class="QLineEdit" name="lineEdit_paRQCV"/>
+           </item>
+           <item row="0" column="7">
+            <widget class="QLabel" name="label_317">
+             <property name="text">
+              <string>FC :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="8" colspan="3">
+            <widget class="QLineEdit" name="lineEdit_fcRQCV"/>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QLabel" name="label_318">
+             <property name="text">
+              <string>Corazón :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4" colspan="7">
+            <widget class="QLineEdit" name="lineEdit_corazonRQCV"/>
+           </item>
+           <item row="2" column="0" colspan="3">
+            <widget class="QLabel" name="label_319">
+             <property name="text">
+              <string>Pulmones :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4" colspan="7">
+            <widget class="QLineEdit" name="lineEdit_pulmonesRQCV"/>
+           </item>
+           <item row="3" column="0" colspan="4">
+            <widget class="QLabel" name="label_320">
+             <property name="text">
+              <string>Pulsos Periféricos :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4" colspan="7">
+            <widget class="QLineEdit" name="lineEdit_pulsosPerifericosRQCV"/>
+           </item>
+           <item row="4" column="0" colspan="4">
+            <widget class="QLabel" name="label_321">
+             <property name="text">
+              <string>Sistena Venoso : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4" colspan="7">
+            <widget class="QLineEdit" name="lineEdit_sistemaVenosoRQCV"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_322">
+             <property name="text">
+              <string>E.K.G</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="7">
+            <widget class="QLabel" name="label_323">
+             <property name="text">
+              <string>FC :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="8" colspan="3">
+            <widget class="QLineEdit" name="lineEdit_fc1RQCV"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_324">
+             <property name="text">
+              <string>P :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1" colspan="4">
+            <widget class="QLineEdit" name="lineEdit_pRQCV"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_328">
+             <property name="text">
+              <string>ST :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_329">
+             <property name="text">
+              <string>Onda T :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_330">
+             <property name="text">
+              <string>AQRS :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="5">
+            <widget class="QLabel" name="label_325">
+             <property name="text">
+              <string>PR :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="6">
+            <widget class="QLineEdit" name="lineEdit_prRQCV"/>
+           </item>
+           <item row="5" column="1" colspan="6">
+            <widget class="QLineEdit" name="lineEdit_ekgRQCV"/>
+           </item>
+           <item row="6" column="7">
+            <widget class="QLabel" name="label_326">
+             <property name="text">
+              <string>QRS : </string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="8">
+            <widget class="QLineEdit" name="lineEdit_qrs"/>
+           </item>
+           <item row="6" column="9">
+            <widget class="QLabel" name="label_327">
+             <property name="text">
+              <string>QT :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="10">
+            <widget class="QLineEdit" name="lineEdit_qtRQCV"/>
+           </item>
+           <item row="8" column="1" colspan="10">
+            <widget class="QLineEdit" name="lineEdit_ondaTRQCV"/>
+           </item>
+           <item row="9" column="1" colspan="10">
+            <widget class="QLineEdit" name="lineEdit_aqrsRQCV"/>
+           </item>
+           <item row="10" column="1" colspan="10">
+            <widget class="QLineEdit" name="lineEdit_idRQCV"/>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_331">
+             <property name="text">
+              <string>ID :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_332">
+             <property name="text">
+              <string>R.Q.C.V :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1" colspan="10">
+            <widget class="QLineEdit" name="lineEdit_rqcvRQCV"/>
+           </item>
+           <item row="12" column="0">
+            <widget class="QLabel" name="label_333">
+             <property name="text">
+              <string>Sugerencias :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="1" colspan="10">
+            <widget class="QLineEdit" name="lineEdit_sugerenciasRQCV"/>
+           </item>
+           <item row="7" column="1" colspan="10">
+            <widget class="QLineEdit" name="lineEdit_stRQCV"/>
+           </item>
+          </layout>
+         </item>
+         <item row="9" column="0" colspan="2">
+          <layout class="QGridLayout" name="gridLayout_42">
+           <property name="verticalSpacing">
+            <number>1</number>
+           </property>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_24">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_AceptRQCV">
+             <property name="text">
+              <string>Aceptar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_SaveRQCV">
+             <property name="text">
+              <string>Guardar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pushButton_CancelRQCV">
+             <property name="text">
+              <string>Cancelar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <spacer name="horizontalSpacer_25">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="Line" name="line_27">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="Line" name="line_28">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <spacer name="verticalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_Patient</tabstop>
+  <tabstop>dateEdit_FechaCreacion</tabstop>
+  <tabstop>lineEdit_medicoGlobal</tabstop>
+  <tabstop>lineEdit_dni_medico_consulta</tabstop>
+  <tabstop>pushButton_consultarMedico</tabstop>
+  <tabstop>Documentos</tabstop>
+  <tabstop>lineEdit_medico_Antecedentes</tabstop>
+  <tabstop>lineEdit_servicioAntecedentes</tabstop>
+  <tabstop>dateEdit_FechaIngresoAntecedentes</tabstop>
+  <tabstop>lineEdit_bedNumber_antecedentes</tabstop>
+  <tabstop>textEdit_AntecedentesPatologicosPersonales</tabstop>
+  <tabstop>dateEdit_menstruacion</tabstop>
+  <tabstop>comboBox_tabaco</tabstop>
+  <tabstop>comboBox_alcohol</tabstop>
+  <tabstop>lineEdit_RegimenCatamental</tabstop>
+  <tabstop>textEdit_MedicacionActual</tabstop>
+  <tabstop>textEdit_AntecedentesPatologicosFamiliares</tabstop>
+  <tabstop>textEdit_Observaciones</tabstop>
+  <tabstop>textEdit_Operaciones</tabstop>
+  <tabstop>pushButton_AceptAntecedentes</tabstop>
+  <tabstop>pushButton_SaveAntecedentes</tabstop>
+  <tabstop>pushButton_CancelAntecedentes</tabstop>
+  <tabstop>lineEdit_medico_ReporteOperatorio</tabstop>
+  <tabstop>lineEdit_bedNumber_reporteOperatorio</tabstop>
+  <tabstop>dateEdit_Inicio_operacion</tabstop>
+  <tabstop>timeEdit_inicio_operacion</tabstop>
+  <tabstop>dateEdit_fin_operacion</tabstop>
+  <tabstop>timeEdit_fin_operacion</tabstop>
+  <tabstop>lineEdit_Cirujano</tabstop>
+  <tabstop>lineEdit_Ayudante1</tabstop>
+  <tabstop>lineEdit_Ayudante2</tabstop>
+  <tabstop>lineEdit_Anestesiologo</tabstop>
+  <tabstop>lineEdit_Instrumentista</tabstop>
+  <tabstop>lineEdit_Circulante</tabstop>
+  <tabstop>lineEdit_TipoAnestecia</tabstop>
+  <tabstop>dateEdit_inicio_Anestecia</tabstop>
+  <tabstop>timeEdit_inicio_Anestecia</tabstop>
+  <tabstop>dateEdit_fin_Anestecia</tabstop>
+  <tabstop>timeEdit_fin_anestecia</tabstop>
+  <tabstop>lineEdit_CuentaGasa</tabstop>
+  <tabstop>lineEdit_Drenes</tabstop>
+  <tabstop>lineEdit_Apositos</tabstop>
+  <tabstop>lineEdit_Otros</tabstop>
+  <tabstop>textEdit_DXPreOperatorio</tabstop>
+  <tabstop>textEdit_DXPostOperatorio</tabstop>
+  <tabstop>textEdit_Procedimiento</tabstop>
+  <tabstop>textEdit_Hallazgo</tabstop>
+  <tabstop>pushButton_AceptReporteOperatorio</tabstop>
+  <tabstop>pushButton_SaveReporteOperatorio</tabstop>
+  <tabstop>pushButton_CancelReporteOperatorio</tabstop>
+  <tabstop>lineEdit_medico_examenClinico</tabstop>
+  <tabstop>lineEdit_servicio_examenClinico</tabstop>
+  <tabstop>dateEdit_Fecha_ExamenClinico</tabstop>
+  <tabstop>lineEdit_bedNumber_ExamenClinico</tabstop>
+  <tabstop>lineEdit_Talla</tabstop>
+  <tabstop>lineEdit_Peso</tabstop>
+  <tabstop>lineEdit_PesoHabitual</tabstop>
+  <tabstop>lineEdit_Biotipo</tabstop>
+  <tabstop>lineEdit_Temperatura</tabstop>
+  <tabstop>lineEdit_Pulso</tabstop>
+  <tabstop>lineEdit_Respiracion</tabstop>
+  <tabstop>lineEdit_EstadoGeneral</tabstop>
+  <tabstop>lineEdit_Mental</tabstop>
+  <tabstop>lineEdit_Fascies</tabstop>
+  <tabstop>lineEdit_PielAnexos</tabstop>
+  <tabstop>lineEdit_Color</tabstop>
+  <tabstop>lineEdit_CelularSubcutaneo</tabstop>
+  <tabstop>lineEdit_OsteoMoArticular</tabstop>
+  <tabstop>lineEdit_SistemaLinfatico</tabstop>
+  <tabstop>lineEdit_Cabeza</tabstop>
+  <tabstop>lineEdit_Ojos</tabstop>
+  <tabstop>lineEdit_Pupilas</tabstop>
+  <tabstop>lineEdit_FondoOjo</tabstop>
+  <tabstop>lineEdit_Nariz</tabstop>
+  <tabstop>lineEdit_Oidos</tabstop>
+  <tabstop>lineEdit_Labios</tabstop>
+  <tabstop>lineEdit_Mucosa</tabstop>
+  <tabstop>lineEdit_Lengua</tabstop>
+  <tabstop>lineEdit_Dientes</tabstop>
+  <tabstop>lineEdit_Paladar</tabstop>
+  <tabstop>lineEdit_AdmigdalasFaringe</tabstop>
+  <tabstop>lineEdit_Cuello</tabstop>
+  <tabstop>lineEdit_Tiroides</tabstop>
+  <tabstop>lineEdit_Torax</tabstop>
+  <tabstop>lineEdit_Mamas</tabstop>
+  <tabstop>lineEdit_PresionArterial</tabstop>
+  <tabstop>lineEdit_Frecuencia</tabstop>
+  <tabstop>lineEdit_Ritmo</tabstop>
+  <tabstop>lineEdit_Amplitud</tabstop>
+  <tabstop>lineEdit_Pared</tabstop>
+  <tabstop>lineEdit_PulsoCardiaco</tabstop>
+  <tabstop>lineEdit_Femoral</tabstop>
+  <tabstop>lineEdit_Pedio</tabstop>
+  <tabstop>lineEdit_OtrosExamenCLinico</tabstop>
+  <tabstop>lineEdit_CorazonCoquePUnta</tabstop>
+  <tabstop>lineEdit_RuidosCardiacos</tabstop>
+  <tabstop>lineEdit_Soplos</tabstop>
+  <tabstop>lineEdit_RuidosAdventicios</tabstop>
+  <tabstop>lineEdit_TipoRespiracion</tabstop>
+  <tabstop>lineEdit_Frecuencia_2</tabstop>
+  <tabstop>lineEdit_Retracciones</tabstop>
+  <tabstop>lineEdit_Abovedameintos</tabstop>
+  <tabstop>lineEdit_Movilidad</tabstop>
+  <tabstop>lineEdit_VibracionesVocales</tabstop>
+  <tabstop>lineEdit_Percusion</tabstop>
+  <tabstop>lineEdit_Auscultacion_palpacio</tabstop>
+  <tabstop>lineEdit_PielAbdomen</tabstop>
+  <tabstop>lineEdit_Deformaciones</tabstop>
+  <tabstop>lineEdit_Movilidad_2</tabstop>
+  <tabstop>lineEdit_CirculacionColateral</tabstop>
+  <tabstop>lineEdit_Pared_2</tabstop>
+  <tabstop>lineEdit_Sensibilidad</tabstop>
+  <tabstop>lineEdit_TensionAbdominal</tabstop>
+  <tabstop>lineEdit_PuntosDolorosos</tabstop>
+  <tabstop>lineEdit_PalpacionProfunda</tabstop>
+  <tabstop>lineEdit_Percusion_2</tabstop>
+  <tabstop>lineEdit_Auscultacion_palpacion</tabstop>
+  <tabstop>lineEdit_Higado</tabstop>
+  <tabstop>lineEdit_Bazo</tabstop>
+  <tabstop>lineEdit_TactoRectal</tabstop>
+  <tabstop>lineEdit_TactoVaginal</tabstop>
+  <tabstop>lineEdit_Genitales</tabstop>
+  <tabstop>textEdit_Neurologico</tabstop>
+  <tabstop>pushButton_AceptExamenClinico</tabstop>
+  <tabstop>pushButton_SaveExamenClinico</tabstop>
+  <tabstop>pushButton_CancelExamenClinico</tabstop>
+  <tabstop>lineEdit_medico_Terapeutica</tabstop>
+  <tabstop>lineEdit_servicio_Terapeutica</tabstop>
+  <tabstop>lineEdit_bedNumber_Terapeutica</tabstop>
+  <tabstop>tableWidget_Terapeutica</tabstop>
+  <tabstop>pushButton_AceptTerapeuticaMedica</tabstop>
+  <tabstop>pushButton_SaveTerapeuticaMedica</tabstop>
+  <tabstop>pushButton_CancelTerapeuticaMedica</tabstop>
+ </tabstops>
+ <resources>
+  <include location="rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

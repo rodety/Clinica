@@ -1,0 +1,26 @@
+TESTEADO
+Agenda
+
+ver todas ok
+Ver tarea  ok
+Ver tarea solo mostrar pantalla con los datos pertinenetes mas no la ventana de nueva tarea.
+Editar tarea Fallo no permitir agregar texto al telefono.
+Editar Tarea No carga Hora. (Resuelto)
+Nueva Tarea Validar el numero de Celular.
+Boton Lupita no se sabe que hace???
+Colores ok
+Eliminar Tarea ok
+
+HISTORIA CLINICA
+REAGUSTAR LA INTERFAZ DE DOCUMENTOS. Urgente
+Validar al presionar Los botones Nuevo, Editar, Ver Detalles (Cuando no se ) Se debe enviar Un mensaje de advertencia.
+Busqueda En Pacientes y en Historias Clinicas cuando presionas dos veces se muestra duplicado.
+
+Continuare Testeando.
+Vidal
+
+
+
+
+
+

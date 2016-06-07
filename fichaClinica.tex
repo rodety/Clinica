@@ -1,0 +1,46 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{anysize}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage[light,math]{iwona}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\marginsize{1cm}{0cm}{1cm}{1cm}
+\pagenumbering{arabic}
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+\LARGE{\textbf{FICHA CL\'INICA}}
+\end{center}
+\scalebox{1.40}[1.55]{
+\begin{tabular}{p{2.8cm}p{2.8cm}p{6.5cm}}
+\multicolumn{2}{p{6cm}}{\scriptsize{APELLIDOS: Condory Fernandez}} & \scriptsize{NOMBRES: Milton Raul} \\
+\multicolumn{3}{p{13cm}}{\scriptsize{DIRECCION: Cercado}} \\
+\scriptsize{TELF: 054252255225} & \scriptsize{DNI: 78252522} & \scriptsize{EDAD: 13} \\
+\multicolumn{2}{p{6cm}}{\scriptsize{ESTADO CIVIL: Soltero/a}} & \scriptsize{OCUPACI\'ON: } \\
+\multicolumn{2}{p{6 cm}}{\scriptsize{CIRUJIAS PREVIAS :No}} & \scriptsize{AL\'ERGIAS: Alergias} \\
+\multicolumn{3}{p{13 cm}}{\scriptsize{ANTECEDENTES: Antecedentes}} \\
+\multicolumn{3}{p{13 cm}}{\scriptsize{MEDICACI\'ON ACTUAL: No}} \\
+\end{tabular}}
+\vspace{0.3cm}
+\begin{center}
+\LARGE{\textbf{MOTIVO DE CONSULTA}}
+\end{center}
+\begin{center}
+\begin{longtable}{ p{2cm}| p{14.5cm}}
+\hline
+\endfirsthead
+\textbf{FECHA} & \textbf{MOTIVO DE CONSULTA}\\\hline
+\endhead
+\endfoot
+\endlastfoot
+2013-01-15&esta es una nueva consulta		\\
+\hline
+2013-01-15&Consulta Lipsuccion	
+\\
+\hline
+\end{longtable}
+\end{center}
+\end{document}

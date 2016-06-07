@@ -1,0 +1,196 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9)
+entering extended mode
+
+("C:\Documents and Settings\vidal\Mis documentos\Proyecto\ClinicaProject\listaT
+areas.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\base\size10.clo"))
+("C:\Archivos de programa\MiKTeX 2.9\tex\generic\babel\babel.sty"
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg")
+("C:\Archivos de programa\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
+("C:\Archivos de programa\MiKTeX 2.9\tex\generic\babel\babel.def")))
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty")
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\ltxmisc\anysize.sty"
+Package: `anysize' 1.0 <1994/08/13>
+) ("C:\Archivos de programa\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\base\latin1.def"))
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\graphics\keyval.sty")
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\graphics\trig.sty")
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg")
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Archivos de programa\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty")
+("C:\Archivos de programa\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"))))
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\iwona\iwona.sty")
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\base\t1enc.def")
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\iwona\t1iwonal.fd"))
+("C:\Archivos de programa\MiKTeX 2.9\tex\latex\tools\longtable.sty")
+("C:\Documents and Settings\vidal\Mis documentos\Proyecto\ClinicaProject\listaT
+areas.aux") ("C:\Archivos de programa\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
+"
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+Overfull \hbox (1.29723pt too wide) in paragraph at lines 31--31
+[]|\T1/iwonal/b/n/10 FICHA| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 32--32
+[]|\T1/iwonal/m/n/10 07:45:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 36--36
+[]|\T1/iwonal/m/n/10 08:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 40--40
+[]|\T1/iwonal/m/n/10 17:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 45--45
+[]|\T1/iwonal/m/n/10 17:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 51--51
+[]|\T1/iwonal/m/n/10 17:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 57--57
+[]|\T1/iwonal/m/n/10 18:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 63--63
+[]|\T1/iwonal/m/n/10 17:30:00| 
+
+Underfull \vbox (badness 10000) detected at line 68
+
+Overfull \hbox (1.29723pt too wide) in paragraph at lines 82--82
+[]|\T1/iwonal/b/n/10 FICHA| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 83--83
+[]|\T1/iwonal/m/n/10 07:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 87--87
+[]|\T1/iwonal/m/n/10 07:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 91--91
+[]|\T1/iwonal/m/n/10 07:30:00| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+[]|\T1/iwonal/m/n/10 Luis An-gel Choq-que-pu-ri
+
+Underfull \vbox (badness 10000) detected at line 96
+
+Overfull \hbox (1.29723pt too wide) in paragraph at lines 110--110
+[]|\T1/iwonal/b/n/10 FICHA| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 111--111
+[]|\T1/iwonal/m/n/10 14:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 116--116
+[]|\T1/iwonal/m/n/10 17:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 120--120
+[]|\T1/iwonal/m/n/10 18:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 126--126
+[]|\T1/iwonal/m/n/10 19:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 130--130
+[]|\T1/iwonal/m/n/10 16:00:00| 
+
+Underfull \vbox (badness 10000) detected at line 132
+
+Overfull \hbox (1.29723pt too wide) in paragraph at lines 146--146
+[]|\T1/iwonal/b/n/10 FICHA| 
+
+Underfull \vbox (badness 10000) detected at line 147
+
+Overfull \hbox (1.29723pt too wide) in paragraph at lines 161--161
+[]|\T1/iwonal/b/n/10 FICHA| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 162--162
+[]|\T1/iwonal/m/n/10 08:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 164--164
+[]|\T1/iwonal/m/n/10 10:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 170--170
+[]|\T1/iwonal/m/n/10 11:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 176--176
+[]|\T1/iwonal/m/n/10 12:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 179--179
+[]|\T1/iwonal/m/n/10 15:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 183--183
+[]|\T1/iwonal/m/n/10 18:00:00| 
+
+Underfull \vbox (badness 10000) detected at line 189
+[1{C:/Documents and Settings/All Users/Datos de programa/MiKTeX/2.9/pdftex/conf
+ig/pdftex.map}]
+Overfull \hbox (1.29723pt too wide) in paragraph at lines 203--203
+[]|\T1/iwonal/b/n/10 FICHA| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 204--204
+[]|\T1/iwonal/m/n/10 08:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 206--206
+[]|\T1/iwonal/m/n/10 07:00:45| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 208--208
+[]|\T1/iwonal/m/n/10 09:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 210--210
+[]|\T1/iwonal/m/n/10 16:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 215--215
+[]|\T1/iwonal/m/n/10 16:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 220--220
+[]|\T1/iwonal/m/n/10 16:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 225--225
+[]|\T1/iwonal/m/n/10 16:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 230--230
+[]|\T1/iwonal/m/n/10 16:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 234--234
+[]|\T1/iwonal/m/n/10 16:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 238--238
+[]|\T1/iwonal/m/n/10 17:00:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 243--243
+[]|\T1/iwonal/m/n/10 17:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 248--248
+[]|\T1/iwonal/m/n/10 17:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 253--253
+[]|\T1/iwonal/m/n/10 18:30:00| 
+
+Overfull \hbox (0.7767pt too wide) in paragraph at lines 258--258
+[]|\T1/iwonal/m/n/10 17:00:00| 
+
+Underfull \vbox (badness 10000) detected at line 260
+[2]
+("C:\Documents and Settings\vidal\Mis documentos\Proyecto\ClinicaProject\listaT
+areas.aux") )
+(see the transcript file for additional information){C:/Archivos de programa/Mi
+KTeX 2.9/fonts/enc/dvips/iwona/ec-iwona.enc}<C:/Archivos de programa/MiKTeX 2.9
+/fonts/type1/nowacki/iwona/iwonal.pfb><C:/Archivos de programa/MiKTeX 2.9/fonts
+/type1/nowacki/iwona/iwonam.pfb>
+Output written on listaTareas.pdf (2 pages, 56619 bytes).
+Transcript written on listaTareas.log.
