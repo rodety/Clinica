@@ -159,6 +159,7 @@ void paciente_ui::paginacion(QString a)
     model->clear();
     QSqlQuery query_paciente;
     QString consulta = "SELECT e_dni.dni_pk, e_historia_clinica.nick ,concat(e_dni.apellido_paterno, ' ', e_dni.apellido_materno,' ' , e_dni.primer_nombre, ' ', e_dni.segundo_nombre) FROM e_dni, e_historia_clinica , e_persona, e_paciente WHERE e_dni.dni_pk=e_persona.dni_pk and e_persona.dni_pk= e_paciente.dni_pk and e_paciente.dni_pk=e_historia_clinica.dni_pk  and e_dni.apellido_paterno like \""+a+"%\""+" ORDER BY CAST(SUBSTR(nick FROM 2) AS UNSIGNED) DESC LIMIT 1000;";
+    qDebug()<<consulta<<endl;
     query_paciente.prepare(consulta);
 
     if(!query_paciente.exec()) qDebug()<<query_paciente.lastError().text();
