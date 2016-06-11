@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'fotos_ui.ui'
 **
-** Created: Thu 14. May 11:49:01 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:29 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -68,6 +68,9 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         pushButton_uploadPicture = new QPushButton(fotos_ui);
         pushButton_uploadPicture->setObjectName(QString::fromUtf8("pushButton_uploadPicture"));
+        QFont font;
+        font.setPointSize(12);
+        pushButton_uploadPicture->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/add1-.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_uploadPicture->setIcon(icon);
@@ -77,6 +80,7 @@ public:
 
         pushButton_downloadPicture = new QPushButton(fotos_ui);
         pushButton_downloadPicture->setObjectName(QString::fromUtf8("pushButton_downloadPicture"));
+        pushButton_downloadPicture->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/system-software-update.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_downloadPicture->setIcon(icon1);
@@ -86,6 +90,7 @@ public:
 
         pushButton_showPictures = new QPushButton(fotos_ui);
         pushButton_showPictures->setObjectName(QString::fromUtf8("pushButton_showPictures"));
+        pushButton_showPictures->setFont(font);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/preview.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_showPictures->setIcon(icon2);
@@ -99,6 +104,7 @@ public:
 
         pushButton_goFilePicture = new QPushButton(fotos_ui);
         pushButton_goFilePicture->setObjectName(QString::fromUtf8("pushButton_goFilePicture"));
+        pushButton_goFilePicture->setFont(font);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/Web.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_goFilePicture->setIcon(icon3);
@@ -111,6 +117,7 @@ public:
 
         line = new QFrame(fotos_ui);
         line->setObjectName(QString::fromUtf8("line"));
+        line->setFont(font);
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
@@ -122,6 +129,7 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         label = new QLabel(fotos_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout_2->addWidget(label, 0, 0, 1, 1);
 
@@ -129,12 +137,14 @@ public:
         lineEdit_patientName->setObjectName(QString::fromUtf8("lineEdit_patientName"));
         lineEdit_patientName->setMinimumSize(QSize(250, 0));
         lineEdit_patientName->setMaximumSize(QSize(250, 16777215));
+        lineEdit_patientName->setFont(font);
         lineEdit_patientName->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_patientName, 0, 1, 1, 1);
 
         label_3 = new QLabel(fotos_ui);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout_2->addWidget(label_3, 1, 0, 1, 1);
 
@@ -147,12 +157,14 @@ public:
         lineEdit_historiaClinicaCode->setSizePolicy(sizePolicy);
         lineEdit_historiaClinicaCode->setMinimumSize(QSize(120, 0));
         lineEdit_historiaClinicaCode->setMaximumSize(QSize(120, 16777215));
+        lineEdit_historiaClinicaCode->setFont(font);
         lineEdit_historiaClinicaCode->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_historiaClinicaCode, 1, 1, 1, 1);
 
         label_4 = new QLabel(fotos_ui);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         gridLayout_2->addWidget(label_4, 2, 0, 1, 1);
 
@@ -162,6 +174,7 @@ public:
         lineEdit_documentCode->setSizePolicy(sizePolicy);
         lineEdit_documentCode->setMinimumSize(QSize(120, 0));
         lineEdit_documentCode->setMaximumSize(QSize(120, 16777215));
+        lineEdit_documentCode->setFont(font);
         lineEdit_documentCode->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_documentCode, 2, 1, 1, 1);
@@ -178,6 +191,7 @@ public:
 
         line_2 = new QFrame(fotos_ui);
         line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFont(font);
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
 
@@ -187,6 +201,7 @@ public:
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         label_2 = new QLabel(fotos_ui);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         gridLayout_4->addWidget(label_2, 0, 0, 1, 1);
 
@@ -200,6 +215,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         tableWidget_reporteOperatorio->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tableWidget_reporteOperatorio->setObjectName(QString::fromUtf8("tableWidget_reporteOperatorio"));
+        tableWidget_reporteOperatorio->setFont(font);
         tableWidget_reporteOperatorio->setAlternatingRowColors(true);
         tableWidget_reporteOperatorio->setSelectionMode(QAbstractItemView::SingleSelection);
         tableWidget_reporteOperatorio->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -222,6 +238,7 @@ public:
 
         pushButton_5 = new QPushButton(fotos_ui);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setFont(font);
 
         gridLayout_5->addWidget(pushButton_5, 0, 1, 1, 1);
 

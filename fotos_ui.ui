@@ -20,6 +20,11 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QPushButton" name="pushButton_uploadPicture">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Añadir Fotos</string>
          </property>
@@ -37,6 +42,11 @@
        </item>
        <item row="0" column="1">
         <widget class="QPushButton" name="pushButton_downloadPicture">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Descargar Fotos</string>
          </property>
@@ -54,6 +64,11 @@
        </item>
        <item row="0" column="2">
         <widget class="QPushButton" name="pushButton_showPictures">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Ver Fotos</string>
          </property>
@@ -71,6 +86,11 @@
        </item>
        <item row="0" column="3">
         <spacer name="horizontalSpacer">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -84,6 +104,11 @@
        </item>
        <item row="0" column="4">
         <widget class="QPushButton" name="pushButton_goFilePicture">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Ir Carpeta</string>
          </property>
@@ -103,6 +128,11 @@
      </item>
      <item row="1" column="0">
       <widget class="Line" name="line">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -114,6 +144,11 @@
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
           <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Paciente :</string>
            </property>
@@ -133,6 +168,11 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -140,6 +180,11 @@
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Historia Clínica :</string>
            </property>
@@ -165,6 +210,11 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -172,6 +222,11 @@
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Código Documento :</string>
            </property>
@@ -197,6 +252,11 @@
              <height>16777215</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -206,6 +266,11 @@
        </item>
        <item row="0" column="1">
         <spacer name="horizontalSpacer_3">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -221,6 +286,11 @@
      </item>
      <item row="3" column="0">
       <widget class="Line" name="line_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -230,6 +300,11 @@
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0">
         <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Lista de Reportes Operatorios:</string>
          </property>
@@ -237,6 +312,11 @@
        </item>
        <item row="1" column="0">
         <widget class="QTableWidget" name="tableWidget_reporteOperatorio">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="alternatingRowColors">
           <bool>true</bool>
          </property>
@@ -284,6 +364,11 @@
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <spacer name="horizontalSpacer_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -297,6 +382,11 @@
        </item>
        <item row="0" column="1">
         <widget class="QPushButton" name="pushButton_5">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Salir</string>
          </property>

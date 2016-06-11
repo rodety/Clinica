@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'paciente_ui.h'
 **
-** Created: Wed 27. May 12:24:58 2015
+** Created: Fri 10. Jun 20:10:41 2016
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_paciente_ui[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,11 +39,13 @@ static const uint qt_meta_data_paciente_ui[] = {
      181,   12,   12,   12, 0x08,
      212,   12,   12,   12, 0x08,
      253,  248,   12,   12, 0x08,
-     311,  306,   12,   12, 0x08,
-     368,  362,   12,   12, 0x08,
-     402,  306,   12,   12, 0x08,
-     443,  362,   12,   12, 0x08,
-     493,  306,   12,   12, 0x08,
+     310,  304,   12,   12, 0x08,
+     344,  248,   12,   12, 0x08,
+     385,  304,   12,   12, 0x08,
+     435,   12,   12,   12, 0x08,
+     468,  248,   12,   12, 0x08,
+     508,   12,   12,   12, 0x08,
+     543,   12,   12,   12, 0x0a,
 
        0        // eod
 };
@@ -56,12 +58,14 @@ static const char qt_meta_stringdata_paciente_ui[] = {
     "on_verConsultas_paciente_clicked()\0"
     "on_verDatos_paciente_clicked()\0"
     "on_pushButton_editarDatos_clicked()\0"
-    "item\0on_tableWidget_result_itemClicked(QTableWidgetItem*)\0"
     "arg1\0on_lineEdit_dniCurrentPatient_textChanged(QString)\0"
     "index\0on_comboBox_search_activated(int)\0"
     "on_comboBox_currentIndexChanged(QString)\0"
     "on_tableView_ListaPacientes1_clicked(QModelIndex)\0"
-    "on_lineEdit_PacienteSearch_textEdited(QString)\0"
+    "on_pushButton_procesar_clicked()\0"
+    "on_lineEdit_buscar_textChanged(QString)\0"
+    "on_lineEdit_buscar_returnPressed()\0"
+    "update_list()\0"
 };
 
 const QMetaObject paciente_ui::staticMetaObject = {
@@ -100,15 +104,17 @@ int paciente_ui::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: on_verConsultas_paciente_clicked(); break;
         case 5: on_verDatos_paciente_clicked(); break;
         case 6: on_pushButton_editarDatos_clicked(); break;
-        case 7: on_tableWidget_result_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
-        case 8: on_lineEdit_dniCurrentPatient_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 9: on_comboBox_search_activated((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 10: on_comboBox_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 11: on_tableView_ListaPacientes1_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
-        case 12: on_lineEdit_PacienteSearch_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 7: on_lineEdit_dniCurrentPatient_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 8: on_comboBox_search_activated((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: on_comboBox_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 10: on_tableView_ListaPacientes1_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 11: on_pushButton_procesar_clicked(); break;
+        case 12: on_lineEdit_buscar_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 13: on_lineEdit_buscar_returnPressed(); break;
+        case 14: update_list(); break;
         default: ;
         }
-        _id -= 13;
+        _id -= 15;
     }
     return _id;
 }

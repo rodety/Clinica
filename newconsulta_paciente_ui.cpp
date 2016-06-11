@@ -41,23 +41,44 @@ void newconsulta_paciente_ui::set_clicked_type(int type)
 
 void newconsulta_paciente_ui::on_pushButton_Acept_clicked()
 {
-    QString DNI,HISTORIA_CLINICA,R_HISTORIAL_DOCUMENTO;
+    QString id,HISTORIA_CLINICA_PK,R_HISTORIAL_DOCUMENTO, consulta;
 
-    DNI = dni_var;
+    id = id_var;
 
     QSqlQuery query;
     int ret;
     QMessageBox *msgBox = new QMessageBox;
 
-    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+
+    //VERIFICANDO SI EXISTE historia_clinica_pk
+    consulta = "SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente = ?";
+    query.prepare(consulta);
+    query.bindValue(0,id);
     query.exec();
-    query.next();
+    if(query.next())
+    {
+        HISTORIA_CLINICA_PK = query.value(0).toString();
+    }
+    else
+    {
+        //REGISTRANDO HISTORIA CLINICA.
 
-    HISTORIA_CLINICA = query.value(0).toString();
+        consulta = "INSERT INTO e_historia_clinica(Paciente_idPaciente) values (?)";
+        query.prepare(consulta);
+        query.bindValue(0,id);
+        if(query.exec())
+        {
 
+            HISTORIA_CLINICA_PK = query.lastInsertId().toString();
+        }
+        else
+            qDebug()<<"fallo resgistro e_historia_clinica";
+
+
+    }
 
     query.prepare("INSERT INTO r_historial_documento(historia_clinica_pk,tipo,fecha_creacion,comentario) VALUES(?,?,?,?)");
-    query.bindValue(0,HISTORIA_CLINICA);
+    query.bindValue(0,HISTORIA_CLINICA_PK);
     query.bindValue(1,"consulta");
     query.bindValue(2,ui->dateEdit_creation->text());
     query.bindValue(3,"Ninguno");
@@ -72,13 +93,16 @@ void newconsulta_paciente_ui::on_pushButton_Acept_clicked()
 
 
     query.prepare("INSERT INTO e_consulta(historia_clinica_pk,historial_documento_pk,fecha,motivo) VALUES(?,?,?,?)");
-    query.bindValue(0,HISTORIA_CLINICA);
+    query.bindValue(0,HISTORIA_CLINICA_PK);
     query.bindValue(1,R_HISTORIAL_DOCUMENTO);
     query.bindValue(2,ui->dateEdit->text());
     query.bindValue(3,ui->textEdit_Reason->toPlainText());
-    query.exec();
 
-    if(query.numRowsAffected()==1)
+    qDebug()<<"historia CLINICA PK "<<HISTORIA_CLINICA_PK<<endl;
+
+
+
+    if(query.exec())
     {
         QString info = "Se creo una nueva consulta con éxito.";
         msgBox->setIcon(QMessageBox::Information);
@@ -94,7 +118,7 @@ void newconsulta_paciente_ui::on_pushButton_Acept_clicked()
     }
     else
     {
-        QString str_warning = "Ingrese una alerta válida porfavor.";
+        QString str_warning = "Fallo al crear una consulta";
         msgBox->setIcon(QMessageBox::Warning);
         msgBox->setWindowTitle("Advertencia");
         msgBox->setWindowIcon(QIcon(":/new/sign-up.png"));
@@ -108,9 +132,6 @@ void newconsulta_paciente_ui::on_pushButton_Acept_clicked()
         return;
     }
 
-    qDebug()<<"DNI_NEW_CONSULTA : "<<DNI<<endl;
-    qDebug()<<"DNI_NEW_CONSULTA : "<<ui->dateEdit->text()<<endl;
-    qDebug()<<"DNI_NEW_CONSULTA : "<<ui->textEdit_Reason->toPlainText()<<endl;
 
     this->close();
 
@@ -170,13 +191,13 @@ void newconsulta_paciente_ui::on_pushButton_Cancel_clicked()
 
 void newconsulta_paciente_ui::show_name()
 {
-    QString DNI,NOMBRE;
+    QString id,NOMBRE;
 
-    DNI = dni_var;
+    id = id_var;
 
     QSqlQuery query;
 
-    query.prepare("SELECT apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM e_dni WHERE dni_pk="+DNI);
+    query.prepare("SELECT apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM Paciente WHERE idPaciente="+id);
     query.exec();
     query.next();
 

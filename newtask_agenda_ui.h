@@ -31,11 +31,17 @@ public:
     QString dni_task;
     QString code_task;
     QString HISTORIA_CLINICA;
+    QString ID_PACIENTE;
+    QString TELEFONO;
+    QString CELULAR;
+    QString NOMBRE;
     void setModoUso(int m_uso);
     int getModoUso(int m_uso);
     void setParentWindow(MainWindow* parent);
     void setcodeWindow(int code);
     bool changeParentWindow(int code);
+    void insertarConsulta(QString id_var,QString fecha,QString motivo,QString id_task);
+    void actualizarCelular(QString id_var, QString celular);
 
 
 
@@ -46,6 +52,8 @@ private slots:
     void on_lineEdit_Name_textEdited(const QString &arg1);
     void on_tableView_clicked(const QModelIndex &index);
     void on_lineEdit_Telefono_editingFinished();
+
+    void on_lineEdit_Name_textChanged(const QString &arg1);
 
 private:
     Ui::newTask_agenda_ui *ui;

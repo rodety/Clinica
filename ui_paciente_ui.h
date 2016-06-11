@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'paciente_ui.ui'
 **
-** Created: Mon 1. Jun 16:24:59 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:48:01 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -24,7 +24,6 @@
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QTableView>
-#include <QtGui/QTableWidget>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -38,21 +37,14 @@ public:
     QLineEdit *lineEdit_fichaCurrentPatient;
     QLabel *label_8;
     QLineEdit *lineEdit_CurrentPatient;
-    QSpacerItem *horizontalSpacer_5;
     QComboBox *comboBox;
     QLabel *label;
+    QLineEdit *lineEdit_buscar;
+    QLabel *label_2;
+    QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout;
     QGridLayout *gridLayout_3;
-    QSpacerItem *horizontalSpacer_3;
-    QGridLayout *gridLayout;
-    QComboBox *comboBox_search;
-    QLineEdit *lineEdit_PacienteSearch;
-    QSpacerItem *verticalSpacer;
     QFrame *line_2;
-    QGridLayout *gridLayout_2;
-    QLabel *label_4;
-    QSpacerItem *verticalSpacer_2;
-    QTableWidget *tableWidget_result;
     QFrame *line_4;
     QGridLayout *gridLayout_4;
     QPushButton *verDatos_paciente;
@@ -81,6 +73,9 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
         label_6->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setPointSize(12);
+        label_6->setFont(font);
 
         gridLayout_5->addWidget(label_6, 0, 0, 1, 1);
 
@@ -94,8 +89,6 @@ public:
         lineEdit_fichaCurrentPatient->setSizePolicy(sizePolicy1);
         lineEdit_fichaCurrentPatient->setMinimumSize(QSize(250, 0));
         lineEdit_fichaCurrentPatient->setMaximumSize(QSize(120, 16777215));
-        QFont font;
-        font.setPointSize(12);
         lineEdit_fichaCurrentPatient->setFont(font);
 
         gridLayout_5->addWidget(lineEdit_fichaCurrentPatient, 0, 1, 1, 1);
@@ -104,6 +97,7 @@ public:
         label_8->setObjectName(QString::fromUtf8("label_8"));
         sizePolicy.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
         label_8->setSizePolicy(sizePolicy);
+        label_8->setFont(font);
 
         gridLayout_5->addWidget(label_8, 0, 3, 1, 1);
 
@@ -118,24 +112,36 @@ public:
 
         gridLayout_5->addWidget(lineEdit_CurrentPatient, 0, 4, 1, 1);
 
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_5->addItem(horizontalSpacer_5, 0, 6, 1, 1);
-
         comboBox = new QComboBox(paciente_ui);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setEnabled(true);
         comboBox->setMinimumSize(QSize(100, 0));
-        QFont font1;
-        font1.setPointSize(11);
-        comboBox->setFont(font1);
+        comboBox->setFont(font);
 
         gridLayout_5->addWidget(comboBox, 0, 8, 1, 1);
 
         label = new QLabel(paciente_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout_5->addWidget(label, 0, 7, 1, 1);
+
+        lineEdit_buscar = new QLineEdit(paciente_ui);
+        lineEdit_buscar->setObjectName(QString::fromUtf8("lineEdit_buscar"));
+        lineEdit_buscar->setFont(font);
+        lineEdit_buscar->setInputMask(QString::fromUtf8(""));
+
+        gridLayout_5->addWidget(lineEdit_buscar, 0, 11, 1, 1);
+
+        label_2 = new QLabel(paciente_ui);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
+
+        gridLayout_5->addWidget(label_2, 0, 10, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(horizontalSpacer_5, 0, 9, 1, 1);
 
 
         gridLayout_6->addLayout(gridLayout_5, 3, 2, 1, 2);
@@ -147,36 +153,6 @@ public:
 
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        horizontalSpacer_3 = new QSpacerItem(351, 13, QSizePolicy::Minimum, QSizePolicy::Minimum);
-
-        gridLayout_3->addItem(horizontalSpacer_3, 0, 0, 1, 1);
-
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        comboBox_search = new QComboBox(paciente_ui);
-        comboBox_search->setObjectName(QString::fromUtf8("comboBox_search"));
-        sizePolicy1.setHeightForWidth(comboBox_search->sizePolicy().hasHeightForWidth());
-        comboBox_search->setSizePolicy(sizePolicy1);
-        comboBox_search->setMinimumSize(QSize(0, 0));
-
-        gridLayout->addWidget(comboBox_search, 0, 0, 1, 1);
-
-        lineEdit_PacienteSearch = new QLineEdit(paciente_ui);
-        lineEdit_PacienteSearch->setObjectName(QString::fromUtf8("lineEdit_PacienteSearch"));
-        sizePolicy1.setHeightForWidth(lineEdit_PacienteSearch->sizePolicy().hasHeightForWidth());
-        lineEdit_PacienteSearch->setSizePolicy(sizePolicy1);
-        lineEdit_PacienteSearch->setMinimumSize(QSize(200, 0));
-        lineEdit_PacienteSearch->setMaximumSize(QSize(200, 16777215));
-
-        gridLayout->addWidget(lineEdit_PacienteSearch, 0, 1, 1, 1);
-
-        verticalSpacer = new QSpacerItem(20, 13, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout->addItem(verticalSpacer, 1, 1, 1, 1);
-
-
-        gridLayout_3->addLayout(gridLayout, 1, 0, 1, 1);
-
         line_2 = new QFrame(paciente_ui);
         line_2->setObjectName(QString::fromUtf8("line_2"));
         QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
@@ -184,50 +160,18 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(line_2->sizePolicy().hasHeightForWidth());
         line_2->setSizePolicy(sizePolicy2);
+        line_2->setFont(font);
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
 
-        gridLayout_3->addWidget(line_2, 2, 0, 1, 1);
-
-        gridLayout_2 = new QGridLayout();
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        label_4 = new QLabel(paciente_ui);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        sizePolicy1.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
-        label_4->setSizePolicy(sizePolicy1);
-
-        gridLayout_2->addWidget(label_4, 0, 0, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(20, 13, QSizePolicy::Minimum, QSizePolicy::Fixed);
-
-        gridLayout_2->addItem(verticalSpacer_2, 1, 0, 1, 1);
-
-        tableWidget_result = new QTableWidget(paciente_ui);
-        if (tableWidget_result->columnCount() < 2)
-            tableWidget_result->setColumnCount(2);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        tableWidget_result->setHorizontalHeaderItem(0, __qtablewidgetitem);
-        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        tableWidget_result->setHorizontalHeaderItem(1, __qtablewidgetitem1);
-        tableWidget_result->setObjectName(QString::fromUtf8("tableWidget_result"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(tableWidget_result->sizePolicy().hasHeightForWidth());
-        tableWidget_result->setSizePolicy(sizePolicy3);
-        tableWidget_result->setMaximumSize(QSize(351, 16777215));
-        tableWidget_result->setSortingEnabled(true);
-
-        gridLayout_2->addWidget(tableWidget_result, 3, 0, 1, 1);
-
-
-        gridLayout_3->addLayout(gridLayout_2, 3, 0, 1, 1);
+        gridLayout_3->addWidget(line_2, 0, 0, 1, 1);
 
 
         gridLayout_6->addLayout(gridLayout_3, 0, 0, 5, 1);
 
         line_4 = new QFrame(paciente_ui);
         line_4->setObjectName(QString::fromUtf8("line_4"));
+        line_4->setFont(font);
         line_4->setFrameShape(QFrame::HLine);
         line_4->setFrameShadow(QFrame::Sunken);
 
@@ -239,6 +183,7 @@ public:
         verDatos_paciente->setObjectName(QString::fromUtf8("verDatos_paciente"));
         sizePolicy1.setHeightForWidth(verDatos_paciente->sizePolicy().hasHeightForWidth());
         verDatos_paciente->setSizePolicy(sizePolicy1);
+        verDatos_paciente->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/preferences-contact-list.png"), QSize(), QIcon::Normal, QIcon::Off);
         verDatos_paciente->setIcon(icon);
@@ -250,6 +195,7 @@ public:
         pushButton_editarDatos->setObjectName(QString::fromUtf8("pushButton_editarDatos"));
         sizePolicy1.setHeightForWidth(pushButton_editarDatos->sizePolicy().hasHeightForWidth());
         pushButton_editarDatos->setSizePolicy(sizePolicy1);
+        pushButton_editarDatos->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/sign-up.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_editarDatos->setIcon(icon1);
@@ -261,6 +207,7 @@ public:
         verConsultas_paciente->setObjectName(QString::fromUtf8("verConsultas_paciente"));
         sizePolicy1.setHeightForWidth(verConsultas_paciente->sizePolicy().hasHeightForWidth());
         verConsultas_paciente->setSizePolicy(sizePolicy1);
+        verConsultas_paciente->setFont(font);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/distributor-report.png"), QSize(), QIcon::Normal, QIcon::Off);
         verConsultas_paciente->setIcon(icon2);
@@ -272,6 +219,7 @@ public:
         eliminar_paciente->setObjectName(QString::fromUtf8("eliminar_paciente"));
         sizePolicy1.setHeightForWidth(eliminar_paciente->sizePolicy().hasHeightForWidth());
         eliminar_paciente->setSizePolicy(sizePolicy1);
+        eliminar_paciente->setFont(font);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/Remove-Male-User.png"), QSize(), QIcon::Normal, QIcon::Off);
         eliminar_paciente->setIcon(icon3);
@@ -287,6 +235,7 @@ public:
         newConsulta_paciente->setObjectName(QString::fromUtf8("newConsulta_paciente"));
         sizePolicy1.setHeightForWidth(newConsulta_paciente->sizePolicy().hasHeightForWidth());
         newConsulta_paciente->setSizePolicy(sizePolicy1);
+        newConsulta_paciente->setFont(font);
         newConsulta_paciente->setIcon(icon1);
         newConsulta_paciente->setIconSize(QSize(20, 20));
 
@@ -296,6 +245,7 @@ public:
         newPaciente_paciente->setObjectName(QString::fromUtf8("newPaciente_paciente"));
         sizePolicy1.setHeightForWidth(newPaciente_paciente->sizePolicy().hasHeightForWidth());
         newPaciente_paciente->setSizePolicy(sizePolicy1);
+        newPaciente_paciente->setFont(font);
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/new/Add-Male-User.png"), QSize(), QIcon::Normal, QIcon::Off);
         newPaciente_paciente->setIcon(icon4);
@@ -308,11 +258,12 @@ public:
 
         line_3 = new QFrame(paciente_ui);
         line_3->setObjectName(QString::fromUtf8("line_3"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Expanding);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(line_3->sizePolicy().hasHeightForWidth());
-        line_3->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(line_3->sizePolicy().hasHeightForWidth());
+        line_3->setSizePolicy(sizePolicy3);
+        line_3->setFont(font);
         line_3->setFrameShape(QFrame::VLine);
         line_3->setFrameShadow(QFrame::Sunken);
 
@@ -320,6 +271,11 @@ public:
 
         tableView_ListaPacientes1 = new QTableView(paciente_ui);
         tableView_ListaPacientes1->setObjectName(QString::fromUtf8("tableView_ListaPacientes1"));
+        QFont font1;
+        font1.setPointSize(12);
+        font1.setBold(true);
+        font1.setWeight(75);
+        tableView_ListaPacientes1->setFont(font1);
 
         gridLayout_6->addWidget(tableView_ListaPacientes1, 4, 3, 1, 1);
 
@@ -365,17 +321,8 @@ public:
          << QApplication::translate("paciente_ui", "Z", 0, QApplication::UnicodeUTF8)
         );
         label->setText(QApplication::translate("paciente_ui", "Orden Alfab\303\251tico:", 0, QApplication::UnicodeUTF8));
-        comboBox_search->clear();
-        comboBox_search->insertItems(0, QStringList()
-         << QApplication::translate("paciente_ui", "Nombre", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("paciente_ui", "Historia Cl\303\255nica", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("paciente_ui", "Dni", 0, QApplication::UnicodeUTF8)
-        );
-        label_4->setText(QApplication::translate("paciente_ui", "Resultados :", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem = tableWidget_result->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("paciente_ui", "Dni", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem1 = tableWidget_result->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("paciente_ui", "Nombre", 0, QApplication::UnicodeUTF8));
+        lineEdit_buscar->setText(QString());
+        label_2->setText(QApplication::translate("paciente_ui", "BUSCAR:", 0, QApplication::UnicodeUTF8));
         verDatos_paciente->setText(QApplication::translate("paciente_ui", "&Ver Datos", 0, QApplication::UnicodeUTF8));
         pushButton_editarDatos->setText(QApplication::translate("paciente_ui", "E&ditar Datos", 0, QApplication::UnicodeUTF8));
         verConsultas_paciente->setText(QApplication::translate("paciente_ui", " Ver &Consultas", 0, QApplication::UnicodeUTF8));

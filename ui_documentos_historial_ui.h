@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'documentos_historial_ui.ui'
 **
-** Created: Mon 1. Jun 15:20:54 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -494,19 +494,24 @@ public:
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
         label_12 = new QLabel(documentos_historial_ui);
         label_12->setObjectName(QString::fromUtf8("label_12"));
+        QFont font;
+        font.setPointSize(12);
+        label_12->setFont(font);
 
         gridLayout_5->addWidget(label_12, 0, 0, 1, 1);
 
         lineEdit_Patient = new QLineEdit(documentos_historial_ui);
         lineEdit_Patient->setObjectName(QString::fromUtf8("lineEdit_Patient"));
-        QFont font;
-        font.setKerning(true);
-        lineEdit_Patient->setFont(font);
+        QFont font1;
+        font1.setPointSize(12);
+        font1.setKerning(true);
+        lineEdit_Patient->setFont(font1);
 
         gridLayout_5->addWidget(lineEdit_Patient, 0, 1, 1, 1);
 
         dateEdit_FechaCreacion = new QDateEdit(documentos_historial_ui);
         dateEdit_FechaCreacion->setObjectName(QString::fromUtf8("dateEdit_FechaCreacion"));
+        dateEdit_FechaCreacion->setFont(font);
         dateEdit_FechaCreacion->setCalendarPopup(true);
 
         gridLayout_5->addWidget(dateEdit_FechaCreacion, 0, 2, 1, 1);
@@ -518,6 +523,7 @@ public:
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
         label_127 = new QLabel(documentos_historial_ui);
         label_127->setObjectName(QString::fromUtf8("label_127"));
+        label_127->setFont(font);
 
         gridLayout_8->addWidget(label_127, 0, 0, 1, 1);
 
@@ -528,22 +534,26 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(lineEdit_dni_medico_consulta->sizePolicy().hasHeightForWidth());
         lineEdit_dni_medico_consulta->setSizePolicy(sizePolicy1);
+        lineEdit_dni_medico_consulta->setFont(font);
         lineEdit_dni_medico_consulta->setMaxLength(8);
 
         gridLayout_8->addWidget(lineEdit_dni_medico_consulta, 0, 3, 1, 1);
 
         pushButton_consultarMedico = new QPushButton(documentos_historial_ui);
         pushButton_consultarMedico->setObjectName(QString::fromUtf8("pushButton_consultarMedico"));
+        pushButton_consultarMedico->setFont(font);
 
         gridLayout_8->addWidget(pushButton_consultarMedico, 0, 4, 1, 1);
 
         lineEdit_medicoGlobal = new QLineEdit(documentos_historial_ui);
         lineEdit_medicoGlobal->setObjectName(QString::fromUtf8("lineEdit_medicoGlobal"));
+        lineEdit_medicoGlobal->setFont(font);
 
         gridLayout_8->addWidget(lineEdit_medicoGlobal, 0, 1, 1, 1);
 
         label_128 = new QLabel(documentos_historial_ui);
         label_128->setObjectName(QString::fromUtf8("label_128"));
+        label_128->setFont(font);
 
         gridLayout_8->addWidget(label_128, 0, 2, 1, 1);
 
@@ -552,6 +562,7 @@ public:
 
         Documentos = new QTabWidget(documentos_historial_ui);
         Documentos->setObjectName(QString::fromUtf8("Documentos"));
+        Documentos->setFont(font);
         tab_Antecedentes = new QWidget();
         tab_Antecedentes->setObjectName(QString::fromUtf8("tab_Antecedentes"));
         gridLayout_10 = new QGridLayout(tab_Antecedentes);
@@ -2158,11 +2169,13 @@ public:
         label_56->setObjectName(QString::fromUtf8("label_56"));
         sizePolicy5.setHeightForWidth(label_56->sizePolicy().hasHeightForWidth());
         label_56->setSizePolicy(sizePolicy5);
+        label_56->setFont(font);
 
         gridLayout_4->addWidget(label_56, 0, 0, 1, 1);
 
         label_64 = new QLabel(tab_TerapeuticaMedica);
         label_64->setObjectName(QString::fromUtf8("label_64"));
+        label_64->setFont(font);
 
         gridLayout_4->addWidget(label_64, 2, 3, 1, 1);
 
@@ -2180,11 +2193,13 @@ public:
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
         tableWidget_Terapeutica->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         tableWidget_Terapeutica->setObjectName(QString::fromUtf8("tableWidget_Terapeutica"));
+        tableWidget_Terapeutica->setFont(font);
 
         gridLayout_4->addWidget(tableWidget_Terapeutica, 3, 0, 1, 6);
 
         label_69 = new QLabel(tab_TerapeuticaMedica);
         label_69->setObjectName(QString::fromUtf8("label_69"));
+        label_69->setFont(font);
 
         gridLayout_4->addWidget(label_69, 4, 2, 1, 1);
 
@@ -2192,6 +2207,7 @@ public:
         lineEdit_medico_Terapeutica->setObjectName(QString::fromUtf8("lineEdit_medico_Terapeutica"));
         sizePolicy2.setHeightForWidth(lineEdit_medico_Terapeutica->sizePolicy().hasHeightForWidth());
         lineEdit_medico_Terapeutica->setSizePolicy(sizePolicy2);
+        lineEdit_medico_Terapeutica->setFont(font);
 
         gridLayout_4->addWidget(lineEdit_medico_Terapeutica, 0, 1, 1, 2);
 
@@ -2199,6 +2215,7 @@ public:
         lineEdit_servicio_Terapeutica->setObjectName(QString::fromUtf8("lineEdit_servicio_Terapeutica"));
         sizePolicy2.setHeightForWidth(lineEdit_servicio_Terapeutica->sizePolicy().hasHeightForWidth());
         lineEdit_servicio_Terapeutica->setSizePolicy(sizePolicy2);
+        lineEdit_servicio_Terapeutica->setFont(font);
 
         gridLayout_4->addWidget(lineEdit_servicio_Terapeutica, 0, 5, 1, 1);
 
@@ -2206,11 +2223,13 @@ public:
         lineEdit_bedNumber_Terapeutica->setObjectName(QString::fromUtf8("lineEdit_bedNumber_Terapeutica"));
         sizePolicy2.setHeightForWidth(lineEdit_bedNumber_Terapeutica->sizePolicy().hasHeightForWidth());
         lineEdit_bedNumber_Terapeutica->setSizePolicy(sizePolicy2);
+        lineEdit_bedNumber_Terapeutica->setFont(font);
 
         gridLayout_4->addWidget(lineEdit_bedNumber_Terapeutica, 1, 5, 1, 1);
 
         label_57 = new QLabel(tab_TerapeuticaMedica);
         label_57->setObjectName(QString::fromUtf8("label_57"));
+        label_57->setFont(font);
 
         gridLayout_4->addWidget(label_57, 1, 3, 1, 1);
 
@@ -2218,16 +2237,19 @@ public:
         label_59->setObjectName(QString::fromUtf8("label_59"));
         sizePolicy.setHeightForWidth(label_59->sizePolicy().hasHeightForWidth());
         label_59->setSizePolicy(sizePolicy);
+        label_59->setFont(font);
 
         gridLayout_4->addWidget(label_59, 0, 3, 1, 1);
 
         pushButton_addItem_terapeutica = new QPushButton(tab_TerapeuticaMedica);
         pushButton_addItem_terapeutica->setObjectName(QString::fromUtf8("pushButton_addItem_terapeutica"));
+        pushButton_addItem_terapeutica->setFont(font);
 
         gridLayout_4->addWidget(pushButton_addItem_terapeutica, 2, 5, 1, 1);
 
         pushButton_quitar_Item = new QPushButton(tab_TerapeuticaMedica);
         pushButton_quitar_Item->setObjectName(QString::fromUtf8("pushButton_quitar_Item"));
+        pushButton_quitar_Item->setFont(font);
 
         gridLayout_4->addWidget(pushButton_quitar_Item, 2, 4, 1, 1);
 
@@ -2242,16 +2264,19 @@ public:
 
         pushButton_AceptTerapeuticaMedica = new QPushButton(tab_TerapeuticaMedica);
         pushButton_AceptTerapeuticaMedica->setObjectName(QString::fromUtf8("pushButton_AceptTerapeuticaMedica"));
+        pushButton_AceptTerapeuticaMedica->setFont(font);
 
         horizontalLayout_4->addWidget(pushButton_AceptTerapeuticaMedica);
 
         pushButton_SaveTerapeuticaMedica = new QPushButton(tab_TerapeuticaMedica);
         pushButton_SaveTerapeuticaMedica->setObjectName(QString::fromUtf8("pushButton_SaveTerapeuticaMedica"));
+        pushButton_SaveTerapeuticaMedica->setFont(font);
 
         horizontalLayout_4->addWidget(pushButton_SaveTerapeuticaMedica);
 
         pushButton_CancelTerapeuticaMedica = new QPushButton(tab_TerapeuticaMedica);
         pushButton_CancelTerapeuticaMedica->setObjectName(QString::fromUtf8("pushButton_CancelTerapeuticaMedica"));
+        pushButton_CancelTerapeuticaMedica->setFont(font);
 
         horizontalLayout_4->addWidget(pushButton_CancelTerapeuticaMedica);
 
@@ -2970,7 +2995,7 @@ public:
 
         retranslateUi(documentos_historial_ui);
 
-        Documentos->setCurrentIndex(0);
+        Documentos->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(documentos_historial_ui);

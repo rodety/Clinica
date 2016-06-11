@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'caja_ui.ui'
 **
-** Created: Thu 14. May 11:49:02 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:29 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -101,7 +101,7 @@ public:
     QLabel *label_29;
     QWidget *tab_5;
     QLabel *label_30;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QGridLayout *gridLayout_9;
     QLabel *label_23;
     QLabel *label_24;
@@ -117,6 +117,9 @@ public:
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         tabWidget = new QTabWidget(caja_ui);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        QFont font;
+        font.setPointSize(12);
+        tabWidget->setFont(font);
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         gridLayout_5 = new QGridLayout(tab);
@@ -125,48 +128,57 @@ public:
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout_4->addWidget(label_3, 0, 0, 1, 1);
 
         label_4 = new QLabel(tab);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         gridLayout_4->addWidget(label_4, 0, 1, 1, 1);
 
         label = new QLabel(tab);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout_4->addWidget(label, 0, 2, 1, 1);
 
         label_2 = new QLabel(tab);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         gridLayout_4->addWidget(label_2, 0, 3, 1, 1);
 
         comboBox_5 = new QComboBox(tab);
         comboBox_5->setObjectName(QString::fromUtf8("comboBox_5"));
+        comboBox_5->setFont(font);
 
         gridLayout_4->addWidget(comboBox_5, 1, 0, 1, 1);
 
         comboBox_6 = new QComboBox(tab);
         comboBox_6->setObjectName(QString::fromUtf8("comboBox_6"));
+        comboBox_6->setFont(font);
 
         gridLayout_4->addWidget(comboBox_6, 1, 1, 1, 1);
 
         dateEdit = new QDateEdit(tab);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
+        dateEdit->setFont(font);
         dateEdit->setCalendarPopup(true);
 
         gridLayout_4->addWidget(dateEdit, 1, 2, 1, 1);
 
         dateEdit_5 = new QDateEdit(tab);
         dateEdit_5->setObjectName(QString::fromUtf8("dateEdit_5"));
+        dateEdit_5->setFont(font);
         dateEdit_5->setCalendarPopup(true);
 
         gridLayout_4->addWidget(dateEdit_5, 1, 3, 1, 1);
 
         newAlert_alerta_2 = new QPushButton(tab);
         newAlert_alerta_2->setObjectName(QString::fromUtf8("newAlert_alerta_2"));
+        newAlert_alerta_2->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/add1-.png"), QSize(), QIcon::Normal, QIcon::Off);
         newAlert_alerta_2->setIcon(icon);
@@ -181,6 +193,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(eliminar_alerta->sizePolicy().hasHeightForWidth());
         eliminar_alerta->setSizePolicy(sizePolicy);
+        eliminar_alerta->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         eliminar_alerta->setIcon(icon1);
@@ -203,6 +216,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setFont(font);
 
         gridLayout_5->addWidget(tableWidget, 1, 0, 1, 1);
 
@@ -210,31 +224,37 @@ public:
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_9 = new QLabel(tab);
         label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setFont(font);
 
         horizontalLayout_3->addWidget(label_9);
 
         lineEdit_6 = new QLineEdit(tab);
         lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+        lineEdit_6->setFont(font);
 
         horizontalLayout_3->addWidget(lineEdit_6);
 
         label_10 = new QLabel(tab);
         label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setFont(font);
 
         horizontalLayout_3->addWidget(label_10);
 
         lineEdit_7 = new QLineEdit(tab);
         lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
+        lineEdit_7->setFont(font);
 
         horizontalLayout_3->addWidget(lineEdit_7);
 
         label_11 = new QLabel(tab);
         label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setFont(font);
 
         horizontalLayout_3->addWidget(label_11);
 
         lineEdit_8 = new QLineEdit(tab);
         lineEdit_8->setObjectName(QString::fromUtf8("lineEdit_8"));
+        lineEdit_8->setFont(font);
 
         horizontalLayout_3->addWidget(lineEdit_8);
 
@@ -476,29 +496,29 @@ public:
         label_30->setObjectName(QString::fromUtf8("label_30"));
         label_30->setGeometry(QRect(120, 70, 661, 371));
         label_30->setPixmap(QPixmap(QString::fromUtf8(":/new/Reporte.PNG")));
-        widget = new QWidget(tab_5);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(60, 20, 174, 41));
-        gridLayout_9 = new QGridLayout(widget);
+        layoutWidget1 = new QWidget(tab_5);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(60, 20, 174, 41));
+        gridLayout_9 = new QGridLayout(layoutWidget1);
         gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
         gridLayout_9->setContentsMargins(0, 0, 0, 0);
-        label_23 = new QLabel(widget);
+        label_23 = new QLabel(layoutWidget1);
         label_23->setObjectName(QString::fromUtf8("label_23"));
 
         gridLayout_9->addWidget(label_23, 0, 0, 1, 1);
 
-        label_24 = new QLabel(widget);
+        label_24 = new QLabel(layoutWidget1);
         label_24->setObjectName(QString::fromUtf8("label_24"));
 
         gridLayout_9->addWidget(label_24, 0, 1, 1, 1);
 
-        dateEdit_4 = new QDateEdit(widget);
+        dateEdit_4 = new QDateEdit(layoutWidget1);
         dateEdit_4->setObjectName(QString::fromUtf8("dateEdit_4"));
         dateEdit_4->setCalendarPopup(true);
 
         gridLayout_9->addWidget(dateEdit_4, 1, 0, 1, 1);
 
-        dateEdit_10 = new QDateEdit(widget);
+        dateEdit_10 = new QDateEdit(layoutWidget1);
         dateEdit_10->setObjectName(QString::fromUtf8("dateEdit_10"));
         dateEdit_10->setCalendarPopup(true);
 

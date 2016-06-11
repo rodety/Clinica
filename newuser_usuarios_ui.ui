@@ -22,26 +22,53 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
       <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Nombre :</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1" colspan="3">
-      <widget class="QLineEdit" name="lineEdit_Name"/>
+      <widget class="QLineEdit" name="lineEdit_Name">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Dni :</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_dni"/>
+      <widget class="QLineEdit" name="lineEdit_dni">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="1" column="2">
       <widget class="QPushButton" name="pushButton_consultar">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Buscar</string>
        </property>
@@ -62,6 +89,11 @@
      </item>
      <item row="1" column="3">
       <spacer name="horizontalSpacer_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -78,16 +110,32 @@
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Usuario :</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_UserNick"/>
+      <widget class="QLineEdit" name="lineEdit_UserNick">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Clave :</string>
        </property>
@@ -95,6 +143,11 @@
      </item>
      <item row="3" column="1" colspan="2">
       <widget class="QLineEdit" name="lineEdit_Password">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
        </property>
@@ -102,6 +155,11 @@
      </item>
      <item row="4" column="0">
       <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Confirmar clave :</string>
        </property>
@@ -109,6 +167,11 @@
      </item>
      <item row="4" column="1" colspan="2">
       <widget class="QLineEdit" name="lineEdit_confirmPassword">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
        </property>
@@ -120,6 +183,11 @@
     <layout class="QGridLayout" name="gridLayout_3">
      <item row="0" column="0">
       <spacer name="horizontalSpacer">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -133,6 +201,11 @@
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="pushButton_Acept">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Aceptar</string>
        </property>
@@ -140,6 +213,11 @@
      </item>
      <item row="0" column="3">
       <widget class="QPushButton" name="pushButton_Cancel">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Cancelar</string>
        </property>
@@ -147,6 +225,11 @@
      </item>
      <item row="0" column="4">
       <spacer name="horizontalSpacer_4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -160,6 +243,11 @@
      </item>
      <item row="0" column="2">
       <widget class="QPushButton" name="pushButton_Save">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Guardar</string>
        </property>

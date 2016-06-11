@@ -18,12 +18,12 @@ historiaClinica_ui::historiaClinica_ui(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->tableWidget_DocumentList->setEditTriggers(QAbstractItemView::NoEditTriggers);
-    ui->tableWidget_DocumentList->setColumnWidth(0,120);
-    ui->tableWidget_DocumentList->setColumnWidth(1,300);
-    ui->tableWidget_DocumentList->setColumnWidth(2,200);
-    //ui->tableWidget_DocumentList->setColumnWidth(3,200);
-    ui->tableWidget_result->setColumnWidth(1,250);
+
+    ui->tableView_DocumentList->setColumnWidth(0,120);
+    ui->tableView_DocumentList->setColumnWidth(1,300);
+    ui->tableView_DocumentList->setColumnWidth(2,200);
+
+
     ui->pushButton_editarDocuento->setHidden(true);
     ptr_pos[0]=&historiaClinica_ui::posAntecedentes;
     ptr_pos[1]=&historiaClinica_ui::posReporteOp;
@@ -58,7 +58,7 @@ void historiaClinica_ui::on_verDatos_paciente_clicked()
     if(ui->lineEdit_PatientActual->text().size() >0)
     {
         newPaciente_paciente_ui *PACIENTE_DATOS_FORM = new newPaciente_paciente_ui;
-        PACIENTE_DATOS_FORM->show_data_paciente_form(currentDni);
+        PACIENTE_DATOS_FORM->show_data_paciente_form(currentID);
         PACIENTE_DATOS_FORM->hideButtonShow();
         PACIENTE_DATOS_FORM->show();
     }
@@ -76,12 +76,12 @@ void historiaClinica_ui::on_verDocumento_historial_clicked()
     if(ui->lineEdit_documentoCodeCurrent->text()!="")
     {
         documentos_historial_ui *VER_FILE_FORM = new documentos_historial_ui;
-        VER_FILE_FORM->dni_var = ui->lineEdit_currentDni->text();
+        VER_FILE_FORM->id_var = currentID;
         QString TIPO_DOC, CODIGO_DOC;
-        int FILA = ui->tableWidget_DocumentList->currentRow();
-        TIPO_DOC = ui->tableWidget_DocumentList->currentIndex().sibling(FILA, 1).data().toString();
+        int FILA = ui->tableView_DocumentList->currentIndex().row();
+        TIPO_DOC = ui->tableView_DocumentList->currentIndex().sibling(FILA, 1).data().toString();
         CODIGO_DOC = ui->lineEdit_documentoCodeCurrent->text();
-        VER_FILE_FORM->dni_var = ui->lineEdit_currentDni->text();
+        VER_FILE_FORM->id_var = ui->lineEdit_currentDni->text();
         VER_FILE_FORM->code_document_var = ui->lineEdit_documentoCodeCurrent->text();
         VER_FILE_FORM->show_name(ui->lineEdit_PatientActual->text());
         VER_FILE_FORM->currentParent = this;
@@ -118,7 +118,8 @@ void historiaClinica_ui::on_nuevoDocumento_historial_clicked()
             DOCUMENT_FORM = new documentos_historial_ui;
         }
 
-        DOCUMENT_FORM->dni_var = currentDni;
+        DOCUMENT_FORM->id_var = currentID;
+        DOCUMENT_FORM->dni_var = currentDNI;
         DOCUMENT_FORM->show_name(ui->lineEdit_PatientActual->text());
         DOCUMENT_FORM->currentParent = this;
         DOCUMENT_FORM->setSorting(true);
@@ -136,238 +137,14 @@ void historiaClinica_ui::on_nuevoDocumento_historial_clicked()
 
 void historiaClinica_ui::updateTableDocuments(QString clinic_code_var)
 {
-    //- - - - - - clear document_list_table------
-    for (int i=ui->tableWidget_DocumentList->rowCount()-1; i >= 0; --i)
-        ui->tableWidget_DocumentList->removeRow(i);
-
-    ui->tableWidget_DocumentList->setSortingEnabled(0);
-
-    int FILA,COUNT;
-    QString NOMBRE,DNI,CODIGO_DOCUMENTO,HISTORIA_CLINICA,FECHA_CREACION,TIPO_DOCUMENTO,COMENTARIO;
-    QSqlQuery query_paciente,query_historia_clinica,query;
-
-    HISTORIA_CLINICA = clinic_code_var;
-    qDebug()<<"Curren code history clinic : "<<HISTORIA_CLINICA<<endl;
-
-    query.prepare("SELECT fecha_creacion,tipo,historial_documento_pk FROM r_historial_documento WHERE historia_clinica_pk="+HISTORIA_CLINICA+" AND "+"tipo<>\"consulta\"");
-    query.exec();
-    COUNT=0;
-    while(query.next())
-    {
-        FECHA_CREACION = query.value(0).toString();
-        TIPO_DOCUMENTO = query.value(1).toString();
-        CODIGO_DOCUMENTO = query.value(2).toString();
-        ui->tableWidget_DocumentList->insertRow(COUNT);
-        ui->tableWidget_DocumentList->setItem(COUNT,0,new QTableWidgetItem(FECHA_CREACION));
-        ui->tableWidget_DocumentList->setItem(COUNT,1,new QTableWidgetItem(TIPO_DOCUMENTO));
-        ui->tableWidget_DocumentList->setItem(COUNT,2,new QTableWidgetItem(CODIGO_DOCUMENTO));
-        COUNT++;
-    }
-    ui->tableWidget_DocumentList->setSortingEnabled(1);
+    QSqlQueryModel *model = new QSqlQueryModel;    
+    QString query = "SELECT fecha_creacion as 'Fecha de Creacion',tipo as 'Tipo de Documento',historial_documento_pk as 'Id Documento' FROM r_historial_documento WHERE historia_clinica_pk="+clinic_code_var+" AND tipo<> 'consulta' ";
+    model->setQuery(query);
+    ui->tableView_DocumentList->setModel(model);
+    ui->tableView_DocumentList->show();
 }
 
-void historiaClinica_ui::on_pushButton_Search_clicked()
-{
-    //------------CLEAR TABLE---------------------------------
-        for (int i=ui->tableWidget_result->rowCount()-1; i >= 0; --i)
-            ui->tableWidget_result->removeRow(i);
-        ui->tableWidget_result->setSortingEnabled(0);
-        //--------------VAR---------------------------------------------
-        QSqlQuery query_paciente,query_dni,query_historial,query_tmp;
-        QString str_search,APELLIDO_PATERTNO,NOMBRE_RESULT,DNI_RESULT,HISTORIA_CLINICA;
-        int COUNT = 0;
 
-        //-------------GET VALUES TO SEARCH -----------------------------------------
-        str_search = ui->lineEdit_historialSearch->text();
-
-
-        //-----------------FIND FOR HISTORIA_CLINICA--------------------------------
-        if(ui->comboBox_search->currentIndex()==0&&str_search!="")
-        {
-
-        query_historial.prepare("SELECT dni_pk, concat(apellido_paterno, ' ',apellido_materno, ' ',primer_nombre, ' ',segundo_nombre) FROM e_dni WHERE dni_pk = (SELECT dni_pk FROM e_historia_clinica WHERE nick='"+str_search+"')");
-        query_historial.exec();
-
-
-
-        if(query_historial.next())
-        {
-
-            DNI_RESULT = query_historial.value(0).toString();
-
-            NOMBRE_RESULT = query_historial.value(1).toString();
-
-            ui->tableWidget_result->insertRow(COUNT);
-
-            ui->tableWidget_result->setItem(COUNT,0,new QTableWidgetItem(DNI_RESULT));
-
-            ui->tableWidget_result->setItem(COUNT,1,new QTableWidgetItem(NOMBRE_RESULT));
-            COUNT++;
-            ui->tableWidget_result->hideColumn(0);
-        }
-
-        }
-        //-------------------------FIND FOR DNI----------------------------------------
-        if(ui->comboBox_search->currentIndex()==2&&str_search!="")
-        {
-            bool b=false;
-            str_search.toInt(&b);
-
-            if(b)
-            {
-                int n=str_search.toInt();
-                if(n<=0)
-                {
-                    b=false;
-                }
-            }
-            if(b)
-            {
-        query_dni.prepare("SELECT dni_pk, concat(apellido_paterno, ' ',apellido_materno, ' ',primer_nombre, ' ',segundo_nombre) FROM e_dni WHERE dni_pk='"+str_search+"'");
-        query_dni.exec();
-
-            if(query_dni.next())
-            {
-                DNI_RESULT = query_dni.value(0).toString();
-                NOMBRE_RESULT = query_dni.value(1).toString();
-
-                ui->tableWidget_result->insertRow(COUNT);
-
-                ui->tableWidget_result->setItem(COUNT,0,new QTableWidgetItem(DNI_RESULT));
-                ui->tableWidget_result->setItem(COUNT,1,new QTableWidgetItem(NOMBRE_RESULT));
-
-                COUNT++;
-                ui->tableWidget_result->showColumn(0);
-            }
-            }
-        }
-        //----------------FIND FOR APELLIDO_PATERNO------------------------------------------------
-        if(ui->comboBox_search->currentIndex()==1&&str_search!="")
-        {
-        if(str_search=="")
-                return;
-        query_paciente.prepare("SELECT dni_pk, concat(apellido_paterno, ' ',apellido_materno, ' ',primer_nombre, ' ',segundo_nombre) FROM e_dni WHERE concat(apellido_paterno, ' ',apellido_materno, ' ',primer_nombre, ' ',segundo_nombre) LIKE \""+str_search+"%\""+" && dni_pk = ANY (SELECT dni_pk FROM e_persona WHERE tipo='Paciente')");
-        query_paciente.exec();
-
-                while(query_paciente.next())
-                {
-
-
-                    DNI_RESULT = query_paciente.value(0).toString();
-
-                    NOMBRE_RESULT = query_paciente.value(1).toString();
-
-                    ui->tableWidget_result->insertRow(COUNT);
-
-                    ui->tableWidget_result->setItem(COUNT,0,new QTableWidgetItem(DNI_RESULT));
-                    ui->tableWidget_result->setItem(COUNT,1,new QTableWidgetItem(NOMBRE_RESULT));
-                    COUNT++;
-                }
-                ui->tableWidget_result->hideColumn(0);
-
-        }
-        ui->tableWidget_result->setSortingEnabled(1);
-
-
-}
-
-void historiaClinica_ui::on_tableWidget_result_itemClicked(QTableWidgetItem *item)
-{
-
-
-    //- - - - - - clear document_list_table------
-    for (int i=ui->tableWidget_DocumentList->rowCount()-1; i >= 0; --i)
-        ui->tableWidget_DocumentList->removeRow(i);
-    ui->tableWidget_DocumentList->setSortingEnabled(0);
-
-    int FILA,COUNT;
-    QString NOMBRE,DNI,CODIGO_DOCUMENTO,HISTORIA_CLINICA,FECHA_CREACION,TIPO_DOCUMENTO,COMENTARIO, NICK;
-    QSqlQuery query_paciente,query_historia_clinica,query;
-
-    FILA  = item->row();
-
-    DNI = ui->tableWidget_result->item(FILA, 0)->text();
-    qDebug()<<"DNI: "<<DNI<<endl;
-    //SETEANDO EL DNI
-    currentDni = DNI;
-
-    bool b=false;
-    DNI.toInt(&b);
-    if(b)
-    {
-        int n = DNI.toInt();
-        if(n<=0)
-        {
-            b=false;
-        }
-    }
-    ui->lineEdit_currentDni->clear();
-    //DNI oculto
-
-    if(b)
-    {
-        ui->lineEdit_currentDni->setText(DNI);
-    }
-
-    NOMBRE = ui->tableWidget_result->item(FILA,1)->text();
-
-
-
-    COUNT = 0;
-
-
-    ui->lineEdit_PatientActual->clear();
-
-    ui->lineEdit_PatientActual->insert(NOMBRE);
-
-    query_historia_clinica.prepare("SELECT historia_clinica_pk, nick FROM e_historia_clinica WHERE dni_pk='"+DNI+"'");
-    query_historia_clinica.exec();
-    query_historia_clinica.next();
-
-    HISTORIA_CLINICA = query_historia_clinica.value(0).toString();
-    NICK = query_historia_clinica.value(1).toString();
-    ui->lineEdit_historiaClinicaCurrent->clear();
-    ui->lineEdit_historiaClinicaCurrent->insert(NICK);
-
-
-    //  - - - - - - - - - show documents - - -  - - - - - - - - - - - - -  -
-
-    query.prepare("SELECT fecha_creacion,tipo,historial_documento_pk FROM r_historial_documento WHERE historia_clinica_pk="+HISTORIA_CLINICA+" AND "+"tipo<>\"consulta\"");
-    query.exec();
-    while(query.next())
-    {
-        FECHA_CREACION = query.value(0).toString();
-        TIPO_DOCUMENTO = query.value(1).toString();
-        //COMENTARIO = query.value(2).toString();
-        CODIGO_DOCUMENTO = query.value(2).toString();
-
-        ui->tableWidget_DocumentList->insertRow(COUNT);
-
-        ui->tableWidget_DocumentList->setItem(COUNT,0,new QTableWidgetItem(FECHA_CREACION));
-        ui->tableWidget_DocumentList->setItem(COUNT,1,new QTableWidgetItem(TIPO_DOCUMENTO));
-        //ui->tableWidget_DocumentList->setItem(COUNT,2,new QTableWidgetItem(HISTORIA_CLINICA));
-        ui->tableWidget_DocumentList->setItem(COUNT,2,new QTableWidgetItem(CODIGO_DOCUMENTO));
-
-        COUNT++;
-    }
-
-    ui->tableWidget_DocumentList->setSortingEnabled(1);
-}
-
-void historiaClinica_ui::on_tableWidget_DocumentList_itemClicked(QTableWidgetItem *item)
-{
-    QString CODIGO_DOCUMENTO;
-    int FILA;
-
-
-    FILA = item->row();
-    CODIGO_DOCUMENTO = ui->tableWidget_DocumentList->item(FILA,2)->text();
-    str_pB_generatePDF = ui->tableWidget_DocumentList->item(FILA,1)->text();
-
-    ui->lineEdit_documentoCodeCurrent->clear();
-    ui->lineEdit_documentoCodeCurrent->insert(CODIGO_DOCUMENTO);
-
-}
 
 void historiaClinica_ui::on_pushButton_generatePDF_clicked()
 {  
@@ -417,19 +194,12 @@ void historiaClinica_ui::generateAntecedentes()
     bool TABACO, ALCOHOL;
     //Extrayendo datos del paciente para generar PDF-ANTECEDENTE
     QString COD_DOCUMENTO, DNI_PACIENTE;
-    QSqlQuery query, query_1, query_historia_clinica;
+    QSqlQuery query, query_1;
     int EDAD_INT;
     COD_DOCUMENTO = ui->lineEdit_documentoCodeCurrent->text();
     query.prepare("SELECT * FROM e_antecedentes WHERE historial_documento_pk ="+COD_DOCUMENTO);
     query.exec();
     query.next();
-
-    HISTORIA_CLINICA = query.value(0).toString();
-
-    query_historia_clinica.prepare("SELECT nick FROM e_historia_clinica WHERE historia_clinica_pk="+HISTORIA_CLINICA);
-    query_historia_clinica.exec();
-    query_historia_clinica.next();
-    HISTORIA_CLINICA = query_historia_clinica.value(0).toString();
 
     CODIGO_DOCUMENTO = query.value(1).toString();
     FECHA_CREACION = query.value(2).toDate();
@@ -446,23 +216,21 @@ void historiaClinica_ui::generateAntecedentes()
     SERVICIO = query.value(13).toString();
     MEDICO_TRATANTE = query.value(14).toString();
     OPERACIONES = query.value(15).toString();
-    DNI_PACIENTE = currentDni;
-    query_1.prepare("SELECT * FROM e_dni WHERE dni_pk = "+DNI_PACIENTE);
+    DNI_PACIENTE = currentDNI;
+    query_1.prepare("SELECT codigo,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre,sexo,fecha_nacimiento,estado_civil,alergias,ocupacion FROM Paciente WHERE idPaciente = "+currentID);
     query_1.exec();
     query_1.next();
-
+    HISTORIA_CLINICA = query_1.value(0).toString();
     LASTNAME = query_1.value(1).toString()+" "+query_1.value(2).toString();
     NAME = query_1.value(3).toString()+" "+query_1.value(4).toString();
     SEX = query_1.value(5).toString();
-    MARITALSTATUS = query_1.value(8).toString();
+    MARITALSTATUS = query_1.value(7).toString();
     FECHA_NACIMIENTO = query_1.value(6).toDate();
     EDAD_INT = getEdad(FECHA_NACIMIENTO, FECHA_CREACION);
     EDAD.setNum(EDAD_INT);
-    query.prepare("SELECT * FROM e_paciente WHERE dni_pk ="+DNI_PACIENTE);
-    query.exec();
-    query.next();
-    OCUPACION = query.value(2).toString();
-    ALERGIA = query.value(1).toString();
+    ALERGIA = query_1.value(8).toString();
+    OCUPACION = query_1.value(9).toString();
+
     //Seteando string para enviar al pdf
     TERAPEUTICA_MEDICA_PDF->setlastname(LASTNAME.toStdString());
     TERAPEUTICA_MEDICA_PDF->setname(NAME.toStdString());
@@ -503,7 +271,7 @@ void historiaClinica_ui::generateReporteOp()
             , CIRUJANO;
     QDateTime INI_OP, FIN_OP, INI_ANES, FIN_ANES;
     QString INICIO_OPERACION, FIN_OPERACION, INICIO_ANESTECIA, FIN_ANESTECIA;
-    QSqlQuery query,query_historia_clinica;
+    QSqlQuery query;
     QString COD_DOCUMENTO;
     QString DNI_PACIENTE;
     QString AP_PATERNO, AP_MATERNO, NOMBRES, NICK_HISTORIA_CLINICA;
@@ -514,10 +282,8 @@ void historiaClinica_ui::generateReporteOp()
     query.next();
 
     HISTORIA_CLINICA_PK = query.value(1).toString();
-    query_historia_clinica.prepare("SELECT nick FROM e_historia_clinica WHERE historia_clinica_pk="+HISTORIA_CLINICA_PK);
-    query_historia_clinica.exec();
-    query_historia_clinica.next();
-    NICK_HISTORIA_CLINICA = query_historia_clinica.value(0).toString();
+
+
 
     HISTORIAL_DOCUMENTO_PK = query.value(2).toString();
     FECHA_CREACION = query.value(3).toString();
@@ -554,11 +320,10 @@ void historiaClinica_ui::generateReporteOp()
     MEDICO_TRATANTE = query.value(26).toString();
     CIRUJANO = query.value(27).toString();
 
-    DNI_PACIENTE = currentDni;
-    query.prepare("SELECT * FROM e_dni WHERE dni_pk = "+DNI_PACIENTE);
+    query.prepare("SELECT codigo,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM Paciente WHERE idPaciente = "+currentID);
     query.exec();
     query.next();
-
+    NICK_HISTORIA_CLINICA = query.value(0).toString();
     AP_PATERNO = query.value(1).toString();
     AP_MATERNO = query.value(2).toString();
     NOMBRES = query.value(3).toString()+" "+query.value(4).toString();
@@ -618,7 +383,7 @@ void historiaClinica_ui::generateExamenClinico()
 
 
     QString COD_DOCUMENTO;
-    QSqlQuery query,query_historia_clinica;
+    QSqlQuery query;
     QString DNI_PACIENTE, LASTNAME, NAME;
 
     COD_DOCUMENTO = ui->lineEdit_documentoCodeCurrent->text();
@@ -631,10 +396,8 @@ void historiaClinica_ui::generateExamenClinico()
     HISTORIA_CLINICA_PK = query.value(1).toString();
 
 
-    query_historia_clinica.prepare("SELECT nick FROM e_historia_clinica WHERE historia_clinica_pk="+HISTORIA_CLINICA_PK);
-    query_historia_clinica.exec();
-    query_historia_clinica.next();
-    NICK_HISTORIA = query_historia_clinica.value(0).toString();
+
+
 
     FECHA_CREACION = query.value(2).toString();
     TALLA = query.value(3).toString();
@@ -712,11 +475,11 @@ void historiaClinica_ui::generateExamenClinico()
     BIOTIPO = query.value(75).toString();
 
 
-    DNI_PACIENTE = currentDni;
-    query.prepare("SELECT * FROM e_dni WHERE dni_pk = "+DNI_PACIENTE);
+
+    query.prepare("SELECT codigo,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM Paciente WHERE idPaciente = "+currentID);
     query.exec();
     query.next();
-
+    NICK_HISTORIA = query.value(0).toString();
     LASTNAME = query.value(1).toString()+" "+query.value(2).toString();
     NAME = query.value(3).toString()+" "+query.value(4).toString();
 
@@ -811,25 +574,22 @@ void historiaClinica_ui::generateTerapeuticaMEdica()
     vector<QString> dateStart,hourStart,terapeuticaVEC,dateEnd,hourEnd;
     //Extrayendo datos del paciente para generar PDF-ANTECEDENTE
     QString COD_DOCUMENTO, DNI_PACIENTE,NICK_HISTORIA;
-    QSqlQuery query, query_1, query_historia_clinica;
+    QSqlQuery query, query_1;
     COD_DOCUMENTO = ui->lineEdit_documentoCodeCurrent->text();
     query.prepare("SELECT * FROM e_terapeutica_medica WHERE historial_documento_pk ="+COD_DOCUMENTO);
     query.exec();
     query.next();
     HISTORIA_CLINICA = query.value(1).toString();
-    query_historia_clinica.prepare("SELECT nick FROM e_historia_clinica WHERE historia_clinica_pk="+HISTORIA_CLINICA);
-    query_historia_clinica.exec();
-    query_historia_clinica.next();
-    NICK_HISTORIA = query_historia_clinica.value(0).toString();
+
+
     CAMA = query.value(3).toString();
     SERVICIO = query.value(4).toString();
     MEDICO_TRATANTE = query.value(5).toString();
 
-    DNI_PACIENTE = currentDni;
-
-    query_1.prepare("SELECT * FROM e_dni WHERE dni_pk = "+DNI_PACIENTE);
+    query_1.prepare("SELECT codigo,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM Paciente WHERE idPaciente = "+currentID);
     query_1.exec();
     query_1.next();
+    NICK_HISTORIA = query_1.value(0).toString();
     LASTNAME = query_1.value(1).toString()+" "+query_1.value(2).toString();
     NAME = query_1.value(3).toString()+" "+query_1.value(4).toString();
     //Seteando string para enviar al pdf
@@ -866,29 +626,29 @@ void historiaClinica_ui::generateEpicrisis()
 {
 
     epicrisis_documento* EPICRISIS_PDF = new epicrisis_documento;
-    QSqlQuery query, query_1,query_historia_clinica;
+    QSqlQuery query, query_1;
     QString MEDIC,SERVICE,BED,DATE_IN,DATE_OUT,DAY_HOSPITALIZED,
             SUMMARY_CLINIC,SUMMARY_TEST_CLINIC,TEST_AUX,DIAGNOSIS_IN,
             TREATMENT,EVOLUTION,DIAGNOSIS_END,DIRECTIONS,DNI_PACIENTE,
             LASTNAME,NAME,HISTORIA_CLINICA,NICK_HISTORIA;
 
-    DNI_PACIENTE = currentDni;
+    DNI_PACIENTE = currentID;
 
     QString cod_doc = ui->lineEdit_documentoCodeCurrent->text();
     query.prepare("SELECT * FROM e_epicrisis WHERE historial_documento_pk="+cod_doc);
     query.exec();
     query.next();
     HISTORIA_CLINICA = query.value(1).toString();
-    query_1.prepare("SELECT * FROM e_dni WHERE dni_pk = "+DNI_PACIENTE);
+    query_1.prepare("SELECT codigo,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM Paciente WHERE idPaciente = "+currentID);
+
     query_1.exec();
     query_1.next();
+    NICK_HISTORIA = query_1.value(0).toString();
     LASTNAME = query_1.value(1).toString()+" "+query_1.value(2).toString();
     NAME = query_1.value(3).toString()+" "+query_1.value(4).toString();
 
-    query_historia_clinica.prepare("SELECT nick FROM e_historia_clinica WHERE historia_clinica_pk="+HISTORIA_CLINICA);
-    query_historia_clinica.exec();
-    query_historia_clinica.next();
-    NICK_HISTORIA = query_historia_clinica.value(0).toString();
+
+
     MEDIC = query.value(2).toString();
     SERVICE = query.value(3).toString();
     BED = query.value(4).toString();
@@ -928,37 +688,31 @@ void historiaClinica_ui::generateEpicrisis()
 void historiaClinica_ui::generateRiesgo_Quirurgico()
 {
     riesgo_quirurgico_documento* RIESGO_PDF = new riesgo_quirurgico_documento;
-       QSqlQuery query, query_1,query_historia_clinica;
+       QSqlQuery query, query_1;
        QString medic,lastname,name,service,clinicHistory,bed,procedencia,sexo,age,HTA,ASMA,
                 TBC,DM,motivo_RQCV,PA,FC,corazon,pulmones,pulso_periferico,sistema_venoso,
                 EKG,FC1,P,PR,QRC,QT,ST,onda_T,AQRS,ID,RQCV,sugerencias,date,DNI_PACIENTE,HISTORIA_CLINICA,
                 NICK_HISTORIA;
        QDate DATE_BIRTH;
 
-        DNI_PACIENTE = currentDni;
+
 
         QString cod_doc = ui->lineEdit_documentoCodeCurrent->text();
         query.prepare("SELECT * FROM e_riesgo_quirurgico WHERE historial_documento_pk="+cod_doc);
         query.exec();
         query.next();
-        HISTORIA_CLINICA = query.value(1).toString();
-        query_1.prepare("SELECT * FROM e_dni WHERE dni_pk = "+DNI_PACIENTE);
+
+
+
+        query_1.prepare("SELECT codigo,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre,sexo,fecha_nacimiento FROM Paciente WHERE idPaciente = "+currentID);
         query_1.exec();
         query_1.next();
+        HISTORIA_CLINICA = query_1.value(0).toString();
         lastname = query_1.value(1).toString()+" "+query_1.value(2).toString();
-        name = query_1.value(3).toString()+" "+query_1.value(4).toString();
+        name = lastname+ ", "+query_1.value(3).toString()+" "+query_1.value(4).toString();
         sexo = query_1.value(5).toString();
         DATE_BIRTH = query_1.value(6).toDate();
-        qDebug()<<DATE_BIRTH<<" "<<QDate::currentDate()<<endl;
         int edad =  QDate::currentDate().year()- DATE_BIRTH.year();
-
-
-        qDebug()<<edad<<"  EDAD DEL PACIENTE"<<endl;
-
-        query_historia_clinica.prepare("SELECT nick FROM e_historia_clinica WHERE historia_clinica_pk="+HISTORIA_CLINICA);
-        query_historia_clinica.exec();
-        query_historia_clinica.next();
-        NICK_HISTORIA = query_historia_clinica.value(0).toString();
 
         medic = query.value(2).toString();
         procedencia = query.value(3).toString();
@@ -1094,12 +848,10 @@ void historiaClinica_ui::on_pushButton_Fotos_clicked()
 {
         QSqlQuery query;
         QString historiaClinica;
-        query.exec("select historia_clinica_pk from e_historia_clinica where dni_pk ="+currentDni);
+        query.exec("select historia_clinica_pk from e_historia_clinica where Paciente_idPaciente ="+currentID);
         query.next();
         historiaClinica = query.value(0).toString();
-        qDebug()<<"DNI FOTOS: "<<currentDni<<endl;
         QString carpeta = query.value(0).toString();
-        qDebug()<<"Carpeta a entrar "<<historiaClinica<<endl ;
 
         if(carpeta!="")
     {
@@ -1107,7 +859,7 @@ void historiaClinica_ui::on_pushButton_Fotos_clicked()
         QDir::setCurrent(absPath);
         FOTOS_FORM->setPatch(absPath);
         entering_folder(historiaClinica);
-        FOTOS_FORM->setDni(currentDni);
+        FOTOS_FORM->setDni(currentDNI);
         FOTOS_FORM->setFolderFtp(historiaClinica);
         FOTOS_FORM->update_form();
         FOTOS_FORM->show_name(ui->lineEdit_PatientActual->text());
@@ -1189,19 +941,8 @@ void historiaClinica_ui::getCorrected()
 
 
 
-void historiaClinica_ui::on_tableWidget_DocumentList_clicked(const QModelIndex &index)
-{
-
-}
-
-void historiaClinica_ui::on_tableWidget_result_clicked(const QModelIndex &index)
-{
-
-}
-
 void historiaClinica_ui::on_lineEdit_historialSearch_returnPressed()
 {
-    this->on_pushButton_Search_clicked();
 }
 void historiaClinica_ui::setAbsPath(QString val)
 {
@@ -1212,3 +953,117 @@ void historiaClinica_ui::setParentPrincipal(MainWindow *parent)
 {
     parentWindow = parent;
 }
+
+void historiaClinica_ui::on_lineEdit_historialSearch_textChanged(const QString &arg1)
+{
+
+    QSqlQueryModel *model = new QSqlQueryModel;
+    QString query;
+
+
+    if(arg1.size() != 0)
+    {
+        QStringList splitted = arg1.split(" ");
+        query = "SELECT idPaciente as ID,dni,codigo as 'Nro Historia' ,concat(apellido_paterno, ' ',apellido_materno,' ' ,primer_nombre, ' ', segundo_nombre) as 'Apellidos y Nombres' FROM Paciente WHERE (";
+
+        switch ( splitted.size() ) {
+          case 1:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' OR ";
+            query+= "codigo REGEXP '"+splitted.at(0)+"'";
+            break;
+          case 2:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' AND ";
+            query+= "apellido_materno REGEXP '"+splitted.at(1)+"'";
+            break;
+          case 3:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' AND ";
+            query+= "apellido_materno REGEXP '"+splitted.at(1)+"' OR ";
+            query+= "primer_nombre REGEXP '"+splitted.at(2)+"'";
+            break;
+          case 4:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' AND ";
+            query+= "apellido_materno REGEXP '"+splitted.at(1)+"' OR ";
+            query+= "primer_nombre REGEXP '"+splitted.at(2)+"' AND ";
+            query+= "segundo_nombre REGEXP '"+splitted.at(3)+"'";
+            break;
+          default:            // Note the colon, not a semicolon
+            for(int i=0;i<splitted.size();i++)
+            {
+                if(i==0)
+                    query+= "apellido_paterno REGEXP '"+splitted.at(i)+"' OR ";
+                else
+                    query+= " OR apellido_paterno REGEXP '"+splitted.at(i)+"' OR ";
+                query+= "apellido_materno REGEXP '"+splitted.at(i)+"' OR ";
+                query+= "codigo REGEXP '"+splitted.at(i)+"'";
+            }
+
+            break;
+          }
+        query+= ") ORDER BY codigo DESC";
+
+
+    }
+
+
+    model->setQuery(query);
+    ui->tableView_ListaPacientes1->setModel(model);
+
+    ui->tableView_ListaPacientes1->setColumnWidth(0,0);
+    ui->tableView_ListaPacientes1->setColumnWidth(1,0);
+    ui->tableView_ListaPacientes1->setColumnWidth(2,100);
+    ui->tableView_ListaPacientes1->setColumnWidth(3,300);
+
+}
+
+
+void historiaClinica_ui::on_tableView_ListaPacientes1_clicked(const QModelIndex &index)
+{
+    QString NOMBRE,CODIGO_DOCUMENTO,HISTORIA_CLINICA,FECHA_CREACION,TIPO_DOCUMENTO,COMENTARIO, codigo, CONSULTA;
+    QSqlQuery query_historia_clinica;
+    QString query;
+    QSqlQueryModel *model = new QSqlQueryModel;
+    int COUNT = 0;
+
+    currentID = ui->tableView_ListaPacientes1->model()->index(index.row(),0).data().toString();
+    //SETEANDO EL DNI
+
+    currentDNI = ui->tableView_ListaPacientes1->model()->index(index.row(),1).data().toString();
+    ui->lineEdit_currentDni->setText(currentDNI);
+
+    NOMBRE = ui->tableView_ListaPacientes1->model()->index(index.row(),3).data().toString();
+    ui->lineEdit_PatientActual->clear();
+    ui->lineEdit_PatientActual->insert(NOMBRE);
+    query_historia_clinica.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente='"+currentID+"'");
+    query_historia_clinica.exec();
+    query_historia_clinica.next();
+
+    HISTORIA_CLINICA = query_historia_clinica.value(0).toString();
+    currentHISTORIA_PK = HISTORIA_CLINICA;
+    codigo = ui->tableView_ListaPacientes1->model()->index(index.row(),2).data().toString();
+    ui->lineEdit_historiaClinicaCurrent->clear();
+    ui->lineEdit_historiaClinicaCurrent->insert(codigo);
+
+
+    //  - - - - - - - - - show documents - - -  - - - - - - - - - - - - -  -
+
+    query = "SELECT fecha_creacion as 'Feha de Creacion',tipo as 'Tipo de Documento' ,historial_documento_pk as 'Codigo Documento' FROM r_historial_documento WHERE historia_clinica_pk = "+HISTORIA_CLINICA+" AND tipo<> 'consulta'";
+    model->setQuery(query);
+    ui->tableView_DocumentList->setModel(model);
+    ui->tableView_DocumentList->show();
+    ui->tableView_DocumentList->setColumnWidth(0,150);
+    ui->tableView_DocumentList->setColumnWidth(1,300);
+    ui->tableView_DocumentList->setColumnWidth(2,120);
+
+
+
+}
+void historiaClinica_ui::on_tableView_DocumentList_clicked(const QModelIndex &index)
+{
+    QString CODIGO_DOCUMENTO;
+    int FILA;
+    FILA = index.row();
+    str_pB_generatePDF = ui->tableView_DocumentList->model()->index(index.row(),1).data().toString();
+    CODIGO_DOCUMENTO = ui->tableView_DocumentList->model()->index(index.row(),2).data().toString();
+    ui->lineEdit_documentoCodeCurrent->setText(CODIGO_DOCUMENTO);
+}
+

@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'configprogram.ui'
 **
-** Created: Thu 14. May 11:49:01 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:29 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -65,11 +65,15 @@ public:
 
         pushButton = new QPushButton(ConfigProgram);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        QFont font;
+        font.setPointSize(12);
+        pushButton->setFont(font);
 
         gridLayout->addWidget(pushButton, 1, 1, 1, 1);
 
         pushButton_2 = new QPushButton(ConfigProgram);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setFont(font);
 
         gridLayout->addWidget(pushButton_2, 1, 2, 1, 1);
 
@@ -82,57 +86,68 @@ public:
         formLayout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         label_6 = new QLabel(ConfigProgram);
         label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setFont(font);
 
         formLayout->setWidget(0, QFormLayout::SpanningRole, label_6);
 
         label = new QLabel(ConfigProgram);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label);
 
         lineEdit_hostName = new QLineEdit(ConfigProgram);
         lineEdit_hostName->setObjectName(QString::fromUtf8("lineEdit_hostName"));
+        lineEdit_hostName->setFont(font);
 
         formLayout->setWidget(1, QFormLayout::FieldRole, lineEdit_hostName);
 
         label_2 = new QLabel(ConfigProgram);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_2);
 
         lineEdit_databaseName = new QLineEdit(ConfigProgram);
         lineEdit_databaseName->setObjectName(QString::fromUtf8("lineEdit_databaseName"));
+        lineEdit_databaseName->setFont(font);
 
         formLayout->setWidget(2, QFormLayout::FieldRole, lineEdit_databaseName);
 
         label_3 = new QLabel(ConfigProgram);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         formLayout->setWidget(3, QFormLayout::LabelRole, label_3);
 
         lineEdit_userName = new QLineEdit(ConfigProgram);
         lineEdit_userName->setObjectName(QString::fromUtf8("lineEdit_userName"));
+        lineEdit_userName->setFont(font);
 
         formLayout->setWidget(3, QFormLayout::FieldRole, lineEdit_userName);
 
         label_4 = new QLabel(ConfigProgram);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         formLayout->setWidget(4, QFormLayout::LabelRole, label_4);
 
         lineEdit_password = new QLineEdit(ConfigProgram);
         lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));
+        lineEdit_password->setFont(font);
         lineEdit_password->setEchoMode(QLineEdit::Password);
 
         formLayout->setWidget(4, QFormLayout::FieldRole, lineEdit_password);
 
         label_10 = new QLabel(ConfigProgram);
         label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setFont(font);
 
         formLayout->setWidget(5, QFormLayout::LabelRole, label_10);
 
         lineEdit_port = new QLineEdit(ConfigProgram);
         lineEdit_port->setObjectName(QString::fromUtf8("lineEdit_port"));
+        lineEdit_port->setFont(font);
 
         formLayout->setWidget(5, QFormLayout::FieldRole, lineEdit_port);
 

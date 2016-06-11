@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'alertas_ui.ui'
 **
-** Created: Thu 14. May 11:49:01 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -62,6 +62,9 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         verAlerta = new QPushButton(alertas_ui);
         verAlerta->setObjectName(QString::fromUtf8("verAlerta"));
+        QFont font;
+        font.setPointSize(12);
+        verAlerta->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/old-edit-find.png"), QSize(), QIcon::Normal, QIcon::Off);
         verAlerta->setIcon(icon);
@@ -76,6 +79,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(editar_alerta->sizePolicy().hasHeightForWidth());
         editar_alerta->setSizePolicy(sizePolicy);
+        editar_alerta->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/edit.png"), QSize(), QIcon::Normal, QIcon::Off);
         editar_alerta->setIcon(icon1);
@@ -87,6 +91,7 @@ public:
         eliminar_alerta->setObjectName(QString::fromUtf8("eliminar_alerta"));
         sizePolicy.setHeightForWidth(eliminar_alerta->sizePolicy().hasHeightForWidth());
         eliminar_alerta->setSizePolicy(sizePolicy);
+        eliminar_alerta->setFont(font);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         eliminar_alerta->setIcon(icon2);
@@ -100,6 +105,7 @@ public:
 
         newAlert_alerta = new QPushButton(alertas_ui);
         newAlert_alerta->setObjectName(QString::fromUtf8("newAlert_alerta"));
+        newAlert_alerta->setFont(font);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/add1-.png"), QSize(), QIcon::Normal, QIcon::Off);
         newAlert_alerta->setIcon(icon3);
@@ -112,6 +118,7 @@ public:
 
         line = new QFrame(alertas_ui);
         line->setObjectName(QString::fromUtf8("line"));
+        line->setFont(font);
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
@@ -123,6 +130,7 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy);
+        label_2->setFont(font);
 
         gridLayout_2->addWidget(label_2, 0, 0, 1, 1);
 
@@ -131,6 +139,7 @@ public:
         dateEdit->setEnabled(true);
         sizePolicy.setHeightForWidth(dateEdit->sizePolicy().hasHeightForWidth());
         dateEdit->setSizePolicy(sizePolicy);
+        dateEdit->setFont(font);
         dateEdit->setLayoutDirection(Qt::LeftToRight);
         dateEdit->setWrapping(false);
         dateEdit->setCalendarPopup(true);
@@ -142,6 +151,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy);
+        label_3->setFont(font);
 
         gridLayout_2->addWidget(label_3, 0, 2, 1, 1);
 
@@ -149,6 +159,7 @@ public:
         lineEdit_code->setObjectName(QString::fromUtf8("lineEdit_code"));
         sizePolicy.setHeightForWidth(lineEdit_code->sizePolicy().hasHeightForWidth());
         lineEdit_code->setSizePolicy(sizePolicy);
+        lineEdit_code->setFont(font);
         lineEdit_code->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_code, 0, 3, 1, 1);
@@ -161,6 +172,7 @@ public:
         pushButton_showAll->setObjectName(QString::fromUtf8("pushButton_showAll"));
         sizePolicy.setHeightForWidth(pushButton_showAll->sizePolicy().hasHeightForWidth());
         pushButton_showAll->setSizePolicy(sizePolicy);
+        pushButton_showAll->setFont(font);
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/new/zoom.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_showAll->setIcon(icon4);
@@ -171,6 +183,7 @@ public:
 
         pushButton_Alert_changeColor = new QPushButton(alertas_ui);
         pushButton_Alert_changeColor->setObjectName(QString::fromUtf8("pushButton_Alert_changeColor"));
+        pushButton_Alert_changeColor->setFont(font);
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/new/color_swatch.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Alert_changeColor->setIcon(icon5);
@@ -194,9 +207,10 @@ public:
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         tableWidget_AlertList->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         tableWidget_AlertList->setObjectName(QString::fromUtf8("tableWidget_AlertList"));
-        QFont font;
-        font.setStrikeOut(false);
-        tableWidget_AlertList->setFont(font);
+        QFont font1;
+        font1.setPointSize(12);
+        font1.setStrikeOut(false);
+        tableWidget_AlertList->setFont(font1);
         tableWidget_AlertList->setEditTriggers(QAbstractItemView::DoubleClicked);
         tableWidget_AlertList->setDragDropOverwriteMode(false);
         tableWidget_AlertList->setAlternatingRowColors(true);

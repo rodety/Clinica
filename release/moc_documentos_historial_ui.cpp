@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'documentos_historial_ui.h'
 **
-** Created: Sat 14. Nov 20:57:46 2015
-**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
+** Created: Sat 11. Jun 15:33:32 2016
+**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -10,8 +10,8 @@
 #include "../documentos_historial_ui.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'documentos_historial_ui.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 62
-#error "This file was generated using the moc from 4.7.3. It"
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,7 +20,7 @@ QT_BEGIN_MOC_NAMESPACE
 static const uint qt_meta_data_documentos_historial_ui[] = {
 
  // content:
-       5,       // revision
+       6,       // revision
        0,       // classname
        0,    0, // classinfo
       18,   14, // methods
@@ -75,9 +75,42 @@ static const char qt_meta_stringdata_documentos_historial_ui[] = {
     "item\0on_tableWidget_Terapeutica_itemClicked(QTableWidgetItem*)\0"
 };
 
+void documentos_historial_ui::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        documentos_historial_ui *_t = static_cast<documentos_historial_ui *>(_o);
+        switch (_id) {
+        case 0: _t->on_pushButton_AceptAntecedentes_clicked(); break;
+        case 1: _t->on_comboBox_DoctorAntecedentes_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: _t->on_pushButton_consultarMedico_clicked(); break;
+        case 3: _t->on_lineEdit_medicoGlobal_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 4: _t->on_pushButton_AceptReporteOperatorio_clicked(); break;
+        case 5: _t->on_pushButton_AceptExamenClinico_clicked(); break;
+        case 6: _t->on_pushButton_AceptTerapeuticaMedica_clicked(); break;
+        case 7: _t->on_pushButton_SaveTerapeuticaMedica_clicked(); break;
+        case 8: _t->on_pushButton_SaveRQCV_clicked(); break;
+        case 9: _t->on_pushButton_AceptRQCV_clicked(); break;
+        case 10: _t->on_pushButton_clicked(); break;
+        case 11: _t->on_pushButton_AceptEpicrisis_clicked(); break;
+        case 12: _t->on_pushButton_SaveEpicrisis_clicked(); break;
+        case 13: _t->on_pushButton_CancelRQCV_clicked(); break;
+        case 14: _t->on_pushButton_addItem_terapeutica_clicked(); break;
+        case 15: _t->on_lineEdit_dni_medico_consulta_returnPressed(); break;
+        case 16: _t->on_pushButton_quitar_Item_clicked(); break;
+        case 17: _t->on_tableWidget_Terapeutica_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData documentos_historial_ui::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
 const QMetaObject documentos_historial_ui::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_documentos_historial_ui,
-      qt_meta_data_documentos_historial_ui, 0 }
+      qt_meta_data_documentos_historial_ui, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
@@ -103,27 +136,8 @@ int documentos_historial_ui::qt_metacall(QMetaObject::Call _c, int _id, void **_
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: on_pushButton_AceptAntecedentes_clicked(); break;
-        case 1: on_comboBox_DoctorAntecedentes_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: on_pushButton_consultarMedico_clicked(); break;
-        case 3: on_lineEdit_medicoGlobal_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 4: on_pushButton_AceptReporteOperatorio_clicked(); break;
-        case 5: on_pushButton_AceptExamenClinico_clicked(); break;
-        case 6: on_pushButton_AceptTerapeuticaMedica_clicked(); break;
-        case 7: on_pushButton_SaveTerapeuticaMedica_clicked(); break;
-        case 8: on_pushButton_SaveRQCV_clicked(); break;
-        case 9: on_pushButton_AceptRQCV_clicked(); break;
-        case 10: on_pushButton_clicked(); break;
-        case 11: on_pushButton_AceptEpicrisis_clicked(); break;
-        case 12: on_pushButton_SaveEpicrisis_clicked(); break;
-        case 13: on_pushButton_CancelRQCV_clicked(); break;
-        case 14: on_pushButton_addItem_terapeutica_clicked(); break;
-        case 15: on_lineEdit_dni_medico_consulta_returnPressed(); break;
-        case 16: on_pushButton_quitar_Item_clicked(); break;
-        case 17: on_tableWidget_Terapeutica_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
-        default: ;
-        }
+        if (_id < 18)
+            qt_static_metacall(this, _c, _id, _a);
         _id -= 18;
     }
     return _id;

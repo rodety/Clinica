@@ -22,7 +22,7 @@ public:
 
      void set_cliked_type(int type);
      void show_data_paciente_form(QString dni_var);
-     QString current_dni;
+     QString current_ID;
      paciente_ui* parent_ui_form;
      void hideButtonShow();
      void setParentWindow(MainWindow* parent);

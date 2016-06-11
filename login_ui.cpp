@@ -136,6 +136,7 @@ void login_ui::on_lineEdit_Password_returnPressed()
 
 bool login_ui::ejecutar_conexiones()
 {
+    return false;
 
 
 }

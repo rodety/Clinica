@@ -17,7 +17,7 @@ public:
     explicit consulta_paciente_ui(QWidget *parent = 0);
     ~consulta_paciente_ui();
 
-    QString dni_var;
+    QString id_var;
     void update_consultas_form();
 
 private slots:

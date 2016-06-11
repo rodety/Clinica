@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'item_terapeutica.ui'
 **
-** Created: Thu 14. May 11:49:01 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:29 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -52,7 +52,7 @@ public:
     {
         if (item_terapeutica->objectName().isEmpty())
             item_terapeutica->setObjectName(QString::fromUtf8("item_terapeutica"));
-        item_terapeutica->resize(352, 123);
+        item_terapeutica->resize(500, 142);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/distributor-report.png"), QSize(), QIcon::Normal, QIcon::Off);
         item_terapeutica->setWindowIcon(icon);
@@ -62,55 +62,67 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label_2 = new QLabel(item_terapeutica);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        QFont font;
+        font.setPointSize(12);
+        label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 0, 0, 1, 1);
 
         dateEdit_Fecha_inicio = new QDateEdit(item_terapeutica);
         dateEdit_Fecha_inicio->setObjectName(QString::fromUtf8("dateEdit_Fecha_inicio"));
+        dateEdit_Fecha_inicio->setFont(font);
         dateEdit_Fecha_inicio->setCalendarPopup(true);
 
         gridLayout->addWidget(dateEdit_Fecha_inicio, 0, 1, 1, 1);
 
         label_3 = new QLabel(item_terapeutica);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 0, 2, 1, 1);
 
         timeEdit_Hora_inicio = new QTimeEdit(item_terapeutica);
         timeEdit_Hora_inicio->setObjectName(QString::fromUtf8("timeEdit_Hora_inicio"));
+        timeEdit_Hora_inicio->setFont(font);
         timeEdit_Hora_inicio->setCalendarPopup(false);
 
         gridLayout->addWidget(timeEdit_Hora_inicio, 0, 3, 1, 1);
 
         label_5 = new QLabel(item_terapeutica);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
 
         gridLayout->addWidget(label_5, 1, 0, 1, 1);
 
         dateEdit_Fecha_fin = new QDateEdit(item_terapeutica);
         dateEdit_Fecha_fin->setObjectName(QString::fromUtf8("dateEdit_Fecha_fin"));
+        dateEdit_Fecha_fin->setFont(font);
         dateEdit_Fecha_fin->setCalendarPopup(true);
 
         gridLayout->addWidget(dateEdit_Fecha_fin, 1, 1, 1, 1);
 
         label_6 = new QLabel(item_terapeutica);
         label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setFont(font);
 
         gridLayout->addWidget(label_6, 1, 2, 1, 1);
 
         timeEdit_Hora_fin = new QTimeEdit(item_terapeutica);
         timeEdit_Hora_fin->setObjectName(QString::fromUtf8("timeEdit_Hora_fin"));
+        timeEdit_Hora_fin->setFont(font);
         timeEdit_Hora_fin->setCalendarPopup(false);
 
         gridLayout->addWidget(timeEdit_Hora_fin, 1, 3, 1, 1);
 
         label_4 = new QLabel(item_terapeutica);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         gridLayout->addWidget(label_4, 2, 0, 1, 1);
 
         lineEdit = new QLineEdit(item_terapeutica);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setFont(font);
 
         gridLayout->addWidget(lineEdit, 2, 1, 1, 3);
 
@@ -122,11 +134,13 @@ public:
 
         pushButton_Aceptar = new QPushButton(item_terapeutica);
         pushButton_Aceptar->setObjectName(QString::fromUtf8("pushButton_Aceptar"));
+        pushButton_Aceptar->setFont(font);
 
         horizontalLayout->addWidget(pushButton_Aceptar);
 
         pushButton_Cancelar = new QPushButton(item_terapeutica);
         pushButton_Cancelar->setObjectName(QString::fromUtf8("pushButton_Cancelar"));
+        pushButton_Cancelar->setFont(font);
 
         horizontalLayout->addWidget(pushButton_Cancelar);
 

@@ -22,56 +22,116 @@
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="0" colspan="2">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Apellido Paterno :</string>
        </property>
       </widget>
      </item>
      <item row="0" column="2" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_FatherName"/>
+      <widget class="QLineEdit" name="lineEdit_FatherName">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="0" column="4">
       <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Apellido Materno :</string>
        </property>
       </widget>
      </item>
      <item row="0" column="5">
-      <widget class="QLineEdit" name="lineEdit_MotherName"/>
+      <widget class="QLineEdit" name="lineEdit_MotherName">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0" colspan="2">
       <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Primer Nombre :</string>
        </property>
       </widget>
      </item>
      <item row="1" column="2" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_FirstName"/>
+      <widget class="QLineEdit" name="lineEdit_FirstName">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="1" column="4">
       <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Segundo Nombre:</string>
        </property>
       </widget>
      </item>
      <item row="1" column="5">
-      <widget class="QLineEdit" name="lineEdit_SecondName"/>
+      <widget class="QLineEdit" name="lineEdit_SecondName">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_7">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Dni :</string>
        </property>
       </widget>
      </item>
      <item row="2" column="2" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_Dni"/>
+      <widget class="QLineEdit" name="lineEdit_Dni">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0" colspan="2">
       <widget class="QLabel" name="label_10">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Función :</string>
        </property>
@@ -79,16 +139,32 @@
      </item>
      <item row="3" column="4">
       <widget class="QLabel" name="label_funcion">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Funcion :</string>
        </property>
       </widget>
      </item>
      <item row="3" column="5">
-      <widget class="QLineEdit" name="lineEdit_funcion"/>
+      <widget class="QLineEdit" name="lineEdit_funcion">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="4" column="0" colspan="6">
       <widget class="Line" name="line_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -96,6 +172,11 @@
      </item>
      <item row="5" column="0" colspan="2">
       <widget class="QLabel" name="label_15">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Dirección :</string>
        </property>
@@ -103,6 +184,11 @@
      </item>
      <item row="6" column="0" colspan="2">
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Pais :</string>
        </property>
@@ -110,6 +196,11 @@
      </item>
      <item row="6" column="2" colspan="2">
       <widget class="QLineEdit" name="lineEdit_Country">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -117,46 +208,95 @@
      </item>
      <item row="6" column="4">
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Departamento :</string>
        </property>
       </widget>
      </item>
      <item row="6" column="5">
-      <widget class="QLineEdit" name="lineEdit_Departamento"/>
+      <widget class="QLineEdit" name="lineEdit_Departamento">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="7" column="0" colspan="2">
       <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Provincia :</string>
        </property>
       </widget>
      </item>
      <item row="7" column="2" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_Provincia"/>
+      <widget class="QLineEdit" name="lineEdit_Provincia">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="7" column="4">
       <widget class="QLabel" name="label_25">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Distrito :</string>
        </property>
       </widget>
      </item>
      <item row="7" column="5">
-      <widget class="QLineEdit" name="lineEdit_Distrito"/>
+      <widget class="QLineEdit" name="lineEdit_Distrito">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="8" column="0" colspan="2">
       <widget class="QLabel" name="label_24">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Lugar :</string>
        </property>
       </widget>
      </item>
      <item row="8" column="2" colspan="2">
-      <widget class="QLineEdit" name="lineEdit_Lugar"/>
+      <widget class="QLineEdit" name="lineEdit_Lugar">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="9" column="0" colspan="6">
       <widget class="Line" name="line_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -164,6 +304,11 @@
      </item>
      <item row="10" column="4">
       <widget class="QLabel" name="label_21">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Estado Civil :</string>
        </property>
@@ -176,6 +321,11 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <item>
         <property name="text">
@@ -201,6 +351,11 @@
      </item>
      <item row="11" column="4">
       <widget class="QLabel" name="label_22">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Sexo</string>
        </property>
@@ -213,6 +368,11 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <item>
         <property name="text">
@@ -228,6 +388,11 @@
      </item>
      <item row="10" column="0">
       <widget class="QLabel" name="label_20">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Fecha de Naciemiento :</string>
        </property>
@@ -235,6 +400,11 @@
      </item>
      <item row="11" column="0">
       <widget class="QLabel" name="label_11">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Donacion de Organos :</string>
        </property>
@@ -247,6 +417,11 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="currentSection">
         <enum>QDateTimeEdit::YearSection</enum>
@@ -266,6 +441,11 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <item>
         <property name="text">
@@ -292,6 +472,11 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <item>
         <property name="text">
          <string>Médico</string>
@@ -315,12 +500,23 @@
       </widget>
      </item>
      <item row="2" column="5">
-      <widget class="QLineEdit" name="lineEdit_dni_to_insert"/>
+      <widget class="QLineEdit" name="lineEdit_dni_to_insert">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
    <item row="1" column="0">
     <spacer name="verticalSpacer">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
@@ -339,6 +535,11 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
       <spacer name="horizontalSpacer">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -352,6 +553,11 @@
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="pushButton_Acept">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Aceptar</string>
        </property>
@@ -359,6 +565,11 @@
      </item>
      <item row="0" column="2">
       <widget class="QPushButton" name="pushButton_Save">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Guardar</string>
        </property>
@@ -366,6 +577,11 @@
      </item>
      <item row="0" column="3">
       <widget class="QPushButton" name="pushButton_Cancel">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Cancelar</string>
        </property>

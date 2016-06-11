@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.27)  27 FEB 2013 21:45
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.27)  10 JUN 2016 14:48
 entering extended mode
-**C:/Documents*and*Settings/vidal/Mis*documentos/Proyecto/ClinicaProject/fichaC
-linica.tex
+**fichaClinica.tex
 
-("C:/Documents and Settings/vidal/Mis documentos/Proyecto/ClinicaProject/fichaC
-linica.tex"
+("C:\Documents and Settings\vidal\Escritorio\escritorio copia\ClinicaProject\fi
+chaClinica.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -182,8 +181,8 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count97
 \LT@p@ftn=\toks18
 )
-("C:\Documents and Settings\vidal\Mis documentos\Proyecto\ClinicaProject\fichaC
-linica.aux")
+("C:\Documents and Settings\vidal\Escritorio\escritorio copia\ClinicaProject\fi
+chaClinica.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
@@ -196,7 +195,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
- ("C:\Archivos de programa\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Archivos de programa\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count98
 \scratchdimen=\dimen111
@@ -236,20 +236,20 @@ File: omxiwonal.fd 2008/07/22 v0.995 font definition file for OMX/iwonal (MW)
 
 {C:/Documents and Settings/All Users/Datos de programa/MiKTeX/2.9/pdftex/config
 /pdftex.map}]
-("C:\Documents and Settings\vidal\Mis documentos\Proyecto\ClinicaProject\fichaC
-linica.aux") ) 
+("C:\Documents and Settings\vidal\Escritorio\escritorio copia\ClinicaProject\fi
+chaClinica.aux") ) 
 Here is how much of TeX's memory you used:
  2471 strings out of 494045
- 32239 string characters out of 3145509
- 85460 words of memory out of 3000000
+ 32267 string characters out of 3145509
+ 84460 words of memory out of 3000000
  5757 multiletter control sequences out of 15000+200000
  31164 words of font info for 31 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,9n,43p,325b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/iwona/ec-iwon
-a.enc}<C:/Archivos de programa/MiKTeX 2.9/fonts/type1/nowacki/iwona/iwonal.pfb>
-<C:/Archivos de programa/MiKTeX 2.9/fonts/type1/nowacki/iwona/iwonam.pfb>
-Output written on fichaClinica.pdf (1 page, 48497 bytes).
+ 27i,9n,43p,254b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/iwona/ec-
+iwona.enc}<C:/Archivos de programa/MiKTeX 2.9/fonts/type1/nowacki/iwona/iwonal.
+pfb><C:/Archivos de programa/MiKTeX 2.9/fonts/type1/nowacki/iwona/iwonam.pfb>
+Output written on fichaClinica.pdf (1 page, 47491 bytes).
 PDF statistics:
  15 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

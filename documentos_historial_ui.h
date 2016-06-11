@@ -25,6 +25,7 @@ public:
     void show_list_doctor_name();
     void show_data_document_form(QString document_code);
     void disable_pBs_Accept(QString name_tab);
+    QString id_var;
     QString dni_var;
     QString code_document_var;
     QString clinic_history_code_var;

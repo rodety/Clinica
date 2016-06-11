@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'newpaciente_paciente_ui.h'
 **
-** Created: Wed 27. May 12:25:01 2015
+** Created: Fri 10. Jun 20:11:05 2016
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,32 +23,38 @@ static const uint qt_meta_data_newPaciente_paciente_ui[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      25,   24,   24,   24, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      25,   24,   24,   24, 0x08,
-      55,   24,   24,   24, 0x08,
-      84,   24,   24,   24, 0x08,
-     120,  115,   24,   24, 0x08,
-     157,   24,   24,   24, 0x08,
-     198,  115,   24,   24, 0x08,
+      48,   24,   24,   24, 0x08,
+      78,   24,   24,   24, 0x08,
+     107,   24,   24,   24, 0x08,
+     143,  138,   24,   24, 0x08,
+     180,   24,   24,   24, 0x08,
+     221,  138,   24,   24, 0x08,
+     273,  265,   24,   24, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_newPaciente_paciente_ui[] = {
     "newPaciente_paciente_ui\0\0"
+    "update_List_patients()\0"
     "on_pushButton_Acept_clicked()\0"
     "on_pushButton_Save_clicked()\0"
     "on_pushButton_Cancel_clicked()\0arg1\0"
     "on_lineEdit_Dni_textChanged(QString)\0"
     "on_lineEdit_FatherName_editingFinished()\0"
     "on_lineEdit_FatherName_textChanged(QString)\0"
+    "checked\0on_checkBox_Historia_clicked(bool)\0"
 };
 
 const QMetaObject newPaciente_paciente_ui::staticMetaObject = {
@@ -80,16 +86,24 @@ int newPaciente_paciente_ui::qt_metacall(QMetaObject::Call _c, int _id, void **_
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_pushButton_Acept_clicked(); break;
-        case 1: on_pushButton_Save_clicked(); break;
-        case 2: on_pushButton_Cancel_clicked(); break;
-        case 3: on_lineEdit_Dni_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 4: on_lineEdit_FatherName_editingFinished(); break;
-        case 5: on_lineEdit_FatherName_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 0: update_List_patients(); break;
+        case 1: on_pushButton_Acept_clicked(); break;
+        case 2: on_pushButton_Save_clicked(); break;
+        case 3: on_pushButton_Cancel_clicked(); break;
+        case 4: on_lineEdit_Dni_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 5: on_lineEdit_FatherName_editingFinished(); break;
+        case 6: on_lineEdit_FatherName_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 7: on_checkBox_Historia_clicked((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
+}
+
+// SIGNAL 0
+void newPaciente_paciente_ui::update_List_patients()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 QT_END_MOC_NAMESPACE

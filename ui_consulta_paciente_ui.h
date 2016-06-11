@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'consulta_paciente_ui.ui'
 **
-** Created: Thu 14. May 11:49:01 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -73,6 +73,9 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton_showConsulta->sizePolicy().hasHeightForWidth());
         pushButton_showConsulta->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setPointSize(12);
+        pushButton_showConsulta->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/file_search.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_showConsulta->setIcon(icon1);
@@ -84,6 +87,7 @@ public:
         pushButton_editConsulta->setObjectName(QString::fromUtf8("pushButton_editConsulta"));
         sizePolicy.setHeightForWidth(pushButton_editConsulta->sizePolicy().hasHeightForWidth());
         pushButton_editConsulta->setSizePolicy(sizePolicy);
+        pushButton_editConsulta->setFont(font);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/edit.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_editConsulta->setIcon(icon2);
@@ -95,6 +99,7 @@ public:
         pushButton_generarPDF->setObjectName(QString::fromUtf8("pushButton_generarPDF"));
         sizePolicy.setHeightForWidth(pushButton_generarPDF->sizePolicy().hasHeightForWidth());
         pushButton_generarPDF->setSizePolicy(sizePolicy);
+        pushButton_generarPDF->setFont(font);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/Adobe - Acrobat.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_generarPDF->setIcon(icon3);
@@ -110,6 +115,7 @@ public:
         pushButton_deleteConsulta->setObjectName(QString::fromUtf8("pushButton_deleteConsulta"));
         sizePolicy.setHeightForWidth(pushButton_deleteConsulta->sizePolicy().hasHeightForWidth());
         pushButton_deleteConsulta->setSizePolicy(sizePolicy);
+        pushButton_deleteConsulta->setFont(font);
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/new/delete.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_deleteConsulta->setIcon(icon4);
@@ -131,6 +137,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy1);
+        label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 0, 0, 1, 1);
 
@@ -138,6 +145,7 @@ public:
         lineEdit_Patient->setObjectName(QString::fromUtf8("lineEdit_Patient"));
         lineEdit_Patient->setMinimumSize(QSize(250, 0));
         lineEdit_Patient->setMaximumSize(QSize(250, 16777215));
+        lineEdit_Patient->setFont(font);
         lineEdit_Patient->setReadOnly(true);
 
         gridLayout->addWidget(lineEdit_Patient, 0, 1, 1, 1);
@@ -146,6 +154,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         sizePolicy1.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy1);
+        label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 1, 0, 1, 1);
 
@@ -155,6 +164,7 @@ public:
         lineEdit_code->setSizePolicy(sizePolicy);
         lineEdit_code->setMinimumSize(QSize(120, 0));
         lineEdit_code->setMaximumSize(QSize(120, 16777215));
+        lineEdit_code->setFont(font);
         lineEdit_code->setReadOnly(true);
 
         gridLayout->addWidget(lineEdit_code, 1, 1, 1, 1);
@@ -171,6 +181,7 @@ public:
 
         line = new QFrame(consulta_paciente_ui);
         line->setObjectName(QString::fromUtf8("line"));
+        line->setFont(font);
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
@@ -180,6 +191,7 @@ public:
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         label = new QLabel(consulta_paciente_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout_4->addWidget(label, 0, 0, 1, 1);
 
@@ -193,6 +205,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         tableWidget_SurgeryList->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tableWidget_SurgeryList->setObjectName(QString::fromUtf8("tableWidget_SurgeryList"));
+        tableWidget_SurgeryList->setFont(font);
         tableWidget_SurgeryList->setEditTriggers(QAbstractItemView::DoubleClicked);
         tableWidget_SurgeryList->setSelectionMode(QAbstractItemView::SingleSelection);
         tableWidget_SurgeryList->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -214,6 +227,7 @@ public:
 
         pushButton = new QPushButton(consulta_paciente_ui);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setFont(font);
 
         gridLayout_5->addWidget(pushButton, 0, 1, 1, 1);
 

@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'configuracion_ui.ui'
 **
-** Created: Mon 7. Jan 16:32:55 2013
-**      by: Qt User Interface Compiler version 4.8.0
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -62,6 +62,9 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         pushButton_VerDatos = new QPushButton(configuracion_ui);
         pushButton_VerDatos->setObjectName(QString::fromUtf8("pushButton_VerDatos"));
+        QFont font;
+        font.setPointSize(12);
+        pushButton_VerDatos->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/old-edit-find.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_VerDatos->setIcon(icon);
@@ -71,6 +74,7 @@ public:
 
         pushButton_Editar = new QPushButton(configuracion_ui);
         pushButton_Editar->setObjectName(QString::fromUtf8("pushButton_Editar"));
+        pushButton_Editar->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/1329798431_Application.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Editar->setIcon(icon1);
@@ -80,6 +84,7 @@ public:
 
         pushButton_3 = new QPushButton(configuracion_ui);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setFont(font);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/Remove-Male-User.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_3->setIcon(icon2);
@@ -98,6 +103,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton_newPersonal->sizePolicy().hasHeightForWidth());
         pushButton_newPersonal->setSizePolicy(sizePolicy);
+        pushButton_newPersonal->setFont(font);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/Add-Male-User.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_newPersonal->setIcon(icon3);
@@ -110,6 +116,7 @@ public:
 
         line_2 = new QFrame(configuracion_ui);
         line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFont(font);
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
 
@@ -124,6 +131,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy1);
+        label_3->setFont(font);
 
         gridLayout_2->addWidget(label_3, 0, 0, 1, 1);
 
@@ -136,6 +144,7 @@ public:
         lineEdit_Nombre->setSizePolicy(sizePolicy2);
         lineEdit_Nombre->setMinimumSize(QSize(250, 0));
         lineEdit_Nombre->setMaximumSize(QSize(350, 16777215));
+        lineEdit_Nombre->setFont(font);
         lineEdit_Nombre->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_Nombre, 0, 1, 1, 1);
@@ -144,6 +153,7 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         sizePolicy1.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy1);
+        label_4->setFont(font);
         label_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_2->addWidget(label_4, 0, 2, 1, 1);
@@ -154,6 +164,7 @@ public:
         lineEdit_dni_show->setSizePolicy(sizePolicy);
         lineEdit_dni_show->setMinimumSize(QSize(120, 0));
         lineEdit_dni_show->setMaximumSize(QSize(120, 16777215));
+        lineEdit_dni_show->setFont(font);
         lineEdit_dni_show->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_dni_show, 0, 3, 1, 1);
@@ -162,6 +173,7 @@ public:
         label_5->setObjectName(QString::fromUtf8("label_5"));
         sizePolicy1.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
         label_5->setSizePolicy(sizePolicy1);
+        label_5->setFont(font);
         label_5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_2->addWidget(label_5, 0, 4, 1, 1);
@@ -172,6 +184,7 @@ public:
         lineEdit_Cargo->setSizePolicy(sizePolicy);
         lineEdit_Cargo->setMinimumSize(QSize(120, 0));
         lineEdit_Cargo->setMaximumSize(QSize(120, 16777215));
+        lineEdit_Cargo->setFont(font);
         lineEdit_Cargo->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_Cargo, 0, 5, 1, 1);
@@ -180,6 +193,7 @@ public:
         lineEdit_Dni->setObjectName(QString::fromUtf8("lineEdit_Dni"));
         sizePolicy.setHeightForWidth(lineEdit_Dni->sizePolicy().hasHeightForWidth());
         lineEdit_Dni->setSizePolicy(sizePolicy);
+        lineEdit_Dni->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Dni, 0, 6, 1, 1);
 
@@ -203,6 +217,7 @@ public:
         tableWidget_trabajadores->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         tableWidget_trabajadores->setObjectName(QString::fromUtf8("tableWidget_trabajadores"));
         tableWidget_trabajadores->setEnabled(true);
+        tableWidget_trabajadores->setFont(font);
         tableWidget_trabajadores->setAcceptDrops(false);
         tableWidget_trabajadores->setEditTriggers(QAbstractItemView::DoubleClicked);
         tableWidget_trabajadores->setDragDropOverwriteMode(false);

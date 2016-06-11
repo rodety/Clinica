@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'agenda_ui.h'
 **
-** Created: Wed 27. May 12:24:57 2015
+** Created: Fri 10. Jun 20:10:29 2016
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_agenda_ui[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      30,   14, // methods
+      31,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,6 +61,7 @@ static const uint qt_meta_data_agenda_ui[] = {
     1191,  225,   10,   10, 0x08,
     1224,  176,   10,   10, 0x08,
     1270,   10,   10,   10, 0x08,
+    1304,   10,   10,   10, 0x0a,
 
        0        // eod
 };
@@ -96,6 +97,7 @@ static const char qt_meta_stringdata_agenda_ui[] = {
     "on_calendarWidget_clicked(QDate)\0"
     "on_tablaView_Agend_doubleClicked(QModelIndex)\0"
     "on_pushButton_printList_clicked()\0"
+    "update_table()\0"
 };
 
 const QMetaObject agenda_ui::staticMetaObject = {
@@ -157,9 +159,10 @@ int agenda_ui::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 27: on_calendarWidget_clicked((*reinterpret_cast< const QDate(*)>(_a[1]))); break;
         case 28: on_tablaView_Agend_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         case 29: on_pushButton_printList_clicked(); break;
+        case 30: update_table(); break;
         default: ;
         }
-        _id -= 30;
+        _id -= 31;
     }
     return _id;
 }

@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'newtask_agenda_ui.ui'
 **
-** Created: Mon 25. May 15:31:33 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -69,13 +69,16 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(newTask_agenda_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(true);
+        font.setWeight(75);
+        label->setFont(font);
 
         horizontalLayout->addWidget(label);
 
         dateEdit = new QDateEdit(newTask_agenda_ui);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        QFont font;
-        font.setPointSize(14);
         dateEdit->setFont(font);
         dateEdit->setCalendarPopup(true);
 
@@ -83,6 +86,7 @@ public:
 
         label_5 = new QLabel(newTask_agenda_ui);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
 
         horizontalLayout->addWidget(label_5);
 
@@ -100,14 +104,13 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_2 = new QLabel(newTask_agenda_ui);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         horizontalLayout_2->addWidget(label_2);
 
         lineEdit_Name = new QLineEdit(newTask_agenda_ui);
         lineEdit_Name->setObjectName(QString::fromUtf8("lineEdit_Name"));
-        QFont font1;
-        font1.setPointSize(12);
-        lineEdit_Name->setFont(font1);
+        lineEdit_Name->setFont(font);
 
         horizontalLayout_2->addWidget(lineEdit_Name);
 
@@ -116,6 +119,7 @@ public:
 
         tableView = new QTableView(newTask_agenda_ui);
         tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableView->setFont(font);
 
         gridLayout_2->addWidget(tableView, 2, 0, 1, 1);
 
@@ -123,33 +127,37 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label_7 = new QLabel(newTask_agenda_ui);
         label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setFont(font);
 
         gridLayout->addWidget(label_7, 0, 0, 1, 1);
 
         lineEdit_Telefono = new QLineEdit(newTask_agenda_ui);
         lineEdit_Telefono->setObjectName(QString::fromUtf8("lineEdit_Telefono"));
-        lineEdit_Telefono->setFont(font1);
+        lineEdit_Telefono->setFont(font);
 
         gridLayout->addWidget(lineEdit_Telefono, 0, 1, 1, 1);
 
         label_3 = new QLabel(newTask_agenda_ui);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 1, 0, 1, 1);
 
         lineEdit_Descripcion = new QLineEdit(newTask_agenda_ui);
         lineEdit_Descripcion->setObjectName(QString::fromUtf8("lineEdit_Descripcion"));
-        lineEdit_Descripcion->setFont(font1);
+        lineEdit_Descripcion->setFont(font);
 
         gridLayout->addWidget(lineEdit_Descripcion, 1, 1, 1, 1);
 
         label_6 = new QLabel(newTask_agenda_ui);
         label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setFont(font);
 
         gridLayout->addWidget(label_6, 2, 0, 1, 1);
 
         lineEdit_Historia = new QLineEdit(newTask_agenda_ui);
         lineEdit_Historia->setObjectName(QString::fromUtf8("lineEdit_Historia"));
+        lineEdit_Historia->setFont(font);
 
         gridLayout->addWidget(lineEdit_Historia, 2, 1, 1, 1);
 
@@ -164,16 +172,19 @@ public:
 
         pushButton_Acept = new QPushButton(newTask_agenda_ui);
         pushButton_Acept->setObjectName(QString::fromUtf8("pushButton_Acept"));
+        pushButton_Acept->setFont(font);
 
         horizontalLayout_5->addWidget(pushButton_Acept);
 
         pushButton_Save = new QPushButton(newTask_agenda_ui);
         pushButton_Save->setObjectName(QString::fromUtf8("pushButton_Save"));
+        pushButton_Save->setFont(font);
 
         horizontalLayout_5->addWidget(pushButton_Save);
 
         pushButton_Cancel = new QPushButton(newTask_agenda_ui);
         pushButton_Cancel->setObjectName(QString::fromUtf8("pushButton_Cancel"));
+        pushButton_Cancel->setFont(font);
 
         horizontalLayout_5->addWidget(pushButton_Cancel);
 

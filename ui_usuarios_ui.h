@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'usuarios_ui.ui'
 **
-** Created: Mon 7. Jan 16:32:54 2013
-**      by: Qt User Interface Compiler version 4.8.0
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -91,7 +91,7 @@ public:
     {
         if (usuarios_ui->objectName().isEmpty())
             usuarios_ui->setObjectName(QString::fromUtf8("usuarios_ui"));
-        usuarios_ui->resize(850, 504);
+        usuarios_ui->resize(966, 590);
         QFont font;
         font.setBold(false);
         font.setItalic(false);
@@ -121,6 +121,9 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setPointSize(14);
+        label_4->setFont(font1);
 
         gridLayout_2->addWidget(label_4, 0, 0, 1, 1);
 
@@ -131,6 +134,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(lineEdit_userCode->sizePolicy().hasHeightForWidth());
         lineEdit_userCode->setSizePolicy(sizePolicy1);
+        lineEdit_userCode->setFont(font1);
         lineEdit_userCode->setReadOnly(true);
 
         gridLayout_2->addWidget(lineEdit_userCode, 1, 0, 1, 1);
@@ -144,6 +148,7 @@ public:
         label_5->setObjectName(QString::fromUtf8("label_5"));
         sizePolicy.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
         label_5->setSizePolicy(sizePolicy);
+        label_5->setFont(font1);
 
         gridLayout->addWidget(label_5, 0, 0, 1, 1);
 
@@ -151,6 +156,7 @@ public:
         comboBox_agenda->setObjectName(QString::fromUtf8("comboBox_agenda"));
         sizePolicy.setHeightForWidth(comboBox_agenda->sizePolicy().hasHeightForWidth());
         comboBox_agenda->setSizePolicy(sizePolicy);
+        comboBox_agenda->setFont(font1);
 
         gridLayout->addWidget(comboBox_agenda, 0, 1, 1, 1);
 
@@ -158,6 +164,7 @@ public:
         label_6->setObjectName(QString::fromUtf8("label_6"));
         sizePolicy.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
         label_6->setSizePolicy(sizePolicy);
+        label_6->setFont(font1);
 
         gridLayout->addWidget(label_6, 1, 0, 1, 1);
 
@@ -165,6 +172,7 @@ public:
         comboBox_paciente->setObjectName(QString::fromUtf8("comboBox_paciente"));
         sizePolicy.setHeightForWidth(comboBox_paciente->sizePolicy().hasHeightForWidth());
         comboBox_paciente->setSizePolicy(sizePolicy);
+        comboBox_paciente->setFont(font1);
 
         gridLayout->addWidget(comboBox_paciente, 1, 1, 1, 1);
 
@@ -172,6 +180,7 @@ public:
         label_7->setObjectName(QString::fromUtf8("label_7"));
         sizePolicy.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
         label_7->setSizePolicy(sizePolicy);
+        label_7->setFont(font1);
 
         gridLayout->addWidget(label_7, 2, 0, 1, 1);
 
@@ -179,6 +188,7 @@ public:
         label_10->setObjectName(QString::fromUtf8("label_10"));
         sizePolicy.setHeightForWidth(label_10->sizePolicy().hasHeightForWidth());
         label_10->setSizePolicy(sizePolicy);
+        label_10->setFont(font1);
 
         gridLayout->addWidget(label_10, 4, 0, 1, 1);
 
@@ -186,6 +196,7 @@ public:
         comboBox_usuarios->setObjectName(QString::fromUtf8("comboBox_usuarios"));
         sizePolicy.setHeightForWidth(comboBox_usuarios->sizePolicy().hasHeightForWidth());
         comboBox_usuarios->setSizePolicy(sizePolicy);
+        comboBox_usuarios->setFont(font1);
 
         gridLayout->addWidget(comboBox_usuarios, 4, 1, 1, 1);
 
@@ -193,6 +204,7 @@ public:
         label_11->setObjectName(QString::fromUtf8("label_11"));
         sizePolicy.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
         label_11->setSizePolicy(sizePolicy);
+        label_11->setFont(font1);
 
         gridLayout->addWidget(label_11, 5, 0, 1, 1);
 
@@ -200,6 +212,7 @@ public:
         comboBox_mailing->setObjectName(QString::fromUtf8("comboBox_mailing"));
         sizePolicy.setHeightForWidth(comboBox_mailing->sizePolicy().hasHeightForWidth());
         comboBox_mailing->setSizePolicy(sizePolicy);
+        comboBox_mailing->setFont(font1);
 
         gridLayout->addWidget(comboBox_mailing, 5, 1, 1, 1);
 
@@ -207,6 +220,7 @@ public:
         label_13->setObjectName(QString::fromUtf8("label_13"));
         sizePolicy.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
         label_13->setSizePolicy(sizePolicy);
+        label_13->setFont(font1);
 
         gridLayout->addWidget(label_13, 6, 0, 1, 1);
 
@@ -214,6 +228,7 @@ public:
         comboBox_facebook->setObjectName(QString::fromUtf8("comboBox_facebook"));
         sizePolicy.setHeightForWidth(comboBox_facebook->sizePolicy().hasHeightForWidth());
         comboBox_facebook->setSizePolicy(sizePolicy);
+        comboBox_facebook->setFont(font1);
 
         gridLayout->addWidget(comboBox_facebook, 6, 1, 1, 1);
 
@@ -221,6 +236,7 @@ public:
         label_12->setObjectName(QString::fromUtf8("label_12"));
         sizePolicy.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
         label_12->setSizePolicy(sizePolicy);
+        label_12->setFont(font1);
 
         gridLayout->addWidget(label_12, 7, 0, 1, 1);
 
@@ -228,6 +244,7 @@ public:
         comboBox_alertas->setObjectName(QString::fromUtf8("comboBox_alertas"));
         sizePolicy.setHeightForWidth(comboBox_alertas->sizePolicy().hasHeightForWidth());
         comboBox_alertas->setSizePolicy(sizePolicy);
+        comboBox_alertas->setFont(font1);
 
         gridLayout->addWidget(comboBox_alertas, 7, 1, 1, 1);
 
@@ -235,6 +252,7 @@ public:
         label_9->setObjectName(QString::fromUtf8("label_9"));
         sizePolicy.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
         label_9->setSizePolicy(sizePolicy);
+        label_9->setFont(font1);
 
         gridLayout->addWidget(label_9, 8, 0, 1, 1);
 
@@ -242,6 +260,7 @@ public:
         comboBox_personal->setObjectName(QString::fromUtf8("comboBox_personal"));
         sizePolicy.setHeightForWidth(comboBox_personal->sizePolicy().hasHeightForWidth());
         comboBox_personal->setSizePolicy(sizePolicy);
+        comboBox_personal->setFont(font1);
 
         gridLayout->addWidget(comboBox_personal, 8, 1, 1, 1);
 
@@ -249,6 +268,7 @@ public:
         comboBox_historia_clinica->setObjectName(QString::fromUtf8("comboBox_historia_clinica"));
         sizePolicy.setHeightForWidth(comboBox_historia_clinica->sizePolicy().hasHeightForWidth());
         comboBox_historia_clinica->setSizePolicy(sizePolicy);
+        comboBox_historia_clinica->setFont(font1);
 
         gridLayout->addWidget(comboBox_historia_clinica, 2, 1, 1, 1);
 
@@ -256,6 +276,7 @@ public:
         comboBox_tratamientos->setObjectName(QString::fromUtf8("comboBox_tratamientos"));
         sizePolicy.setHeightForWidth(comboBox_tratamientos->sizePolicy().hasHeightForWidth());
         comboBox_tratamientos->setSizePolicy(sizePolicy);
+        comboBox_tratamientos->setFont(font1);
 
         gridLayout->addWidget(comboBox_tratamientos, 3, 1, 1, 1);
 
@@ -263,6 +284,7 @@ public:
         label_8->setObjectName(QString::fromUtf8("label_8"));
         sizePolicy.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
         label_8->setSizePolicy(sizePolicy);
+        label_8->setFont(font1);
 
         gridLayout->addWidget(label_8, 3, 0, 1, 1);
 
@@ -281,6 +303,7 @@ public:
         label_14->setObjectName(QString::fromUtf8("label_14"));
         sizePolicy.setHeightForWidth(label_14->sizePolicy().hasHeightForWidth());
         label_14->setSizePolicy(sizePolicy);
+        label_14->setFont(font1);
 
         gridLayout_3->addWidget(label_14, 0, 0, 1, 1);
 
@@ -291,16 +314,19 @@ public:
         gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
         label_15 = new QLabel(usuarios_ui);
         label_15->setObjectName(QString::fromUtf8("label_15"));
+        label_15->setFont(font1);
 
         gridLayout_10->addWidget(label_15, 0, 0, 1, 1);
 
         label_16 = new QLabel(usuarios_ui);
         label_16->setObjectName(QString::fromUtf8("label_16"));
+        label_16->setFont(font1);
 
         gridLayout_10->addWidget(label_16, 1, 0, 1, 1);
 
         label_17 = new QLabel(usuarios_ui);
         label_17->setObjectName(QString::fromUtf8("label_17"));
+        label_17->setFont(font1);
 
         gridLayout_10->addWidget(label_17, 2, 0, 1, 1);
 
@@ -324,6 +350,7 @@ public:
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
         pushButton_4->setSizePolicy(sizePolicy);
+        pushButton_4->setFont(font1);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/checkbox_checked.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_4->setIcon(icon);
@@ -348,6 +375,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(line->sizePolicy().hasHeightForWidth());
         line->setSizePolicy(sizePolicy2);
+        line->setFont(font1);
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
 
@@ -361,6 +389,7 @@ public:
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy);
+        pushButton_2->setFont(font1);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/edit-user.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_2->setIcon(icon1);
@@ -376,6 +405,7 @@ public:
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
         pushButton_3->setSizePolicy(sizePolicy);
+        pushButton_3->setFont(font1);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/delete-user.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_3->setIcon(icon2);
@@ -387,6 +417,7 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
+        pushButton->setFont(font1);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/add-user.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton->setIcon(icon3);
@@ -408,6 +439,7 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy3);
+        label_2->setFont(font1);
 
         gridLayout_6->addWidget(label_2, 0, 0, 1, 1);
 
@@ -417,6 +449,7 @@ public:
         lineEdit_currentSesion->setSizePolicy(sizePolicy);
         lineEdit_currentSesion->setMinimumSize(QSize(300, 0));
         lineEdit_currentSesion->setMaximumSize(QSize(300, 16777215));
+        lineEdit_currentSesion->setFont(font1);
         lineEdit_currentSesion->setReadOnly(true);
 
         gridLayout_6->addWidget(lineEdit_currentSesion, 0, 1, 1, 1);
@@ -425,6 +458,7 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy3);
+        label->setFont(font1);
 
         gridLayout_6->addWidget(label, 1, 0, 1, 1);
 
@@ -432,6 +466,7 @@ public:
         lineEdit_currentUserSelectec->setObjectName(QString::fromUtf8("lineEdit_currentUserSelectec"));
         sizePolicy.setHeightForWidth(lineEdit_currentUserSelectec->sizePolicy().hasHeightForWidth());
         lineEdit_currentUserSelectec->setSizePolicy(sizePolicy);
+        lineEdit_currentUserSelectec->setFont(font1);
         lineEdit_currentUserSelectec->setReadOnly(true);
 
         gridLayout_6->addWidget(lineEdit_currentUserSelectec, 1, 1, 1, 1);
@@ -452,6 +487,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy);
+        label_3->setFont(font1);
 
         gridLayout_4->addWidget(label_3, 0, 0, 1, 1);
 
@@ -470,6 +506,7 @@ public:
         sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(tableWidget_list_users->sizePolicy().hasHeightForWidth());
         tableWidget_list_users->setSizePolicy(sizePolicy4);
+        tableWidget_list_users->setFont(font1);
         tableWidget_list_users->setEditTriggers(QAbstractItemView::DoubleClicked);
         tableWidget_list_users->setAlternatingRowColors(true);
         tableWidget_list_users->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -491,9 +528,6 @@ public:
 
         gridLayout_15->addLayout(gridLayout_14, 0, 0, 1, 1);
 
-        line->raise();
-        pushButton_4->raise();
-        tableWidget_list_users->raise();
         QWidget::setTabOrder(pushButton_2, pushButton);
         QWidget::setTabOrder(pushButton, pushButton_3);
         QWidget::setTabOrder(pushButton_3, lineEdit_currentSesion);

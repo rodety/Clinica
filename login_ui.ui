@@ -23,10 +23,25 @@
      <item row="0" column="0">
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="1" colspan="2">
-        <widget class="QLineEdit" name="lineEdit_User"/>
+        <widget class="QLineEdit" name="lineEdit_User">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Clave </string>
          </property>
@@ -34,6 +49,13 @@
        </item>
        <item row="1" column="1" colspan="2">
         <widget class="QLineEdit" name="lineEdit_Password">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
          </property>
@@ -41,6 +63,13 @@
        </item>
        <item row="2" column="0">
         <spacer name="horizontalSpacer">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -54,6 +83,13 @@
        </item>
        <item row="2" column="1">
         <widget class="QPushButton" name="pushButton_Login">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>&amp;Entrar</string>
          </property>
@@ -64,6 +100,13 @@
        </item>
        <item row="2" column="2">
         <spacer name="horizontalSpacer_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -77,6 +120,13 @@
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Usuario </string>
          </property>

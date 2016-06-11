@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat 30. May 18:08:23 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:27 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -55,7 +55,7 @@ public:
         MainWindow->setSizeIncrement(QSize(10, 12));
         MainWindow->setBaseSize(QSize(16, 20));
         QFont font;
-        font.setPointSize(8);
+        font.setPointSize(12);
         font.setBold(false);
         font.setItalic(false);
         font.setUnderline(false);
@@ -129,7 +129,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 960, 20));
+        menuBar->setGeometry(QRect(0, 0, 960, 26));
         MainWindow->setMenuBar(menuBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));

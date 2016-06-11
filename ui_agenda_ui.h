@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'agenda_ui.ui'
 **
-** Created: Mon 1. Jun 16:24:59 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:38:00 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -118,8 +118,12 @@ public:
         sizePolicy.setHeightForWidth(tableWidget_Alert->sizePolicy().hasHeightForWidth());
         tableWidget_Alert->setSizePolicy(sizePolicy);
         tableWidget_Alert->setMinimumSize(QSize(0, 0));
-        tableWidget_Alert->setMaximumSize(QSize(351, 16777215));
+        tableWidget_Alert->setMaximumSize(QSize(360, 16777215));
+        QFont font;
+        font.setPointSize(12);
+        tableWidget_Alert->setFont(font);
         tableWidget_Alert->setWordWrap(true);
+        tableWidget_Alert->horizontalHeader()->setDefaultSectionSize(114);
 
         gridLayout_6->addWidget(tableWidget_Alert, 1, 0, 1, 1);
 
@@ -132,6 +136,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(pushButton_show_SelectAlert_Personales_4->sizePolicy().hasHeightForWidth());
         pushButton_show_SelectAlert_Personales_4->setSizePolicy(sizePolicy1);
+        pushButton_show_SelectAlert_Personales_4->setFont(font);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/playback_reload.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_show_SelectAlert_Personales_4->setIcon(icon);
@@ -143,6 +148,7 @@ public:
         label_3->setObjectName(QString::fromUtf8("label_3"));
         sizePolicy1.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
         label_3->setSizePolicy(sizePolicy1);
+        label_3->setFont(font);
 
         gridLayout_7->addWidget(label_3, 0, 1, 1, 1);
 
@@ -150,6 +156,7 @@ public:
         dateEdit_Alerta_Personales->setObjectName(QString::fromUtf8("dateEdit_Alerta_Personales"));
         sizePolicy1.setHeightForWidth(dateEdit_Alerta_Personales->sizePolicy().hasHeightForWidth());
         dateEdit_Alerta_Personales->setSizePolicy(sizePolicy1);
+        dateEdit_Alerta_Personales->setFont(font);
         dateEdit_Alerta_Personales->setCurrentSection(QDateTimeEdit::YearSection);
         dateEdit_Alerta_Personales->setCalendarPopup(true);
 
@@ -159,6 +166,7 @@ public:
         pushButton_Alert_Personal_show->setObjectName(QString::fromUtf8("pushButton_Alert_Personal_show"));
         sizePolicy1.setHeightForWidth(pushButton_Alert_Personal_show->sizePolicy().hasHeightForWidth());
         pushButton_Alert_Personal_show->setSizePolicy(sizePolicy1);
+        pushButton_Alert_Personal_show->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/zoom.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Alert_Personal_show->setIcon(icon1);
@@ -171,6 +179,7 @@ public:
         pushButton_Alert_Personal_changeColor->setObjectName(QString::fromUtf8("pushButton_Alert_Personal_changeColor"));
         sizePolicy1.setHeightForWidth(pushButton_Alert_Personal_changeColor->sizePolicy().hasHeightForWidth());
         pushButton_Alert_Personal_changeColor->setSizePolicy(sizePolicy1);
+        pushButton_Alert_Personal_changeColor->setFont(font);
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/color_swatch.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Alert_Personal_changeColor->setIcon(icon2);
@@ -195,7 +204,8 @@ public:
         sizePolicy.setHeightForWidth(tableWidget_Alert_Personales->sizePolicy().hasHeightForWidth());
         tableWidget_Alert_Personales->setSizePolicy(sizePolicy);
         tableWidget_Alert_Personales->setMinimumSize(QSize(0, 0));
-        tableWidget_Alert_Personales->setMaximumSize(QSize(351, 16777215));
+        tableWidget_Alert_Personales->setMaximumSize(QSize(360, 16777215));
+        tableWidget_Alert_Personales->setFont(font);
         tableWidget_Alert_Personales->setWordWrap(true);
 
         gridLayout_6->addWidget(tableWidget_Alert_Personales, 3, 0, 1, 1);
@@ -210,6 +220,7 @@ public:
         pushButton_Alert_Personales_edit->setObjectName(QString::fromUtf8("pushButton_Alert_Personales_edit"));
         sizePolicy1.setHeightForWidth(pushButton_Alert_Personales_edit->sizePolicy().hasHeightForWidth());
         pushButton_Alert_Personales_edit->setSizePolicy(sizePolicy1);
+        pushButton_Alert_Personales_edit->setFont(font);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/doc_edit.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Alert_Personales_edit->setIcon(icon3);
@@ -222,6 +233,7 @@ public:
         pushButton_Alert_Personales_add->setObjectName(QString::fromUtf8("pushButton_Alert_Personales_add"));
         sizePolicy1.setHeightForWidth(pushButton_Alert_Personales_add->sizePolicy().hasHeightForWidth());
         pushButton_Alert_Personales_add->setSizePolicy(sizePolicy1);
+        pushButton_Alert_Personales_add->setFont(font);
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/new/round_plus.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Alert_Personales_add->setIcon(icon4);
@@ -234,6 +246,7 @@ public:
         pushButton_Alert_Personales_remove->setObjectName(QString::fromUtf8("pushButton_Alert_Personales_remove"));
         sizePolicy1.setHeightForWidth(pushButton_Alert_Personales_remove->sizePolicy().hasHeightForWidth());
         pushButton_Alert_Personales_remove->setSizePolicy(sizePolicy1);
+        pushButton_Alert_Personales_remove->setFont(font);
         QIcon icon5;
         icon5.addFile(QString::fromUtf8(":/new/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_Alert_Personales_remove->setIcon(icon5);
@@ -251,6 +264,7 @@ public:
         pushButton_show_SelectAlert->setObjectName(QString::fromUtf8("pushButton_show_SelectAlert"));
         sizePolicy1.setHeightForWidth(pushButton_show_SelectAlert->sizePolicy().hasHeightForWidth());
         pushButton_show_SelectAlert->setSizePolicy(sizePolicy1);
+        pushButton_show_SelectAlert->setFont(font);
         pushButton_show_SelectAlert->setCursor(QCursor(Qt::ArrowCursor));
         pushButton_show_SelectAlert->setIcon(icon);
         pushButton_show_SelectAlert->setFlat(true);
@@ -261,6 +275,7 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy1);
+        label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 2, 1, 1, 1);
 
@@ -268,6 +283,7 @@ public:
         dateEdit_Alerta->setObjectName(QString::fromUtf8("dateEdit_Alerta"));
         sizePolicy1.setHeightForWidth(dateEdit_Alerta->sizePolicy().hasHeightForWidth());
         dateEdit_Alerta->setSizePolicy(sizePolicy1);
+        dateEdit_Alerta->setFont(font);
         dateEdit_Alerta->setCurrentSection(QDateTimeEdit::YearSection);
         dateEdit_Alerta->setCalendarPopup(true);
 
@@ -277,6 +293,7 @@ public:
         pushButton_Alerta_General_show->setObjectName(QString::fromUtf8("pushButton_Alerta_General_show"));
         sizePolicy1.setHeightForWidth(pushButton_Alerta_General_show->sizePolicy().hasHeightForWidth());
         pushButton_Alerta_General_show->setSizePolicy(sizePolicy1);
+        pushButton_Alerta_General_show->setFont(font);
         pushButton_Alerta_General_show->setIcon(icon1);
         pushButton_Alerta_General_show->setIconSize(QSize(16, 16));
         pushButton_Alerta_General_show->setFlat(true);
@@ -288,6 +305,7 @@ public:
         pushButton_AlertaGeneral_changeColor->setEnabled(true);
         sizePolicy1.setHeightForWidth(pushButton_AlertaGeneral_changeColor->sizePolicy().hasHeightForWidth());
         pushButton_AlertaGeneral_changeColor->setSizePolicy(sizePolicy1);
+        pushButton_AlertaGeneral_changeColor->setFont(font);
         pushButton_AlertaGeneral_changeColor->setIcon(icon2);
         pushButton_AlertaGeneral_changeColor->setIconSize(QSize(16, 16));
         pushButton_AlertaGeneral_changeColor->setAutoDefault(false);
@@ -298,11 +316,17 @@ public:
 
         calendarWidget = new QCalendarWidget(agenda_ui);
         calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
+        QFont font1;
+        font1.setPointSize(12);
+        font1.setBold(true);
+        font1.setWeight(75);
+        calendarWidget->setFont(font1);
 
         gridLayout->addWidget(calendarWidget, 0, 0, 1, 5);
 
         line_3 = new QFrame(agenda_ui);
         line_3->setObjectName(QString::fromUtf8("line_3"));
+        line_3->setFont(font);
         line_3->setFrameShape(QFrame::HLine);
         line_3->setFrameShadow(QFrame::Sunken);
 
@@ -324,6 +348,7 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(line_2->sizePolicy().hasHeightForWidth());
         line_2->setSizePolicy(sizePolicy2);
+        line_2->setFont(font);
         line_2->setFrameShadow(QFrame::Sunken);
         line_2->setLineWidth(1);
         line_2->setFrameShape(QFrame::VLine);
@@ -338,6 +363,7 @@ public:
         pushButton_showTask->setObjectName(QString::fromUtf8("pushButton_showTask"));
         sizePolicy1.setHeightForWidth(pushButton_showTask->sizePolicy().hasHeightForWidth());
         pushButton_showTask->setSizePolicy(sizePolicy1);
+        pushButton_showTask->setFont(font);
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/new/file_search.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_showTask->setIcon(icon6);
@@ -354,6 +380,7 @@ public:
         pushButton_showAll->setObjectName(QString::fromUtf8("pushButton_showAll"));
         sizePolicy1.setHeightForWidth(pushButton_showAll->sizePolicy().hasHeightForWidth());
         pushButton_showAll->setSizePolicy(sizePolicy1);
+        pushButton_showAll->setFont(font);
 #ifndef QT_NO_ACCESSIBILITY
         pushButton_showAll->setAccessibleName(QString::fromUtf8(""));
 #endif // QT_NO_ACCESSIBILITY
@@ -379,6 +406,7 @@ public:
         pushButton_editTask->setObjectName(QString::fromUtf8("pushButton_editTask"));
         sizePolicy1.setHeightForWidth(pushButton_editTask->sizePolicy().hasHeightForWidth());
         pushButton_editTask->setSizePolicy(sizePolicy1);
+        pushButton_editTask->setFont(font);
         QIcon icon8;
         icon8.addFile(QString::fromUtf8(":/new/application.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_editTask->setIcon(icon8);
@@ -391,6 +419,7 @@ public:
         pushButton_deleteTask->setObjectName(QString::fromUtf8("pushButton_deleteTask"));
         sizePolicy1.setHeightForWidth(pushButton_deleteTask->sizePolicy().hasHeightForWidth());
         pushButton_deleteTask->setSizePolicy(sizePolicy1);
+        pushButton_deleteTask->setFont(font);
         QIcon icon9;
         icon9.addFile(QString::fromUtf8(":/new/file_delete.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_deleteTask->setIcon(icon9);
@@ -406,6 +435,7 @@ public:
         pushButton_newTask->setObjectName(QString::fromUtf8("pushButton_newTask"));
         sizePolicy1.setHeightForWidth(pushButton_newTask->sizePolicy().hasHeightForWidth());
         pushButton_newTask->setSizePolicy(sizePolicy1);
+        pushButton_newTask->setFont(font);
         QIcon icon10;
         icon10.addFile(QString::fromUtf8(":/new/file_add.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_newTask->setIcon(icon10);
@@ -415,6 +445,7 @@ public:
 
         pushButton_printList = new QPushButton(agenda_ui);
         pushButton_printList->setObjectName(QString::fromUtf8("pushButton_printList"));
+        pushButton_printList->setFont(font);
         QIcon icon11;
         icon11.addFile(QString::fromUtf8(":/new/printer.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_printList->setIcon(icon11);
@@ -431,6 +462,7 @@ public:
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(line->sizePolicy().hasHeightForWidth());
         line->setSizePolicy(sizePolicy3);
+        line->setFont(font);
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
@@ -447,8 +479,6 @@ public:
         comboBox_Names->setSizePolicy(sizePolicy4);
         comboBox_Names->setMinimumSize(QSize(250, 0));
         comboBox_Names->setMaximumSize(QSize(350, 16777215));
-        QFont font;
-        font.setPointSize(12);
         comboBox_Names->setFont(font);
 
         gridLayout_2->addWidget(comboBox_Names, 0, 1, 1, 1);
@@ -459,14 +489,13 @@ public:
         comboBox_dni->setSizePolicy(sizePolicy1);
         comboBox_dni->setMinimumSize(QSize(10, 0));
         comboBox_dni->setMaximumSize(QSize(10, 16777215));
+        comboBox_dni->setFont(font);
 
         gridLayout_2->addWidget(comboBox_dni, 0, 2, 1, 1);
 
         dateEdit_Agenda = new QDateEdit(agenda_ui);
         dateEdit_Agenda->setObjectName(QString::fromUtf8("dateEdit_Agenda"));
-        QFont font1;
-        font1.setPointSize(14);
-        dateEdit_Agenda->setFont(font1);
+        dateEdit_Agenda->setFont(font);
         dateEdit_Agenda->setCurrentSection(QDateTimeEdit::YearSection);
         dateEdit_Agenda->setCalendarPopup(true);
 
@@ -478,11 +507,13 @@ public:
         sizePolicy1.setHeightForWidth(lineEdit_codigo->sizePolicy().hasHeightForWidth());
         lineEdit_codigo->setSizePolicy(sizePolicy1);
         lineEdit_codigo->setMaximumSize(QSize(10, 16777215));
+        lineEdit_codigo->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_codigo, 0, 4, 1, 1);
 
         pushButton_show_Agenda = new QPushButton(agenda_ui);
         pushButton_show_Agenda->setObjectName(QString::fromUtf8("pushButton_show_Agenda"));
+        pushButton_show_Agenda->setFont(font);
         pushButton_show_Agenda->setIcon(icon1);
         pushButton_show_Agenda->setIconSize(QSize(20, 20));
         pushButton_show_Agenda->setFlat(true);
@@ -494,6 +525,7 @@ public:
         pushButton_agenda_changeColor->setEnabled(true);
         sizePolicy1.setHeightForWidth(pushButton_agenda_changeColor->sizePolicy().hasHeightForWidth());
         pushButton_agenda_changeColor->setSizePolicy(sizePolicy1);
+        pushButton_agenda_changeColor->setFont(font);
         pushButton_agenda_changeColor->setIcon(icon2);
         pushButton_agenda_changeColor->setIconSize(QSize(20, 20));
         pushButton_agenda_changeColor->setAutoDefault(false);
@@ -506,6 +538,7 @@ public:
         pushButton_update_Agenda->setObjectName(QString::fromUtf8("pushButton_update_Agenda"));
         sizePolicy1.setHeightForWidth(pushButton_update_Agenda->sizePolicy().hasHeightForWidth());
         pushButton_update_Agenda->setSizePolicy(sizePolicy1);
+        pushButton_update_Agenda->setFont(font);
         pushButton_update_Agenda->setAutoFillBackground(false);
         pushButton_update_Agenda->setIcon(icon);
         pushButton_update_Agenda->setIconSize(QSize(16, 16));
@@ -522,6 +555,7 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         sizePolicy1.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy1);
+        label_4->setFont(font);
 
         gridLayout_2->addWidget(label_4, 0, 0, 1, 1);
 
@@ -538,6 +572,7 @@ public:
         line_4->setObjectName(QString::fromUtf8("line_4"));
         sizePolicy4.setHeightForWidth(line_4->sizePolicy().hasHeightForWidth());
         line_4->setSizePolicy(sizePolicy4);
+        line_4->setFont(font);
         line_4->setFrameShape(QFrame::HLine);
         line_4->setFrameShadow(QFrame::Sunken);
 
@@ -561,11 +596,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
         tablaView_Agend->setHorizontalHeaderItem(6, __qtablewidgetitem12);
         tablaView_Agend->setObjectName(QString::fromUtf8("tablaView_Agend"));
-        QFont font2;
-        font2.setPointSize(11);
-        font2.setBold(true);
-        font2.setWeight(75);
-        tablaView_Agend->setFont(font2);
+        tablaView_Agend->setFont(font1);
         tablaView_Agend->setFrameShape(QFrame::StyledPanel);
         tablaView_Agend->setFrameShadow(QFrame::Plain);
         tablaView_Agend->setMidLineWidth(1);

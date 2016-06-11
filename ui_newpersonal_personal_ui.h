@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'newpersonal_personal_ui.ui'
 **
-** Created: Thu 14. May 11:49:01 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -90,71 +90,87 @@ public:
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         label_2 = new QLabel(newpersonal_personal_ui);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        QFont font;
+        font.setPointSize(12);
+        label_2->setFont(font);
 
         gridLayout_2->addWidget(label_2, 0, 0, 1, 2);
 
         lineEdit_FatherName = new QLineEdit(newpersonal_personal_ui);
         lineEdit_FatherName->setObjectName(QString::fromUtf8("lineEdit_FatherName"));
+        lineEdit_FatherName->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_FatherName, 0, 2, 1, 2);
 
         label_3 = new QLabel(newpersonal_personal_ui);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout_2->addWidget(label_3, 0, 4, 1, 1);
 
         lineEdit_MotherName = new QLineEdit(newpersonal_personal_ui);
         lineEdit_MotherName->setObjectName(QString::fromUtf8("lineEdit_MotherName"));
+        lineEdit_MotherName->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_MotherName, 0, 5, 1, 1);
 
         label_5 = new QLabel(newpersonal_personal_ui);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
 
         gridLayout_2->addWidget(label_5, 1, 0, 1, 2);
 
         lineEdit_FirstName = new QLineEdit(newpersonal_personal_ui);
         lineEdit_FirstName->setObjectName(QString::fromUtf8("lineEdit_FirstName"));
+        lineEdit_FirstName->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_FirstName, 1, 2, 1, 2);
 
         label_6 = new QLabel(newpersonal_personal_ui);
         label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setFont(font);
 
         gridLayout_2->addWidget(label_6, 1, 4, 1, 1);
 
         lineEdit_SecondName = new QLineEdit(newpersonal_personal_ui);
         lineEdit_SecondName->setObjectName(QString::fromUtf8("lineEdit_SecondName"));
+        lineEdit_SecondName->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_SecondName, 1, 5, 1, 1);
 
         label_7 = new QLabel(newpersonal_personal_ui);
         label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setFont(font);
 
         gridLayout_2->addWidget(label_7, 2, 0, 1, 1);
 
         lineEdit_Dni = new QLineEdit(newpersonal_personal_ui);
         lineEdit_Dni->setObjectName(QString::fromUtf8("lineEdit_Dni"));
+        lineEdit_Dni->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Dni, 2, 2, 1, 2);
 
         label_10 = new QLabel(newpersonal_personal_ui);
         label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setFont(font);
 
         gridLayout_2->addWidget(label_10, 3, 0, 1, 2);
 
         label_funcion = new QLabel(newpersonal_personal_ui);
         label_funcion->setObjectName(QString::fromUtf8("label_funcion"));
+        label_funcion->setFont(font);
 
         gridLayout_2->addWidget(label_funcion, 3, 4, 1, 1);
 
         lineEdit_funcion = new QLineEdit(newpersonal_personal_ui);
         lineEdit_funcion->setObjectName(QString::fromUtf8("lineEdit_funcion"));
+        lineEdit_funcion->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_funcion, 3, 5, 1, 1);
 
         line_2 = new QFrame(newpersonal_personal_ui);
         line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFont(font);
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
 
@@ -162,61 +178,73 @@ public:
 
         label_15 = new QLabel(newpersonal_personal_ui);
         label_15->setObjectName(QString::fromUtf8("label_15"));
+        label_15->setFont(font);
 
         gridLayout_2->addWidget(label_15, 5, 0, 1, 2);
 
         label = new QLabel(newpersonal_personal_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout_2->addWidget(label, 6, 0, 1, 2);
 
         lineEdit_Country = new QLineEdit(newpersonal_personal_ui);
         lineEdit_Country->setObjectName(QString::fromUtf8("lineEdit_Country"));
+        lineEdit_Country->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Country, 6, 2, 1, 2);
 
         label_4 = new QLabel(newpersonal_personal_ui);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         gridLayout_2->addWidget(label_4, 6, 4, 1, 1);
 
         lineEdit_Departamento = new QLineEdit(newpersonal_personal_ui);
         lineEdit_Departamento->setObjectName(QString::fromUtf8("lineEdit_Departamento"));
+        lineEdit_Departamento->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Departamento, 6, 5, 1, 1);
 
         label_9 = new QLabel(newpersonal_personal_ui);
         label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setFont(font);
 
         gridLayout_2->addWidget(label_9, 7, 0, 1, 2);
 
         lineEdit_Provincia = new QLineEdit(newpersonal_personal_ui);
         lineEdit_Provincia->setObjectName(QString::fromUtf8("lineEdit_Provincia"));
+        lineEdit_Provincia->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Provincia, 7, 2, 1, 2);
 
         label_25 = new QLabel(newpersonal_personal_ui);
         label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setFont(font);
 
         gridLayout_2->addWidget(label_25, 7, 4, 1, 1);
 
         lineEdit_Distrito = new QLineEdit(newpersonal_personal_ui);
         lineEdit_Distrito->setObjectName(QString::fromUtf8("lineEdit_Distrito"));
+        lineEdit_Distrito->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Distrito, 7, 5, 1, 1);
 
         label_24 = new QLabel(newpersonal_personal_ui);
         label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setFont(font);
 
         gridLayout_2->addWidget(label_24, 8, 0, 1, 2);
 
         lineEdit_Lugar = new QLineEdit(newpersonal_personal_ui);
         lineEdit_Lugar->setObjectName(QString::fromUtf8("lineEdit_Lugar"));
+        lineEdit_Lugar->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_Lugar, 8, 2, 1, 2);
 
         line_3 = new QFrame(newpersonal_personal_ui);
         line_3->setObjectName(QString::fromUtf8("line_3"));
+        line_3->setFont(font);
         line_3->setFrameShape(QFrame::HLine);
         line_3->setFrameShadow(QFrame::Sunken);
 
@@ -224,6 +252,7 @@ public:
 
         label_21 = new QLabel(newpersonal_personal_ui);
         label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setFont(font);
 
         gridLayout_2->addWidget(label_21, 10, 4, 1, 1);
 
@@ -234,11 +263,13 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(comboBox_MaritalStatus->sizePolicy().hasHeightForWidth());
         comboBox_MaritalStatus->setSizePolicy(sizePolicy);
+        comboBox_MaritalStatus->setFont(font);
 
         gridLayout_2->addWidget(comboBox_MaritalStatus, 10, 5, 1, 1);
 
         label_22 = new QLabel(newpersonal_personal_ui);
         label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setFont(font);
 
         gridLayout_2->addWidget(label_22, 11, 4, 1, 1);
 
@@ -246,16 +277,19 @@ public:
         comboBox_Sex->setObjectName(QString::fromUtf8("comboBox_Sex"));
         sizePolicy.setHeightForWidth(comboBox_Sex->sizePolicy().hasHeightForWidth());
         comboBox_Sex->setSizePolicy(sizePolicy);
+        comboBox_Sex->setFont(font);
 
         gridLayout_2->addWidget(comboBox_Sex, 11, 5, 1, 1);
 
         label_20 = new QLabel(newpersonal_personal_ui);
         label_20->setObjectName(QString::fromUtf8("label_20"));
+        label_20->setFont(font);
 
         gridLayout_2->addWidget(label_20, 10, 0, 1, 1);
 
         label_11 = new QLabel(newpersonal_personal_ui);
         label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setFont(font);
 
         gridLayout_2->addWidget(label_11, 11, 0, 1, 1);
 
@@ -263,6 +297,7 @@ public:
         dateEdit_DateofBirth->setObjectName(QString::fromUtf8("dateEdit_DateofBirth"));
         sizePolicy.setHeightForWidth(dateEdit_DateofBirth->sizePolicy().hasHeightForWidth());
         dateEdit_DateofBirth->setSizePolicy(sizePolicy);
+        dateEdit_DateofBirth->setFont(font);
         dateEdit_DateofBirth->setCurrentSection(QDateTimeEdit::YearSection);
         dateEdit_DateofBirth->setCalendarPopup(true);
 
@@ -272,6 +307,7 @@ public:
         comboBox_OrganDonor->setObjectName(QString::fromUtf8("comboBox_OrganDonor"));
         sizePolicy.setHeightForWidth(comboBox_OrganDonor->sizePolicy().hasHeightForWidth());
         comboBox_OrganDonor->setSizePolicy(sizePolicy);
+        comboBox_OrganDonor->setFont(font);
 
         gridLayout_2->addWidget(comboBox_OrganDonor, 11, 2, 1, 2);
 
@@ -279,11 +315,13 @@ public:
         comboBox_tipo->setObjectName(QString::fromUtf8("comboBox_tipo"));
         sizePolicy.setHeightForWidth(comboBox_tipo->sizePolicy().hasHeightForWidth());
         comboBox_tipo->setSizePolicy(sizePolicy);
+        comboBox_tipo->setFont(font);
 
         gridLayout_2->addWidget(comboBox_tipo, 3, 2, 1, 1);
 
         lineEdit_dni_to_insert = new QLineEdit(newpersonal_personal_ui);
         lineEdit_dni_to_insert->setObjectName(QString::fromUtf8("lineEdit_dni_to_insert"));
+        lineEdit_dni_to_insert->setFont(font);
 
         gridLayout_2->addWidget(lineEdit_dni_to_insert, 2, 5, 1, 1);
 
@@ -302,16 +340,19 @@ public:
 
         pushButton_Acept = new QPushButton(newpersonal_personal_ui);
         pushButton_Acept->setObjectName(QString::fromUtf8("pushButton_Acept"));
+        pushButton_Acept->setFont(font);
 
         gridLayout->addWidget(pushButton_Acept, 0, 1, 1, 1);
 
         pushButton_Save = new QPushButton(newpersonal_personal_ui);
         pushButton_Save->setObjectName(QString::fromUtf8("pushButton_Save"));
+        pushButton_Save->setFont(font);
 
         gridLayout->addWidget(pushButton_Save, 0, 2, 1, 1);
 
         pushButton_Cancel = new QPushButton(newpersonal_personal_ui);
         pushButton_Cancel->setObjectName(QString::fromUtf8("pushButton_Cancel"));
+        pushButton_Cancel->setFont(font);
 
         gridLayout->addWidget(pushButton_Cancel, 0, 3, 1, 1);
 

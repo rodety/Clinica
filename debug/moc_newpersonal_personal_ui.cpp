@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'newpersonal_personal_ui.h'
 **
-** Created: Thu 14. May 11:50:58 2015
+** Created: Fri 10. Jun 20:12:27 2016
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!

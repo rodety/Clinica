@@ -18,7 +18,6 @@ newPaciente_paciente_ui::newPaciente_paciente_ui(QWidget *parent) :
     ui->setupUi(this);
     //reg_Dato();
     //ui->lineEdit_Dni->setValidator(new QIntValidator(0, 99999999));
-    ui->lineEdit_dni_to_insert->hide();
     accept=true;
 }
 
@@ -202,100 +201,60 @@ void newPaciente_paciente_ui::on_pushButton_Acept_clicked()
         return;
     }
 
-    QString DNI_TO_INSERT;
+
 
 
     QSqlQuery query;
 
-    DNI_TO_INSERT = ui->lineEdit_Dni->text();
 
-    //if(ui->lineEdit_Dni->text().length() > 0 && ui->lineEdit_Dni->text().length() < 8)
-    //{
-    ///QString str_warning = "Porfavor ingrese un dni con 8 caracteres";
-    //ret = QMessageBox::warning(this, tr("Advertencia"), tr(str_warning.toStdString().data()),
-    //                               QMessageBox::Ok);
-    //msgBox->setButtonText(QMessageBox::Close, "Ok");
-    //return;
-    //}
 
-    if(ui->lineEdit_Dni->text().length() == 0)
-    {
-        int DNI_TEMP;
-        QSqlQuery invalid_dni;
-
-        invalid_dni.prepare("select max(dni_pk) from e_invalid_dni");
-        invalid_dni.exec();
-        invalid_dni.next();
-
-        DNI_TO_INSERT = invalid_dni.value(0).toString();
-        DNI_TEMP = DNI_TO_INSERT.toInt();
-
-        invalid_dni.prepare("UPDATE e_invalid_dni SET dni_pk=? WHERE dni_pk="+DNI_TO_INSERT);
-        DNI_TEMP++;
-        DNI_TO_INSERT = QString::number(DNI_TEMP);
-
-        invalid_dni.bindValue(0,DNI_TO_INSERT);
-        invalid_dni.exec();
-
-        DNI_TO_INSERT = "-"+DNI_TO_INSERT;
-    }
-    //}
-
-    int count=0;
 
     //------------------------------CREANDO DNI----------------------------------------
 
-    query.prepare("INSERT INTO e_dni(dni_pk,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre,sexo,fecha_nacimiento,donacion_organos,estado_civil,pais,departamento,provincia,distrito,direccion) Values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-    query.bindValue(0,DNI_TO_INSERT);
-    query.bindValue(1,ui->lineEdit_FatherName->text());
-    query.bindValue(2,ui->lineEdit_MotherName->text());
-    query.bindValue(3,ui->lineEdit_FirstName->text());
-    query.bindValue(4,ui->lineEdit_SecondName->text());
-    query.bindValue(5,ui->comboBox_Sex->currentText());
-    query.bindValue(6,ui->dateEdit_DateofBirth->text());
-    query.bindValue(7,ui->comboBox_OrganDonor->currentText());
-    query.bindValue(8,ui->comboBox_MaritalStatus->currentText());
-    query.bindValue(9,ui->lineEdit_Country->text());
-    query.bindValue(10,ui->lineEdit_Departamento->text());
-    query.bindValue(11,ui->lineEdit_Provincia->text());
-    query.bindValue(12,ui->lineEdit_Distrito->text());
-    query.bindValue(13,ui->lineEdit_Lugar->text());
-    if(!query.exec())
-        qDebug()<<"Query 1:"<< query.lastError().text();
-    count = query.numRowsAffected();
-    //------------------------------CREANDO PERSONA----------------------------------------
+    //query.prepare("INSERT INTO Paciente(dni_pk,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre,sexo,fecha_nacimiento,donacion_organos,estado_civil,pais,departamento,provincia,distrito,direccion) Values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    QString consulta = "INSERT INTO Paciente (dni,apellido_paterno,apellido_materno,primer_nombre,segundo_nombre,sexo,fecha_nacimiento,donacion_organos,estado_civil,pais,departamento,provincia,distrito,direccion,alergias,ocupacion,telefono_paciente,celular_paciente,email,cirujias_previas,medicacion_actual,persona_recurrir,telefono_persona_recurrir,antecedentes,codigo) VALUES(";
+            consulta += "'"+ui->lineEdit_Dni->text()+"',";
+            consulta += "'"+ui->lineEdit_FatherName->text()+"',";
+            consulta += "'"+ui->lineEdit_MotherName->text()+"',";
+            consulta += "'"+ui->lineEdit_FirstName->text()+"',";
+            consulta += "'"+ui->lineEdit_SecondName->text()+"',";
+            consulta += "'"+ui->comboBox_Sex->currentText()+"',";
+            consulta += "'"+ui->dateEdit_DateofBirth->date().toString(Qt::ISODate)+"',";
+            consulta += "'"+ui->comboBox_OrganDonor->currentText()+"',";
+            consulta += "'"+ui->comboBox_MaritalStatus->currentText()+"',";
+            consulta += "'"+ui->lineEdit_Country->text()+"',";
+            consulta += "'"+ui->lineEdit_Departamento->text()+"',";
+            consulta += "'"+ui->lineEdit_Provincia->text()+"',";
+            consulta += "'"+ui->lineEdit_Distrito->text()+"',";
+            consulta += "'"+ui->lineEdit_Lugar->text()+"',";
+            consulta += "'"+ui->lineEdit_alergias->text()+"',";
+            consulta += "'"+ui->lineEdit_Ocupation->text()+"',";
+            consulta += "'"+ui->lineEdit_Telephone->text()+"',";
+            consulta += "'"+ui->lineEdit_Cellphone->text()+"',";
+            consulta += "'"+ui->lineEdit_Email->text()+"',";
 
-    query.prepare("INSERT INTO e_persona(dni_pk,tipo) VALUES(?,?)");
-    query.bindValue(0,DNI_TO_INSERT);
-    query.bindValue(1,"Paciente");//PACIENTE
-    query.exec();
-    count += query.numRowsAffected();
-    //------------------------------CREANDO PACIENTE----------------------------------------
+            if(ui->comboBox_PrefSurgery->currentText() == "No")
+                consulta += "'"+ui->comboBox_PrefSurgery->currentText()+"',";
+            else
+                consulta += "'"+ui->lineEdit_cirujias_previas->text()+"',";
 
-    query.prepare("INSERT INTO e_paciente(dni_pk,alergias,ocupacion,telefono_paciente,celular_paciente,email,cirujias_previas,medicacion_actual,persona_recurrir,telefono_persona_recurrir,antecedentes) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
-    query.bindValue(0,DNI_TO_INSERT);
-    query.bindValue(1,ui->lineEdit_alergias->text());
-    query.bindValue(2,ui->lineEdit_Ocupation->text());
-    query.bindValue(3,ui->lineEdit_Telephone->text());
-    query.bindValue(4,ui->lineEdit_Cellphone->text());
-    query.bindValue(5,ui->lineEdit_Email->text());
-    if(ui->comboBox_PrefSurgery->currentText() == "No")
-        query.bindValue(6,ui->comboBox_PrefSurgery->currentText());
-    else
-        query.bindValue(6,ui->lineEdit_cirujias_previas->text());
-
-    if(ui->comboBox_CurrentMedication->currentText() == "No")
-        query.bindValue(7,ui->comboBox_CurrentMedication->currentText());
-    else
-        query.bindValue(7,ui->lineEdit_Medicacion_actual->text());
+            if(ui->comboBox_CurrentMedication->currentText() == "No")
+                 consulta += "'"+ui->comboBox_CurrentMedication->currentText()+"',";
+            else
+                 consulta += "'"+ui->lineEdit_Medicacion_actual->text()+"',";
 
 
-    query.bindValue(8,ui->lineEdit_TutorPerson->text());
-    query.bindValue(9,ui->lineEdit_TelephoneTutorPerson->text());
-    query.bindValue(10,ui->lineEdit_antecedentes->text());
-    query.exec();
-    count += query.numRowsAffected();
-    //------------------------------CREANDO HISTORIA CLINICA----------------------------------------
+
+            consulta += "'"+ui->lineEdit_TutorPerson->text()+"',";
+            consulta += "'"+ui->lineEdit_TelephoneTutorPerson->text()+"',";
+            consulta += "'"+ui->lineEdit_antecedentes->text()+"',";
+            consulta += "'"+ui->lineEdit_historiaClinica->text()+"')";
+
+
+
+
+
+
 
     if(ui->lineEdit_historiaClinica->text().size() > 0)
     {
@@ -320,7 +279,7 @@ void newPaciente_paciente_ui::on_pushButton_Acept_clicked()
 
                 if(ultimo_codigo.toInt(0)+1 >= candidato.toInt(0))
                 {
-                    query.prepare("SELECT * FROM e_historia_clinica WHERE nick = '"+ui->lineEdit_historiaClinica->text()+"'");
+                    query.prepare("SELECT * FROM Paciente WHERE codigo = '"+ui->lineEdit_historiaClinica->text()+"'");
                     query.exec();
                     if(query.next()){
                         QString str_warning = "El paciente con Historia "+ui->lineEdit_historiaClinica->text()+" ya existe."+"\nPorvafor ingrese otro codigo de historia";
@@ -336,13 +295,6 @@ void newPaciente_paciente_ui::on_pushButton_Acept_clicked()
                         ret = msgBox->exec();
                         return;
 
-                    }
-                    else{
-                        query.prepare("INSERT INTO e_historia_clinica(dni_pk,nick) VALUES(?,?)");
-                        query.bindValue(0,DNI_TO_INSERT);
-                        query.bindValue(1,ui->lineEdit_historiaClinica->text());
-                        query.exec();
-                        count += query.numRowsAffected();
                     }
 
                     if (ultimo_codigo.toInt(0)+1 == candidato.toInt(0)){
@@ -377,51 +329,51 @@ void newPaciente_paciente_ui::on_pushButton_Acept_clicked()
         }
 
     }
-    else{
-        query.prepare("INSERT INTO e_historia_clinica(dni_pk,nick) VALUES(?,?)");
-        query.bindValue(0,DNI_TO_INSERT);
-        query.bindValue(1,ui->lineEdit_historiaClinica->text());
-        query.exec();
-        count += query.numRowsAffected();
-    }
+        query.prepare(consulta);
+        if(!query.exec())
+        {
+            QString str_warning = "La persona con DNI "+ui->lineEdit_Dni->text()+" ya existe en el personal."+"\nPorvafor ingrese otro DNI";
+            msgBox->setIcon(QMessageBox::Warning);
+            msgBox->setWindowTitle("Advertencia");
+            msgBox->setWindowIcon(QIcon(":/new/Add-Male-User.png"));
+
+            msgBox->setText(str_warning);
+            msgBox->setStandardButtons(QMessageBox::Save);
+            msgBox->setDefaultButton(QMessageBox::Save);
+            msgBox->setButtonText(QMessageBox::Save, "Aceptar");
+
+            ret = msgBox->exec();
+            return;
+        }
+        else
+        {                        
+            QString info = "Paciente con DNI "+ui->lineEdit_Dni->text()+"\nfue registrado con historia "+ui->lineEdit_historiaClinica->text();
+            msgBox->setIcon(QMessageBox::Information);
+            msgBox->setWindowTitle("Información");
+            msgBox->setWindowIcon(QIcon(":/new/Add-Male-User.png"));
+
+            msgBox->setText(info);
+            msgBox->setStandardButtons(QMessageBox::Save);
+            msgBox->setDefaultButton(QMessageBox::Save);
+            msgBox->setButtonText(QMessageBox::Save, "Aceptar");
+
+            ret = msgBox->exec();
+            emit update_List_patients();
+
+
+        }
+
+
+
 
 
 
     //------------------------CERRANDO VENTANA-------------------------------------------------------
 
-    qDebug()<<"ROWS AFECTED : "<<count;
-    if(count == 4)
-    {       
-        QString info = "Paciente con DNI "+ui->lineEdit_Dni->text()+"\nfue registrado con historia "+ui->lineEdit_historiaClinica->text();
-        msgBox->setIcon(QMessageBox::Information);
-        msgBox->setWindowTitle("Información");
-        msgBox->setWindowIcon(QIcon(":/new/Add-Male-User.png"));
 
-        msgBox->setText(info);
-        msgBox->setStandardButtons(QMessageBox::Save);
-        msgBox->setDefaultButton(QMessageBox::Save);
-        msgBox->setButtonText(QMessageBox::Save, "Aceptar");
-
-        ret = msgBox->exec();
-    }
-    else
-    {
-        QString str_warning = "La persona con DNI "+ui->lineEdit_Dni->text()+" ya existe en el personal."+"\nPorvafor ingrese otro DNI";
-        msgBox->setIcon(QMessageBox::Warning);
-        msgBox->setWindowTitle("Advertencia");
-        msgBox->setWindowIcon(QIcon(":/new/Add-Male-User.png"));
-
-        msgBox->setText(str_warning);
-        msgBox->setStandardButtons(QMessageBox::Save);
-        msgBox->setDefaultButton(QMessageBox::Save);
-        msgBox->setButtonText(QMessageBox::Save, "Aceptar");
-
-        ret = msgBox->exec();
-        return;
-    }
         this->close();
     //SOLO ACTUALIZAR SI LA VENTANA NO CAMBIO
-        emit update_List_patients();
+
 }
 
 void newPaciente_paciente_ui::on_pushButton_Save_clicked()
@@ -444,29 +396,13 @@ void newPaciente_paciente_ui::on_pushButton_Save_clicked()
         }
     }
 
-    QString DNI = current_dni;
-    qDebug()<<"newpaciente: "<<DNI<<endl;
+    QString id = current_ID;
     QSqlQuery query;
 
 
-    if(current_dni!=ui->lineEdit_Dni->text())
-    {
-        query.prepare("SELECT dni_pk FROM e_dni WHERE dni_pk='"+ui->lineEdit_Dni->text()+"'");
-        query.exec();
-        if(query.next())
-        {
-            msgBox->setIcon(QMessageBox::Critical);
-            msgBox->setWindowTitle("Error");
-            msgBox->setWindowIcon(QIcon(":/new/1329798431_Application.png"));
-            msgBox->setText("El DNI ingresado ya existe.");
-            msgBox->setStandardButtons(QMessageBox::Cancel);
-            msgBox->setButtonText(QMessageBox::Cancel, "Cancelar");
-            ret = msgBox->exec();
-            return;
-        }
-    }
 
-    QString DNI_TO_INSERT;
+
+
 
     msgBox->setIcon(QMessageBox::Warning);
     msgBox->setWindowTitle("Confirmar Guardar");
@@ -481,29 +417,8 @@ void newPaciente_paciente_ui::on_pushButton_Save_clicked()
     msgBox->setButtonText(QMessageBox::Cancel, "Cancelar");
     ret = msgBox->exec();
 
-    DNI_TO_INSERT=ui->lineEdit_Dni->text();
-    if(ui->lineEdit_Dni->text().length() == 0)
-    {
 
-        int DNI_TEMP;
-        QSqlQuery invalid_dni;
 
-        invalid_dni.prepare("select max(dni_pk) from e_invalid_dni");
-        invalid_dni.exec();
-        invalid_dni.next();
-
-        DNI_TO_INSERT = invalid_dni.value(0).toString();
-        DNI_TEMP = DNI_TO_INSERT.toInt();
-
-        invalid_dni.prepare("UPDATE e_invalid_dni SET dni_pk=? WHERE dni_pk="+DNI_TO_INSERT);
-        DNI_TEMP++;
-        DNI_TO_INSERT = QString::number(DNI_TEMP);
-
-        invalid_dni.bindValue(0,DNI_TO_INSERT);
-        invalid_dni.exec();
-
-        DNI_TO_INSERT = "-"+DNI_TO_INSERT;
-    }
 
     switch(ret)
     {
@@ -511,11 +426,11 @@ void newPaciente_paciente_ui::on_pushButton_Save_clicked()
 
 
 
-        query.prepare("UPDATE e_dni SET dni_pk=?,apellido_paterno=?,apellido_materno=?,primer_nombre=?,segundo_nombre=?,sexo=?,fecha_nacimiento=?,donacion_organos=?,estado_civil=?,pais=?,departamento=?,provincia=?,distrito=?,direccion=? WHERE dni_pk='"+DNI+"'");
+        query.prepare("UPDATE Paciente SET dni=?,apellido_paterno=?,apellido_materno=?,primer_nombre=?,segundo_nombre=?,sexo=?,fecha_nacimiento=?,donacion_organos=?,estado_civil=?,pais=?,departamento=?,provincia=?,distrito=?,direccion=?,alergias=?,ocupacion=?,telefono_paciente=?,celular_paciente=?,email=?,cirujias_previas=?,medicacion_actual=?,persona_recurrir=?,telefono_persona_recurrir=?,antecedentes=?,codigo=? WHERE idPaciente='"+id+"'");
 
 
 
-        query.bindValue(0,DNI_TO_INSERT);
+        query.bindValue(0,ui->lineEdit_Dni->text());
         query.bindValue(1,ui->lineEdit_FatherName->text());
         query.bindValue(2,ui->lineEdit_MotherName->text());
         query.bindValue(3,ui->lineEdit_FirstName->text());
@@ -529,42 +444,25 @@ void newPaciente_paciente_ui::on_pushButton_Save_clicked()
         query.bindValue(11,ui->lineEdit_Provincia->text());
         query.bindValue(12,ui->lineEdit_Distrito->text());
         query.bindValue(13,ui->lineEdit_Lugar->text());
-        query.exec();
 
-
-        /*
-        query.prepare("UPDATE e_persona SET dni_pk=? WHERE dni_pk='"+DNI_TO_INSERT+"'");
-        query.bindValue(0,DNI_TO_INSERT);
-        query.exec();
-        */
-
-
-
-
-        query.prepare("UPDATE e_paciente SET alergias=?,ocupacion=?,telefono_paciente=?,celular_paciente=?,email=?,cirujias_previas=?,medicacion_actual=?,persona_recurrir=?,telefono_persona_recurrir=?,antecedentes=? WHERE dni_pk='"+DNI_TO_INSERT+"'");
-        //query.bindValue(0,DNI_TO_INSERT);
-        query.bindValue(0,ui->lineEdit_alergias->text());
-        query.bindValue(1,ui->lineEdit_Ocupation->text());
-        query.bindValue(2,ui->lineEdit_Telephone->text());
-        query.bindValue(3,ui->lineEdit_Cellphone->text());
-        query.bindValue(4,ui->lineEdit_Email->text());
+        query.bindValue(14,ui->lineEdit_alergias->text());
+        query.bindValue(15,ui->lineEdit_Ocupation->text());
+        query.bindValue(16,ui->lineEdit_Telephone->text());
+        query.bindValue(17,ui->lineEdit_Cellphone->text());
+        query.bindValue(18,ui->lineEdit_Email->text());
         if(ui->comboBox_PrefSurgery->currentText() == "No")
-            query.bindValue(5,ui->comboBox_PrefSurgery->currentText());
+            query.bindValue(19,ui->comboBox_PrefSurgery->currentText());
         else
-            query.bindValue(5,ui->lineEdit_cirujias_previas->text());
+            query.bindValue(19,ui->lineEdit_cirujias_previas->text());
 
         if(ui->comboBox_CurrentMedication->currentText() == "No")
-            query.bindValue(6,ui->comboBox_CurrentMedication->currentText());
+            query.bindValue(20,ui->comboBox_CurrentMedication->currentText());
         else
-            query.bindValue(6,ui->lineEdit_Medicacion_actual->text());
-        query.bindValue(7,ui->lineEdit_TutorPerson->text());
-        query.bindValue(8,ui->lineEdit_TelephoneTutorPerson->text());
-        query.bindValue(9,ui->lineEdit_antecedentes->text());
-        query.exec();
-
-        query.prepare("UPDATE e_historia_clinica SET nick=? WHERE dni_pk='"+DNI_TO_INSERT+"'");
-        //query.bindValue(0,DNI_TO_INSERT);
-        query.bindValue(0,ui->lineEdit_historiaClinica->text());
+            query.bindValue(20,ui->lineEdit_Medicacion_actual->text());
+        query.bindValue(21,ui->lineEdit_TutorPerson->text());
+        query.bindValue(22,ui->lineEdit_TelephoneTutorPerson->text());
+        query.bindValue(23,ui->lineEdit_antecedentes->text());
+        query.bindValue(24,ui->lineEdit_historiaClinica->text());
         query.exec();
 
 
@@ -616,60 +514,48 @@ void newPaciente_paciente_ui::set_cliked_type(int type)
 }
 
 //PARA ACTUALIZAR CONTENIDO DE LA UI
-void newPaciente_paciente_ui::show_data_paciente_form(QString dni_var)
+void newPaciente_paciente_ui::show_data_paciente_form(QString id)
 {
-    const QString DNI = dni_var;
+
     QSqlQuery query;
-    query.prepare("SELECT * FROM e_dni WHERE dni_pk='"+DNI+"'");
+    query.prepare("SELECT * FROM Paciente WHERE idPaciente='"+id+"'");
     query.exec();
     query.next();
 
 
-    const QString APELLIDO_PATERNO =query.value(1).toString();
-    const QString APELLIDO_MATERNO =query.value(2).toString();
-    const QString PRIMER_NOMBRE =query.value(3).toString();
-    const QString SEGUNDO_NOMBRE =query.value(4).toString();
-    const QString SEXO =query.value(5).toString();
-    const QString FECHA_NACIMENTO =query.value(6).toString(); //Update show this var in the form
-    const QString DONACION_ORGANOS =query.value(7).toString();
-    const QString ESTADO_CIVIL =query.value(8).toString();
-    const QString PAIS =query.value(9).toString();
-    const QString DEPARTAMENTO =query.value(10).toString();
-    const QString PROVINCIA =query.value(11).toString();
-    const QString DISTRITO =query.value(12).toString();
-    const QString DIRECCION =query.value(13).toString();
-
-    query.prepare("SELECT * FROM e_paciente WHERE dni_pk='"+DNI+"'");
-    query.exec();
-    query.next();
-
-    const QString ALERGIAS = query.value(1).toString();
-    const QString OCUPACION = query.value(2).toString();
-    const QString TELEFONO_PACIENTE = query.value(3).toString();
-    const QString CELULAR_PACIENTE = query.value(4).toString();
-    const QString EMAIL = query.value(5).toString();
-    const QString CIRUJIAS_PREVIAS = query.value(6).toString();
-    const QString MEDICACION_ACTUAL = query.value(7).toString();
-    const QString PERSONAS_RECURRIR = query.value(8).toString();
-    const QString TELEFONO_PERSONA_RECURRIR = query.value(9).toString();
-    const QString ANTECEDENTES = query.value(10).toString();
-
-    query.prepare("SELECT nick FROM e_historia_clinica WHERE dni_pk='"+DNI+"'");
-    query.exec();
-    query.next();
-
-    const QString NICK_HISTORIA_CLINICA = query.value(0).toString();
+    const QString DNI = query.value(1).toString();
+    const QString APELLIDO_PATERNO =query.value(2).toString();
+    const QString APELLIDO_MATERNO =query.value(3).toString();
+    const QString PRIMER_NOMBRE =query.value(4).toString();
+    const QString SEGUNDO_NOMBRE =query.value(5).toString();
+    const QString SEXO =query.value(6).toString();
+    const QString FECHA_NACIMENTO =query.value(7).toString(); //Update show this var in the form
+    const QString DONACION_ORGANOS =query.value(8).toString();
+    const QString ESTADO_CIVIL =query.value(9).toString();
+    const QString PAIS =query.value(10).toString();
+    const QString DEPARTAMENTO =query.value(11).toString();
+    const QString PROVINCIA =query.value(12).toString();
+    const QString DISTRITO =query.value(13).toString();
+    const QString DIRECCION =query.value(14).toString();
 
 
-    bool b=false;
-    DNI.toInt(&b);
-    if(b)
-    {
-        int n=DNI.toInt();
-        if(n<=0)
-            b=false;
-    }
-    if(b)
+
+    const QString ALERGIAS = query.value(15).toString();
+    const QString OCUPACION = query.value(16).toString();
+    const QString TELEFONO_PACIENTE = query.value(17).toString();
+    const QString CELULAR_PACIENTE = query.value(18).toString();
+    const QString EMAIL = query.value(19).toString();
+    const QString CIRUJIAS_PREVIAS = query.value(20).toString();
+    const QString MEDICACION_ACTUAL = query.value(21).toString();
+    const QString PERSONAS_RECURRIR = query.value(22).toString();
+    const QString TELEFONO_PERSONA_RECURRIR = query.value(23).toString();
+    const QString ANTECEDENTES = query.value(24).toString();
+    const QString NICK_HISTORIA_CLINICA = query.value(25).toString();
+
+
+    if(DNI.toInt(0) < 0)
+        ui->lineEdit_Dni->setText("");
+    else
         ui->lineEdit_Dni->setText(DNI);
 
     ui->lineEdit_FatherName->insert(APELLIDO_PATERNO);
@@ -677,7 +563,6 @@ void newPaciente_paciente_ui::show_data_paciente_form(QString dni_var)
     ui->lineEdit_FirstName->insert(PRIMER_NOMBRE);
     ui->lineEdit_SecondName->insert(SEGUNDO_NOMBRE);
  //   ui->lineEdit_Dni->insert(DNI);
-    ui->lineEdit_dni_to_insert->insert(DNI);
     ui->lineEdit_Ocupation->insert(OCUPACION);
     ui->lineEdit_Telephone->insert(TELEFONO_PACIENTE);
     ui->lineEdit_Cellphone->insert(CELULAR_PACIENTE);
@@ -749,8 +634,7 @@ void newPaciente_paciente_ui::hideButtonShow()
 
 void newPaciente_paciente_ui::on_lineEdit_Dni_textChanged(const QString &arg1)
 {
-    ui->lineEdit_dni_to_insert->clear();
-    ui->lineEdit_dni_to_insert->insert(arg1);
+
 }
 void newPaciente_paciente_ui::on_lineEdit_FatherName_editingFinished()
 {
@@ -828,10 +712,11 @@ QString newPaciente_paciente_ui::calculateCodeHistoryClinic(QString arg1)
             msgBox->setIcon(QMessageBox::Critical);
             msgBox->setWindowTitle("Error");
             msgBox->setWindowIcon(QIcon(":/new/1329798431_Application.png"));
-            msgBox->setText("Errot en apellido paterno.");
+            msgBox->setText("Error en apellido paterno.");
             msgBox->exec();
             ui->lineEdit_FatherName->setFocus();
         }
+        return "";
     }
 
 

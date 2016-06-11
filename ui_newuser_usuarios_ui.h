@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'newuser_usuarios_ui.ui'
 **
-** Created: Mon 7. Jan 16:32:55 2013
-**      by: Qt User Interface Compiler version 4.8.0
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -62,26 +62,33 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label_3 = new QLabel(newuser_usuarios_ui);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        QFont font;
+        font.setPointSize(12);
+        label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 0, 0, 1, 1);
 
         lineEdit_Name = new QLineEdit(newuser_usuarios_ui);
         lineEdit_Name->setObjectName(QString::fromUtf8("lineEdit_Name"));
+        lineEdit_Name->setFont(font);
 
         gridLayout->addWidget(lineEdit_Name, 0, 1, 1, 3);
 
         label_4 = new QLabel(newuser_usuarios_ui);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         gridLayout->addWidget(label_4, 1, 0, 1, 1);
 
         lineEdit_dni = new QLineEdit(newuser_usuarios_ui);
         lineEdit_dni->setObjectName(QString::fromUtf8("lineEdit_dni"));
+        lineEdit_dni->setFont(font);
 
         gridLayout->addWidget(lineEdit_dni, 1, 1, 1, 1);
 
         pushButton_consultar = new QPushButton(newuser_usuarios_ui);
         pushButton_consultar->setObjectName(QString::fromUtf8("pushButton_consultar"));
+        pushButton_consultar->setFont(font);
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/new/zoom.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_consultar->setIcon(icon1);
@@ -96,32 +103,38 @@ public:
 
         label = new QLabel(newuser_usuarios_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout->addWidget(label, 2, 0, 1, 1);
 
         lineEdit_UserNick = new QLineEdit(newuser_usuarios_ui);
         lineEdit_UserNick->setObjectName(QString::fromUtf8("lineEdit_UserNick"));
+        lineEdit_UserNick->setFont(font);
 
         gridLayout->addWidget(lineEdit_UserNick, 2, 1, 1, 2);
 
         label_2 = new QLabel(newuser_usuarios_ui);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 3, 0, 1, 1);
 
         lineEdit_Password = new QLineEdit(newuser_usuarios_ui);
         lineEdit_Password->setObjectName(QString::fromUtf8("lineEdit_Password"));
+        lineEdit_Password->setFont(font);
         lineEdit_Password->setEchoMode(QLineEdit::Password);
 
         gridLayout->addWidget(lineEdit_Password, 3, 1, 1, 2);
 
         label_5 = new QLabel(newuser_usuarios_ui);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
 
         gridLayout->addWidget(label_5, 4, 0, 1, 1);
 
         lineEdit_confirmPassword = new QLineEdit(newuser_usuarios_ui);
         lineEdit_confirmPassword->setObjectName(QString::fromUtf8("lineEdit_confirmPassword"));
+        lineEdit_confirmPassword->setFont(font);
         lineEdit_confirmPassword->setEchoMode(QLineEdit::Password);
 
         gridLayout->addWidget(lineEdit_confirmPassword, 4, 1, 1, 2);
@@ -137,11 +150,13 @@ public:
 
         pushButton_Acept = new QPushButton(newuser_usuarios_ui);
         pushButton_Acept->setObjectName(QString::fromUtf8("pushButton_Acept"));
+        pushButton_Acept->setFont(font);
 
         gridLayout_3->addWidget(pushButton_Acept, 0, 1, 1, 1);
 
         pushButton_Cancel = new QPushButton(newuser_usuarios_ui);
         pushButton_Cancel->setObjectName(QString::fromUtf8("pushButton_Cancel"));
+        pushButton_Cancel->setFont(font);
 
         gridLayout_3->addWidget(pushButton_Cancel, 0, 3, 1, 1);
 
@@ -151,6 +166,7 @@ public:
 
         pushButton_Save = new QPushButton(newuser_usuarios_ui);
         pushButton_Save->setObjectName(QString::fromUtf8("pushButton_Save"));
+        pushButton_Save->setFont(font);
 
         gridLayout_3->addWidget(pushButton_Save, 0, 2, 1, 1);
 

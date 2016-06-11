@@ -16,6 +16,11 @@
   <layout class="QGridLayout" name="gridLayout_6">
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -28,6 +33,11 @@
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
           <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Categoria Ingresos</string>
            </property>
@@ -35,6 +45,11 @@
          </item>
          <item row="0" column="1">
           <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Descripcion Ingreso</string>
            </property>
@@ -42,6 +57,11 @@
          </item>
          <item row="0" column="2">
           <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Fecha Desde:</string>
            </property>
@@ -49,6 +69,11 @@
          </item>
          <item row="0" column="3">
           <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Hasta:</string>
            </property>
@@ -56,6 +81,11 @@
          </item>
          <item row="1" column="0">
           <widget class="QComboBox" name="comboBox_5">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <item>
             <property name="text">
              <string>Quirurgicos</string>
@@ -90,6 +120,11 @@
          </item>
          <item row="1" column="1">
           <widget class="QComboBox" name="comboBox_6">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <item>
             <property name="text">
              <string>Cirugía Plástica Reparadora</string>
@@ -169,6 +204,11 @@
          </item>
          <item row="1" column="2">
           <widget class="QDateEdit" name="dateEdit">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="calendarPopup">
             <bool>true</bool>
            </property>
@@ -176,6 +216,11 @@
          </item>
          <item row="1" column="3">
           <widget class="QDateEdit" name="dateEdit_5">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="calendarPopup">
             <bool>true</bool>
            </property>
@@ -183,6 +228,11 @@
          </item>
          <item row="1" column="4">
           <widget class="QPushButton" name="newAlert_alerta_2">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>&amp;Nuevo Ingreso</string>
            </property>
@@ -206,6 +256,11 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Eli&amp;minar</string>
            </property>
@@ -225,6 +280,11 @@
        </item>
        <item row="1" column="0">
         <widget class="QTableWidget" name="tableWidget">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <column>
           <property name="text">
            <string>Fecha</string>
@@ -251,33 +311,66 @@
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Total Soles</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="lineEdit_6">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_10">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Total Dolares</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="lineEdit_7">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_11">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Total Tarjeta</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_8"/>
+          <widget class="QLineEdit" name="lineEdit_8">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -813,7 +906,7 @@
         <pixmap resource="rc.qrc">:/new/Reporte.PNG</pixmap>
        </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>60</x>

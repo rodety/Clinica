@@ -45,6 +45,11 @@
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <widget class="QLabel" name="label_12">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Paciente :</string>
          </property>
@@ -54,6 +59,7 @@
         <widget class="QLineEdit" name="lineEdit_Patient">
          <property name="font">
           <font>
+           <pointsize>12</pointsize>
            <kerning>true</kerning>
           </font>
          </property>
@@ -61,6 +67,11 @@
        </item>
        <item row="0" column="2">
         <widget class="QDateEdit" name="dateEdit_FechaCreacion">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="displayFormat">
           <string>yyyy/MM/dd</string>
          </property>
@@ -75,6 +86,11 @@
       <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
         <widget class="QLabel" name="label_127">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Médico Tratante :</string>
          </property>
@@ -88,6 +104,11 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="maxLength">
           <number>8</number>
          </property>
@@ -95,16 +116,32 @@
        </item>
        <item row="0" column="4">
         <widget class="QPushButton" name="pushButton_consultarMedico">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Consultar</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_medicoGlobal"/>
+        <widget class="QLineEdit" name="lineEdit_medicoGlobal">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
        <item row="0" column="2">
         <widget class="QLabel" name="label_128">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Dni :</string>
          </property>
@@ -114,8 +151,13 @@
      </item>
      <item row="2" column="0">
       <widget class="QTabWidget" name="Documentos">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>5</number>
        </property>
        <widget class="QWidget" name="tab_Antecedentes">
         <attribute name="title">
@@ -2291,6 +2333,11 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Médico tratante :</string>
              </property>
@@ -2298,6 +2345,11 @@
            </item>
            <item row="2" column="3">
             <widget class="QLabel" name="label_64">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -2305,6 +2357,11 @@
            </item>
            <item row="3" column="0" colspan="6">
             <widget class="QTableWidget" name="tableWidget_Terapeutica">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <column>
               <property name="text">
                <string>Fecha de inicio</string>
@@ -2334,6 +2391,11 @@
            </item>
            <item row="4" column="2">
             <widget class="QLabel" name="label_69">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -2347,6 +2409,11 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
             </widget>
            </item>
            <item row="0" column="5">
@@ -2356,6 +2423,11 @@
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
              </property>
             </widget>
            </item>
@@ -2367,10 +2439,20 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
             </widget>
            </item>
            <item row="1" column="3">
             <widget class="QLabel" name="label_57">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>N° Cama</string>
              </property>
@@ -2384,6 +2466,11 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Servicio</string>
              </property>
@@ -2391,6 +2478,11 @@
            </item>
            <item row="2" column="5">
             <widget class="QPushButton" name="pushButton_addItem_terapeutica">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Agregar Item</string>
              </property>
@@ -2398,6 +2490,11 @@
            </item>
            <item row="2" column="4">
             <widget class="QPushButton" name="pushButton_quitar_Item">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Quitar Item</string>
              </property>
@@ -2409,6 +2506,11 @@
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
             <spacer name="horizontalSpacer_8">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -2422,6 +2524,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_AceptTerapeuticaMedica">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Aceptar</string>
              </property>
@@ -2429,6 +2536,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_SaveTerapeuticaMedica">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Guardar</string>
              </property>
@@ -2436,6 +2548,11 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_CancelTerapeuticaMedica">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>Cancelar</string>
              </property>

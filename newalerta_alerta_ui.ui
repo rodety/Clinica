@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>420</width>
-    <height>166</height>
+    <width>413</width>
+    <height>176</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,6 +24,11 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Fecha :</string>
          </property>
@@ -31,6 +36,11 @@
        </item>
        <item row="0" column="1">
         <widget class="QDateEdit" name="dateEdit">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="displayFormat">
           <string>yyyy/MM/dd</string>
          </property>
@@ -41,6 +51,11 @@
        </item>
        <item row="0" column="2">
         <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Hora :</string>
          </property>
@@ -48,6 +63,11 @@
        </item>
        <item row="0" column="3">
         <widget class="QTimeEdit" name="timeEdit">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="maximumDateTime">
           <datetime>
            <hour>23</hour>
@@ -78,6 +98,11 @@
        </item>
        <item row="0" column="4">
         <spacer name="horizontalSpacer">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -93,6 +118,11 @@
      </item>
      <item row="1" column="0">
       <widget class="Line" name="line">
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -108,13 +138,24 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Nota :</string>
          </property>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -122,6 +163,11 @@
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="1" column="0">
         <spacer name="horizontalSpacer_2">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -135,6 +181,11 @@
        </item>
        <item row="1" column="1">
         <widget class="QPushButton" name="pushButton_Acept">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Aceptar</string>
          </property>
@@ -142,6 +193,11 @@
        </item>
        <item row="1" column="2">
         <widget class="QPushButton" name="pushButton_Save">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Guardar</string>
          </property>
@@ -149,6 +205,11 @@
        </item>
        <item row="1" column="3">
         <widget class="QPushButton" name="pushButton_Cancel">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Cancelar</string>
          </property>
@@ -169,6 +230,11 @@
        </item>
        <item row="0" column="2">
         <spacer name="verticalSpacer">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>

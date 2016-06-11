@@ -19,7 +19,7 @@ public:
     ~newconsulta_paciente_ui();
 
     void set_clicked_type(int type);
-    QString dni_var;
+    QString id_var;
     QString code_consulta_var;
     void show_name();
     void update_new_consulta_form();

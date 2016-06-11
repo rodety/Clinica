@@ -31,15 +31,15 @@ void consulta_paciente_ui::update_consultas_form()
         ui->tableWidget_SurgeryList->removeRow(i);
 
     ui->tableWidget_SurgeryList->setSortingEnabled(0);
-    QString DNI,NOMBRE,FECHA,MOTIVO,CODIGO,HISTORIA_CLINICA;
+    QString id,NOMBRE,FECHA,MOTIVO,CODIGO,HISTORIA_CLINICA;
     int COUNT;
 
 
-    DNI = dni_var;
+    id = id_var;
     COUNT = 0;
 
     QSqlQuery query;
-    query.prepare("SELECT apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM e_dni WHERE dni_pk="+DNI);
+    query.prepare("SELECT apellido_paterno,apellido_materno,primer_nombre,segundo_nombre FROM Paciente WHERE idPaciente="+id);
     query.exec();
     query.next();
 
@@ -48,7 +48,7 @@ void consulta_paciente_ui::update_consultas_form()
     ui->lineEdit_Patient->clear();
     ui->lineEdit_Patient->insert(NOMBRE);
 
-    query.prepare("SELECT historia_clinica_Pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+    query.prepare("SELECT historia_clinica_Pk FROM e_historia_clinica WHERE paciente_idPaciente="+id);
     query.exec();
     query.next();
 
@@ -182,8 +182,8 @@ void consulta_paciente_ui::on_pushButton_generarPDF_clicked()
 
     QSqlQuery query;
 
-    QString HISTORIA_CLINICA, DNI;
-    QString FECHA, MOTIVO;
+    QString HISTORIA_CLINICA, id;
+    QString FECHA, MOTIVO,DNI;
     QString APELLIDOS, NOMBRES, DIRECCION, TELEFONO, ESTADO_CIVIL, EDAD;
     QString OCUPACION, CIRUJIAS_PREVIAS, ALERGIAS, ANTECEDENTES, MEDICACION_ACTUAL;
 
@@ -194,9 +194,9 @@ void consulta_paciente_ui::on_pushButton_generarPDF_clicked()
     vector< QString> reason;
 
 
-    DNI = dni_var;
+    id = id_var;
 
-    query.prepare("SELECT apellido_paterno, apellido_materno, primer_nombre, segundo_nombre, direccion, estado_civil, fecha_nacimiento FROM e_dni WHERE dni_pk="+DNI);
+    query.prepare("SELECT apellido_paterno, apellido_materno, primer_nombre, segundo_nombre, direccion, estado_civil, fecha_nacimiento, telefono_paciente, ocupacion, cirujias_previas, alergias, antecedentes, medicacion_actual,dni FROM Paciente WHERE idPaciente="+id);
     query.exec();
     query.next();
 
@@ -209,18 +209,18 @@ void consulta_paciente_ui::on_pushButton_generarPDF_clicked()
     edad = getEdad(FECHA_NACIMIENTO, FECHA_ACTUAL);
     EDAD.setNum(edad);
 
-    query.prepare("SELECT telefono_paciente, ocupacion, cirujias_previas, alergias, antecedentes, medicacion_actual FROM e_paciente WHERE dni_pk="+DNI);
-    query.exec();
-    query.next();
-    TELEFONO = query.value(0).toString();
-    OCUPACION = query.value(1).toString();
-    CIRUJIAS_PREVIAS = query.value(2).toString();
-    ALERGIAS = query.value(3).toString();
-    ANTECEDENTES = query.value(4).toString();
-    MEDICACION_ACTUAL = query.value(5).toString();
+
+    TELEFONO = query.value(7).toString();
+    OCUPACION = query.value(8).toString();
+    CIRUJIAS_PREVIAS = query.value(9).toString();
+    ALERGIAS = query.value(10).toString();
+    ANTECEDENTES = query.value(11).toString();
+    MEDICACION_ACTUAL = query.value(12).toString();
+    DNI = query.value(13).toString();
 
 
-    query.prepare("SELECT historia_clinica_Pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+
+    query.prepare("SELECT historia_clinica_Pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id);
     query.exec();
     query.next();
 
@@ -251,7 +251,7 @@ void consulta_paciente_ui::on_pushButton_generarPDF_clicked()
     if(DNI.at(0) == '-')
         CLINIC_TAB_DOC->setdni("");
     else
-        CLINIC_TAB_DOC->setdni(DNI.toStdString());
+        CLINIC_TAB_DOC->setdni(id.toStdString());
 
     CLINIC_TAB_DOC->setmaritalstatus(ESTADO_CIVIL.toStdString());
     CLINIC_TAB_DOC->setocupation(OCUPACION.toStdString());

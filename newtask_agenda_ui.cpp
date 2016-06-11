@@ -60,13 +60,21 @@ void newTask_agenda_ui::on_pushButton_Acept_clicked()
     query.bindValue(6,"#ffffff");
     query.bindValue(7,ui->lineEdit_Telefono->text());
 
+    //REGISTRANDO DATOS SI ES UN PACIENTE
+
+
 
     //######AGREGAR FICHA- - - > TERMINAR PACIENTE Y REGRESAR
 
-    query.exec();
 
-    if(query.numRowsAffected()==1)
-    {       
+
+    if(query.exec())
+    {
+        if(flag == true)
+        {
+            insertarConsulta(ID_PACIENTE,ui->dateEdit->text(),ui->lineEdit_Descripcion->text(),query.lastInsertId().toString());
+            actualizarCelular(ID_PACIENTE,ui->lineEdit_Telefono->text());
+        }
         this->close();
         emit update_list();
     }
@@ -92,7 +100,7 @@ void newTask_agenda_ui::on_pushButton_Acept_clicked()
 void newTask_agenda_ui::on_pushButton_Save_clicked()
 {
     QString DNI,CODE;
-
+    QString celular, id;
     DNI = dni_task;
     CODE = code_task;
 
@@ -126,6 +134,13 @@ void newTask_agenda_ui::on_pushButton_Save_clicked()
         query.bindValue(4,ui->lineEdit_Historia->text());
         query.bindValue(5,ui->lineEdit_Telefono->text());
         query.exec();
+
+        query.prepare("UPDATE e_consulta, e_agenda, r_historial_documento SET e_consulta.fecha=e_agenda.fecha, e_consulta.motivo=e_agenda.descripcion WHERE r_historial_documento.comentario = e_agenda.agenda_pk AND r_historial_documento.historial_documento_pk = e_consulta.historial_documento_pk");
+        query.exec();
+        id = ui->tableView->model()->data(ui->tableView->model()->index(0,4)).toString();
+        celular = ui->lineEdit_Telefono->text();
+        actualizarCelular(id,celular);
+
 
         emit update_list();
         this->close();
@@ -215,40 +230,17 @@ void newTask_agenda_ui::show_data_task_form(QString code)
 }
 void newTask_agenda_ui::on_lineEdit_Name_textEdited(const QString &arg1)
 {
-    if(ui->lineEdit_Name->text().isEmpty())
-        flag=false  ;
 
-    if(flag==false)
-    {
-        model->clear();
-        QSqlQuery query_paciente;
-        qDebug()<<arg1<<endl;
-        query_paciente.prepare("SELECT concat(d.apellido_paterno, ' ',d.apellido_materno, ' ',d.primer_nombre, ' ',d.segundo_nombre), h.nick, p.telefono_paciente, p.celular_paciente FROM e_dni d LEFT JOIN e_historia_clinica h ON d.dni_pk=h.dni_pk LEFT JOIN e_paciente p ON d.dni_pk=p.dni_pk WHERE d.apellido_paterno LIKE \""+arg1+"%\""+"OR d.apellido_materno LIKE \""+arg1+"%\""+"OR d.primer_nombre LIKE \""+arg1+"%\""+"OR d.segundo_nombre LIKE \""+arg1+"%\""+" OR concat(d.apellido_paterno, ' ',d.apellido_materno, ' ',d.primer_nombre, ' ',d.segundo_nombre) LIKE \""+arg1+"%\""+" OR concat(d.primer_nombre, ' ',d.segundo_nombre, ' ',d.apellido_paterno, ' ',d.apellido_materno) LIKE \""+arg1+"%\""+"OR concat(d.apellido_paterno, ' ',d.apellido_materno, ' ',d.primer_nombre, ' ',d.segundo_nombre) LIKE \""+arg1+"%\""+" OR concat(d.primer_nombre,' ',d.apellido_paterno, ' ',d.apellido_materno) LIKE \""+arg1+"%\""+"&& d.dni_pk = ANY (SELECT dni_pk FROM e_persona WHERE tipo='Paciente')");
-        if(!query_paciente.exec()) qDebug()<<query_paciente.lastError().text();
-        model->setQuery(query_paciente);
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Apellidos y Nombres"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Historial"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Teléfono"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Celular"));
-        QFont fuente;
-        fuente.setPointSize(14);
-        ui->tableView->setModel(model);
-        //ui->tableView_ListaPacientes1->setSortingEnabled(1);
-        ui->tableView->setColumnWidth(0,300);
-        ui->tableView->setColumnWidth(1,100);
-        ui->tableView->setColumnWidth(1,100);
-        ui->tableView->setColumnWidth(1,100);
-        ui->tableView->setFont(fuente);
-        ui->tableView->show();
-    }
+
 }
 void newTask_agenda_ui::on_tableView_clicked(const QModelIndex &index)
 {
-    flag=false;
-    QString NOMBRE =ui->tableView->model()->data(ui->tableView->model()->index(index.row(),0)).toString();
+    flag=true;
+    NOMBRE =ui->tableView->model()->data(ui->tableView->model()->index(index.row(),0)).toString();
     HISTORIA_CLINICA =ui->tableView->model()->data(ui->tableView->model()->index(index.row(),1)).toString();
-    QString TELEFONO=ui->tableView->model()->data(ui->tableView->model()->index(index.row(),2)).toString();
-    QString CELULAR = ui->tableView->model()->data(ui->tableView->model()->index(index.row(),3)).toString();
+    TELEFONO=ui->tableView->model()->data(ui->tableView->model()->index(index.row(),2)).toString();
+    CELULAR = ui->tableView->model()->data(ui->tableView->model()->index(index.row(),3)).toString();
+    ID_PACIENTE = ui->tableView->model()->data(ui->tableView->model()->index(index.row(),4)).toString();
     ui->lineEdit_Name->clear();
     ui->lineEdit_Name->insert(NOMBRE);
     ui->lineEdit_Telefono->clear();
@@ -321,3 +313,175 @@ bool newTask_agenda_ui::changeParentWindow(int code)
     else return true;
 }
 
+
+void newTask_agenda_ui::on_lineEdit_Name_textChanged(const QString &arg1)
+{
+    QSqlQueryModel *model = new QSqlQueryModel;
+    QString query;
+
+
+    if(arg1.size() != 0)
+    {
+        QStringList splitted = arg1.split(" ");
+        query = "SELECT concat(apellido_paterno, ' ',apellido_materno, ' ',primer_nombre, ' ',segundo_nombre) as 'Apellidos y Nombres', codigo as 'Codigo', telefono_paciente as 'Telefono', celular_paciente as 'Celular', idPaciente FROM Paciente WHERE (";
+
+        switch ( splitted.size() ) {
+          case 1:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' OR ";
+            query+= "codigo REGEXP '"+splitted.at(0)+"'";
+            break;
+          case 2:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' AND ";
+            query+= "apellido_materno REGEXP '"+splitted.at(1)+"'";
+            break;
+          case 3:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' AND ";
+            query+= "apellido_materno REGEXP '"+splitted.at(1)+"' OR ";
+            query+= "primer_nombre REGEXP '"+splitted.at(2)+"'";
+            break;
+          case 4:            // Note the colon, not a semicolon
+            query+= "apellido_paterno REGEXP '"+splitted.at(0)+"' AND ";
+            query+= "apellido_materno REGEXP '"+splitted.at(1)+"' OR ";
+            query+= "primer_nombre REGEXP '"+splitted.at(2)+"' AND ";
+            query+= "segundo_nombre REGEXP '"+splitted.at(3)+"'";
+            break;
+          default:            // Note the colon, not a semicolon
+            for(int i=0;i<splitted.size();i++)
+            {
+                if(i==0)
+                    query+= "apellido_paterno REGEXP '"+splitted.at(i)+"' OR ";
+                else
+                    query+= " OR apellido_paterno REGEXP '"+splitted.at(i)+"' OR ";
+                query+= "apellido_materno REGEXP '"+splitted.at(i)+"' OR ";
+                query+= "codigo REGEXP '"+splitted.at(i)+"'";
+            }
+
+            break;
+          }
+        query+= ") ORDER BY codigo DESC";
+
+
+    }
+
+
+
+    model->setQuery(query);
+    ui->tableView->setModel(model);
+    ui->tableView->show();
+    ui->tableView->setColumnWidth(0,300);
+    ui->tableView->setColumnWidth(1,100);
+    ui->tableView->setColumnWidth(2,100);
+    ui->tableView->setColumnWidth(3,100);
+    ui->tableView->setColumnWidth(4,0);
+    //GUARDANDO SI EDITO EL NOMBRE
+
+}
+
+void newTask_agenda_ui::insertarConsulta(QString id_var,QString fecha,QString motivo,QString id_task)
+{
+    QString id,HISTORIA_CLINICA_PK,R_HISTORIAL_DOCUMENTO, consulta;
+
+    id = id_var;
+
+    QSqlQuery query;
+    int ret;
+    QMessageBox *msgBox = new QMessageBox;
+
+
+    //VERIFICANDO SI EXISTE historia_clinica_pk
+    consulta = "SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente = ?";
+    query.prepare(consulta);
+    query.bindValue(0,id);
+    query.exec();
+    if(query.next())
+    {
+        HISTORIA_CLINICA_PK = query.value(0).toString();
+    }
+    else
+    {
+        //REGISTRANDO HISTORIA CLINICA.
+
+        consulta = "INSERT INTO e_historia_clinica(Paciente_idPaciente) values (?)";
+        query.prepare(consulta);
+        query.bindValue(0,id);
+        if(query.exec())
+        {
+
+            HISTORIA_CLINICA_PK = query.lastInsertId().toString();
+        }
+        else
+            qDebug()<<"fallo resgistro e_historia_clinica";
+
+
+    }
+
+    query.prepare("INSERT INTO r_historial_documento(historia_clinica_pk,tipo,fecha_creacion,comentario) VALUES(?,?,?,?)");
+    query.bindValue(0,HISTORIA_CLINICA_PK);
+    query.bindValue(1,"consulta");
+    query.bindValue(2,fecha);
+    query.bindValue(3,id_task);
+    query.exec();
+
+    query.prepare("SELECT max(historial_documento_pk) as historial_documento_pk from r_historial_documento");
+    query.exec();
+    query.next();
+
+    R_HISTORIAL_DOCUMENTO = query.value(0).toString();
+
+
+
+    query.prepare("INSERT INTO e_consulta(historia_clinica_pk,historial_documento_pk,fecha,motivo) VALUES(?,?,?,?)");
+    query.bindValue(0,HISTORIA_CLINICA_PK);
+    query.bindValue(1,R_HISTORIAL_DOCUMENTO);
+    query.bindValue(2,fecha);
+    query.bindValue(3,motivo);
+
+    qDebug()<<"historia CLINICA PK "<<HISTORIA_CLINICA_PK<<endl;
+
+
+
+    if(query.exec())
+    {
+        QString info = "Se creo una nueva consulta con éxito.";
+        msgBox->setIcon(QMessageBox::Information);
+        msgBox->setWindowTitle("Información");
+        msgBox->setWindowIcon(QIcon(":/new/sign-up.png"));
+
+        msgBox->setText(info);
+        msgBox->setStandardButtons(QMessageBox::Save);
+        msgBox->setDefaultButton(QMessageBox::Save);
+        msgBox->setButtonText(QMessageBox::Save, "Aceptar");
+
+        ret = msgBox->exec();
+    }
+    else
+    {
+        QString str_warning = "Fallo al crear una consulta";
+        msgBox->setIcon(QMessageBox::Warning);
+        msgBox->setWindowTitle("Advertencia");
+        msgBox->setWindowIcon(QIcon(":/new/sign-up.png"));
+
+        msgBox->setText(str_warning);
+        msgBox->setStandardButtons(QMessageBox::Save);
+        msgBox->setDefaultButton(QMessageBox::Save);
+        msgBox->setButtonText(QMessageBox::Save, "Aceptar");
+
+        ret = msgBox->exec();
+        return;
+    }
+
+}
+
+void newTask_agenda_ui::actualizarCelular(QString id_var, QString celular)
+{
+    QSqlQuery query;
+    QString consulta = "UPDATE Paciente SET celular_paciente = "+celular+" WHERE idPaciente = "+id_var;
+    query.prepare(consulta);
+
+    if(!query.exec()){
+        qDebug()<<query.lastError()<<endl;
+    }
+    qDebug()<<consulta<<endl;
+
+
+}

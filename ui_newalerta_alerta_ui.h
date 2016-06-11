@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'newalerta_alerta_ui.ui'
 **
-** Created: Fri 15. May 18:50:04 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:28 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -54,7 +54,7 @@ public:
     {
         if (newalerta_alerta_ui->objectName().isEmpty())
             newalerta_alerta_ui->setObjectName(QString::fromUtf8("newalerta_alerta_ui"));
-        newalerta_alerta_ui->resize(420, 166);
+        newalerta_alerta_ui->resize(413, 176);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/1329798431_Application.png"), QSize(), QIcon::Normal, QIcon::Off);
         newalerta_alerta_ui->setWindowIcon(icon);
@@ -66,22 +66,28 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label = new QLabel(newalerta_alerta_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        QFont font;
+        font.setPointSize(14);
+        label->setFont(font);
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
         dateEdit = new QDateEdit(newalerta_alerta_ui);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
+        dateEdit->setFont(font);
         dateEdit->setCalendarPopup(true);
 
         gridLayout->addWidget(dateEdit, 0, 1, 1, 1);
 
         label_3 = new QLabel(newalerta_alerta_ui);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 0, 2, 1, 1);
 
         timeEdit = new QTimeEdit(newalerta_alerta_ui);
         timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
+        timeEdit->setFont(font);
         timeEdit->setMaximumDateTime(QDateTime(QDate(2000, 1, 1), QTime(23, 59, 59)));
         timeEdit->setMaximumTime(QTime(23, 59, 59));
         timeEdit->setCurrentSection(QDateTimeEdit::HourSection);
@@ -98,6 +104,7 @@ public:
 
         line = new QFrame(newalerta_alerta_ui);
         line->setObjectName(QString::fromUtf8("line"));
+        line->setFont(font);
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
@@ -112,11 +119,13 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy);
+        label_2->setFont(font);
 
         gridLayout_2->addWidget(label_2, 0, 0, 1, 1);
 
         lineEdit = new QLineEdit(newalerta_alerta_ui);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setFont(font);
 
         gridLayout_2->addWidget(lineEdit, 1, 0, 1, 1);
 
@@ -131,16 +140,19 @@ public:
 
         pushButton_Acept = new QPushButton(newalerta_alerta_ui);
         pushButton_Acept->setObjectName(QString::fromUtf8("pushButton_Acept"));
+        pushButton_Acept->setFont(font);
 
         gridLayout_3->addWidget(pushButton_Acept, 1, 1, 1, 1);
 
         pushButton_Save = new QPushButton(newalerta_alerta_ui);
         pushButton_Save->setObjectName(QString::fromUtf8("pushButton_Save"));
+        pushButton_Save->setFont(font);
 
         gridLayout_3->addWidget(pushButton_Save, 1, 2, 1, 1);
 
         pushButton_Cancel = new QPushButton(newalerta_alerta_ui);
         pushButton_Cancel->setObjectName(QString::fromUtf8("pushButton_Cancel"));
+        pushButton_Cancel->setFont(font);
 
         gridLayout_3->addWidget(pushButton_Cancel, 1, 3, 1, 1);
 

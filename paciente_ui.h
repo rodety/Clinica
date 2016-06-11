@@ -24,12 +24,14 @@ public:
     ~paciente_ui();
     bool flag_to_fk;
     bool flag_consultahistoria;
-    QString DNI_CURRENT;
+    QString ID_CURRENT;
     QString cmpEditDni;
     void update_table_paciente();
     void paginacion(QString a);
     void set_access_level(int access);
     void setParentPrincipal(MainWindow* parent);
+    void procesar();
+    void copiar();
 
 private:
     Ui::paciente_ui *ui;
@@ -45,19 +47,28 @@ private slots:
     void on_verConsultas_paciente_clicked();
     void on_verDatos_paciente_clicked();
     void on_pushButton_editarDatos_clicked();
-    void on_tableWidget_result_itemClicked(QTableWidgetItem *item);
+    //void on_tableWidget_result_itemClicked(QTableWidgetItem *item);
     //void on_lineEdit_apellidoPaternoSearch_returnPressed();
     void on_lineEdit_dniCurrentPatient_textChanged(const QString &arg1);
     void on_comboBox_search_activated(int index);
    // void on_lineEdit_PacienteSearch_returnPressed();
     void on_comboBox_currentIndexChanged(const QString &arg1);
     void on_tableView_ListaPacientes1_clicked(const QModelIndex &index);
-    void on_lineEdit_PacienteSearch_textEdited(const QString &arg1);
+    //void on_lineEdit_PacienteSearch_textEdited(const QString &arg1);
+
+    void on_lineEdit_buscar_textChanged(const QString &arg1);
+
+    void on_lineEdit_buscar_returnPressed();
+
 public slots:
     void update_list();
 };
 
 #endif // PACIENTE_UI_H
+
+
+
+
 
 
 

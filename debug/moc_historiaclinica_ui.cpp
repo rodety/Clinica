@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'historiaclinica_ui.h'
 **
-** Created: Wed 27. May 12:25:03 2015
+** Created: Fri 10. Jun 20:11:16 2016
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_historiaClinica_ui[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -36,16 +36,14 @@ static const uint qt_meta_data_historiaClinica_ui[] = {
       99,   19,   19,   19, 0x08,
      135,   19,   19,   19, 0x08,
      166,   19,   19,   19, 0x08,
-     202,  197,   19,   19, 0x08,
-     255,  197,   19,   19, 0x08,
-     314,   19,   19,   19, 0x08,
-     350,   19,   19,   19, 0x08,
-     389,   19,   19,   19, 0x08,
-     419,   19,   19,   19, 0x08,
-     434,   19,   19,   19, 0x08,
-     455,  449,   19,   19, 0x08,
-     504,  449,   19,   19, 0x08,
-     547,   19,   19,   19, 0x08,
+     202,   19,   19,   19, 0x08,
+     241,   19,   19,   19, 0x08,
+     271,   19,   19,   19, 0x08,
+     286,   19,   19,   19, 0x08,
+     301,   19,   19,   19, 0x08,
+     350,  345,   19,   19, 0x08,
+     405,  399,   19,   19, 0x08,
+     455,  399,   19,   19, 0x08,
 
        0        // eod
 };
@@ -56,16 +54,14 @@ static const char qt_meta_stringdata_historiaClinica_ui[] = {
     "on_eliminarDocumento_historial_clicked()\0"
     "on_verDocumento_historial_clicked()\0"
     "on_verDatos_paciente_clicked()\0"
-    "on_pushButton_Search_clicked()\0item\0"
-    "on_tableWidget_result_itemClicked(QTableWidgetItem*)\0"
-    "on_tableWidget_DocumentList_itemClicked(QTableWidgetItem*)\0"
     "on_pushButton_generatePDF_clicked()\0"
     "on_pushButton_editarDocuento_clicked()\0"
     "on_pushButton_Fotos_clicked()\0"
-    "putCorrected()\0getCorrected()\0index\0"
-    "on_tableWidget_DocumentList_clicked(QModelIndex)\0"
-    "on_tableWidget_result_clicked(QModelIndex)\0"
+    "putCorrected()\0getCorrected()\0"
     "on_lineEdit_historialSearch_returnPressed()\0"
+    "arg1\0on_lineEdit_historialSearch_textChanged(QString)\0"
+    "index\0on_tableView_ListaPacientes1_clicked(QModelIndex)\0"
+    "on_tableView_DocumentList_clicked(QModelIndex)\0"
 };
 
 const QMetaObject historiaClinica_ui::staticMetaObject = {
@@ -101,20 +97,18 @@ int historiaClinica_ui::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: on_eliminarDocumento_historial_clicked(); break;
         case 2: on_verDocumento_historial_clicked(); break;
         case 3: on_verDatos_paciente_clicked(); break;
-        case 4: on_pushButton_Search_clicked(); break;
-        case 5: on_tableWidget_result_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
-        case 6: on_tableWidget_DocumentList_itemClicked((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
-        case 7: on_pushButton_generatePDF_clicked(); break;
-        case 8: on_pushButton_editarDocuento_clicked(); break;
-        case 9: on_pushButton_Fotos_clicked(); break;
-        case 10: putCorrected(); break;
-        case 11: getCorrected(); break;
-        case 12: on_tableWidget_DocumentList_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
-        case 13: on_tableWidget_result_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
-        case 14: on_lineEdit_historialSearch_returnPressed(); break;
+        case 4: on_pushButton_generatePDF_clicked(); break;
+        case 5: on_pushButton_editarDocuento_clicked(); break;
+        case 6: on_pushButton_Fotos_clicked(); break;
+        case 7: putCorrected(); break;
+        case 8: getCorrected(); break;
+        case 9: on_lineEdit_historialSearch_returnPressed(); break;
+        case 10: on_lineEdit_historialSearch_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 11: on_tableView_ListaPacientes1_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
+        case 12: on_tableView_DocumentList_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 15;
+        _id -= 13;
     }
     return _id;
 }

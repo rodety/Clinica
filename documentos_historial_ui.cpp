@@ -435,10 +435,10 @@ void documentos_historial_ui::llenar_doc_Riesgo_Quirurgico(QString cod_doc)
 //--------------ANTECEDENTES ------------------------------------------------------
 void documentos_historial_ui::on_pushButton_AceptAntecedentes_clicked()
 {
-    QString DNI,HISTORIA_CLINICA,R_HISTORIAL_DOCUMENTO;
-    DNI = dni_var;
+    QString HISTORIA_CLINICA,R_HISTORIAL_DOCUMENTO;
+
     QSqlQuery query;
-    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id_var);
     query.exec();
     query.next();
     HISTORIA_CLINICA = query.value(0).toString();
@@ -582,12 +582,10 @@ void documentos_historial_ui::on_pushButton_AceptReporteOperatorio_clicked()
     QDateTime FIN_OPERACION;
     QDateTime INICIO_ANESTECIA;
     QDateTime FIN_ANESTECIA;
-    QString DNI;
-    DNI = dni_var;
-    qDebug()<<DNI<<endl;
+
     QSqlQuery query, insert_e_rp;
     QString str_insert;
-    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id_var);
     query.exec();
     query.next();
     HISTORIA_CLINICA_PK = query.value(0).toString();
@@ -698,11 +696,10 @@ void documentos_historial_ui::on_pushButton_AceptExamenClinico_clicked()
             , AUSCULTACION_ABDOMEN, HIGADO, BASO, TACTO_RECTAL, TACTO_VAGINAL
             , GENITALES, NEUROLOGICO, IMPRESIONES_DIAGNOSTICAS, CAMA, SERVICIO
             , MEDICO_TRATANTE, BIOTIPO;
-    QString DNI;
-    DNI = dni_var;
+
     QSqlQuery query, insert;
     QString str_insert;
-    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id_var);
     query.exec();
     query.next();
     HISTORIA_CLINICA_PK = query.value(0).toString();
@@ -902,10 +899,11 @@ void documentos_historial_ui::on_pushButton_AceptTerapeuticaMedica_clicked()
        QString FECHA_INICIO, HORA_INICIO,TERAPEUTICA,FECHA_FIN,HORA_FIN, HISTORIA_CLINICA,R_HISTORIAL_DOCUMENTO,DNI;
        QSqlQuery query;
        const QDate FECHA = QDate::currentDate();
-       DNI = this->dni_var;
-       query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+
+       query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id_var);
        query.exec();
        query.next();
+       qDebug()<<"id Pacienteeeeeeeeeeeee "<<id_var<<endl;
        HISTORIA_CLINICA = query.value(0).toString();
        query.prepare("INSERT INTO r_historial_documento(historia_clinica_pk,tipo,fecha_creacion,comentario) VALUES(?,?,?,?)");
        query.bindValue(0,HISTORIA_CLINICA);
@@ -944,8 +942,10 @@ void documentos_historial_ui::on_pushButton_AceptTerapeuticaMedica_clicked()
            query.bindValue(6,HORA_FIN);
            if(query.exec() == TRUE)
             qDebug()<<"Insertando Correctamente Fila: "<<i<<endl;
-           else
+           else{
             qDebug()<<"Error en la no se inserto datos: "<<i<<endl;
+            qDebug()<<query.lastError()<<endl;
+           }
        }
        if(!changeParentWindow(codeWindow))
         currentParent->updateTableDocuments(HISTORIA_CLINICA);
@@ -967,12 +967,11 @@ void documentos_historial_ui::on_pushButton_AceptRQCV_clicked()
     QString HISTORIA_CLINICA,R_HISTORIAL_DOCUMENTO,DNI;
               QSqlQuery query;
               const QDate FECHA = QDate::currentDate();
-              DNI = this->dni_var;
-              query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+
+              query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id_var);
               query.exec();
               query.next();
               HISTORIA_CLINICA = query.value(0).toString();
-              qDebug()<<"histo"<<HISTORIA_CLINICA<<endl;
               query.prepare("INSERT INTO r_historial_documento(historia_clinica_pk,tipo,fecha_creacion,comentario) VALUES(?,?,?,?)");
               query.bindValue(0,HISTORIA_CLINICA);
               query.bindValue(1,"Riesgo.Q.C");
@@ -1081,13 +1080,12 @@ void documentos_historial_ui::on_pushButton_AceptEpicrisis_clicked()
             EVOLUCION,DIAGNOSTICO_FINAL,INDICACIONES;
     QDateTime FECHA_INGRESO,FECHA_ALTA;
     int DIAS_HOSPITALIZACION,CAMA;
-    QString DNI;
+
     const QDate FECHA = QDate::currentDate();
-    DNI = dni_var;
-    qDebug()<<DNI<<endl;
+
     QSqlQuery query, insert_e_rp;
     QString str_insert;
-    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE dni_pk="+DNI);
+    query.prepare("SELECT historia_clinica_pk FROM e_historia_clinica WHERE Paciente_idPaciente="+id_var);
     query.exec();
     query.next();
     HISTORIA_CLINICA_PK = query.value(0).toString();

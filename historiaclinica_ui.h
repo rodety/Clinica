@@ -64,7 +64,9 @@ private:
     documentos_historial_ui *DOCUMENT_FORM;
     QString lastadd;
     QString currentDocument;
-    QString currentDni;
+    QString currentID;
+    QString currentDNI;
+    QString currentHISTORIA_PK;
     QString absPath;
     MainWindow* parentWindow;
 
@@ -73,16 +75,16 @@ private slots:
     void on_eliminarDocumento_historial_clicked();
     void on_verDocumento_historial_clicked();
     void on_verDatos_paciente_clicked();
-    void on_pushButton_Search_clicked();
-    void on_tableWidget_result_itemClicked(QTableWidgetItem *item);
-    void on_tableWidget_DocumentList_itemClicked(QTableWidgetItem *item);
     void on_pushButton_generatePDF_clicked();
     void on_pushButton_editarDocuento_clicked();
     void on_pushButton_Fotos_clicked();
     void putCorrected();
     void getCorrected();
-    void on_tableWidget_DocumentList_clicked(const QModelIndex &index);
-    void on_tableWidget_result_clicked(const QModelIndex &index);
     void on_lineEdit_historialSearch_returnPressed();
+    void on_lineEdit_historialSearch_textChanged(const QString &arg1);
+    void on_tableView_ListaPacientes1_clicked(const QModelIndex &index);
+    void on_tableView_DocumentList_clicked(const QModelIndex &index);
 };
 #endif // HISTORIACLINICA_UI_H
+
+

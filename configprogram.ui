@@ -22,6 +22,11 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="1" column="0">
       <spacer name="horizontalSpacer">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -35,6 +40,11 @@
      </item>
      <item row="1" column="1">
       <widget class="QPushButton" name="pushButton">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Aceptar</string>
        </property>
@@ -42,6 +52,11 @@
      </item>
      <item row="1" column="2">
       <widget class="QPushButton" name="pushButton_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Cancel</string>
        </property>
@@ -49,6 +64,11 @@
      </item>
      <item row="1" column="3">
       <spacer name="horizontalSpacer_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -67,6 +87,11 @@
        </property>
        <item row="0" column="0" colspan="2">
         <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>DATABASE SERVER</string>
          </property>
@@ -74,6 +99,11 @@
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Host Name:</string>
          </property>
@@ -81,6 +111,11 @@
        </item>
        <item row="1" column="1">
         <widget class="QLineEdit" name="lineEdit_hostName">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>192.168.1.254</string>
          </property>
@@ -88,6 +123,11 @@
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Database Name:</string>
          </property>
@@ -95,6 +135,11 @@
        </item>
        <item row="2" column="1">
         <widget class="QLineEdit" name="lineEdit_databaseName">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>clinicadb</string>
          </property>
@@ -102,6 +147,11 @@
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>User Name:</string>
          </property>
@@ -109,6 +159,11 @@
        </item>
        <item row="3" column="1">
         <widget class="QLineEdit" name="lineEdit_userName">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>clinicadb</string>
          </property>
@@ -116,6 +171,11 @@
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Password:</string>
          </property>
@@ -123,6 +183,11 @@
        </item>
        <item row="4" column="1">
         <widget class="QLineEdit" name="lineEdit_password">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>clinica123</string>
          </property>
@@ -133,6 +198,11 @@
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Port:</string>
          </property>
@@ -140,6 +210,11 @@
        </item>
        <item row="5" column="1">
         <widget class="QLineEdit" name="lineEdit_port">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>3306</string>
          </property>

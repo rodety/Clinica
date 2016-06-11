@@ -190,7 +190,7 @@ void agenda_ui::show_personal_combox()
 {
     QSqlQuery query,query_dni;
     QString DNI,APELLIDOS_NOMBRES;
-    query.prepare("SELECT *FROM e_persona WHERE tipo!=\"Paciente\"");
+    query.prepare("SELECT * FROM e_persona WHERE tipo!=\"Paciente\"");
     query.exec();
 
     while(query.next())

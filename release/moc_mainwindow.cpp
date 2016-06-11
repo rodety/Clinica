@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sat 14. Nov 20:57:01 2015
-**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.3)
+** Created: Sat 11. Jun 15:32:30 2016
+**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -10,8 +10,8 @@
 #include "../mainwindow.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 62
-#error "This file was generated using the moc from 4.7.3. It"
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,7 +20,7 @@ QT_BEGIN_MOC_NAMESPACE
 static const uint qt_meta_data_MainWindow[] = {
 
  // content:
-       5,       // revision
+       6,       // revision
        0,       // classname
        0,    0, // classinfo
       13,   14, // methods
@@ -64,9 +64,38 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_actionCaja_triggered()\0"
 };
 
+void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        MainWindow *_t = static_cast<MainWindow *>(_o);
+        switch (_id) {
+        case 0: _t->on_actionLogin_triggered(); break;
+        case 1: _t->on_actionFacebook_triggered(); break;
+        case 2: _t->on_actionAyuda_triggered(); break;
+        case 3: _t->on_actionAlertas_triggered(); break;
+        case 4: _t->on_actionMailing_triggered(); break;
+        case 5: _t->on_actionSeguridad_triggered(); break;
+        case 6: _t->on_actionTratamientos_triggered(); break;
+        case 7: _t->on_actionUsuarios_triggered(); break;
+        case 8: _t->on_actionHistoriaClinica_triggered(); break;
+        case 9: _t->on_actionPaciente_triggered(); break;
+        case 10: _t->on_actionAgenda_triggered(); break;
+        case 11: _t->on_actionPersonal_triggered(); break;
+        case 12: _t->on_actionCaja_triggered(); break;
+        default: ;
+        }
+    }
+    Q_UNUSED(_a);
+}
+
+const QMetaObjectExtraData MainWindow::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
 const QMetaObject MainWindow::staticMetaObject = {
     { &QMainWindow::staticMetaObject, qt_meta_stringdata_MainWindow,
-      qt_meta_data_MainWindow, 0 }
+      qt_meta_data_MainWindow, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
@@ -92,22 +121,8 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        switch (_id) {
-        case 0: on_actionLogin_triggered(); break;
-        case 1: on_actionFacebook_triggered(); break;
-        case 2: on_actionAyuda_triggered(); break;
-        case 3: on_actionAlertas_triggered(); break;
-        case 4: on_actionMailing_triggered(); break;
-        case 5: on_actionSeguridad_triggered(); break;
-        case 6: on_actionTratamientos_triggered(); break;
-        case 7: on_actionUsuarios_triggered(); break;
-        case 8: on_actionHistoriaClinica_triggered(); break;
-        case 9: on_actionPaciente_triggered(); break;
-        case 10: on_actionAgenda_triggered(); break;
-        case 11: on_actionPersonal_triggered(); break;
-        case 12: on_actionCaja_triggered(); break;
-        default: ;
-        }
+        if (_id < 13)
+            qt_static_metacall(this, _c, _id, _a);
         _id -= 13;
     }
     return _id;

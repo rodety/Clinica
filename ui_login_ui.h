@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login_ui.ui'
 **
-** Created: Mon 7. Jan 16:32:55 2013
-**      by: Qt User Interface Compiler version 4.8.0
+** Created: Sat 11. Jun 15:26:29 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -54,16 +54,23 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         lineEdit_User = new QLineEdit(login_ui);
         lineEdit_User->setObjectName(QString::fromUtf8("lineEdit_User"));
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(true);
+        font.setWeight(75);
+        lineEdit_User->setFont(font);
 
         gridLayout->addWidget(lineEdit_User, 0, 1, 1, 2);
 
         label_2 = new QLabel(login_ui);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 1, 0, 1, 1);
 
         lineEdit_Password = new QLineEdit(login_ui);
         lineEdit_Password->setObjectName(QString::fromUtf8("lineEdit_Password"));
+        lineEdit_Password->setFont(font);
         lineEdit_Password->setEchoMode(QLineEdit::Password);
 
         gridLayout->addWidget(lineEdit_Password, 1, 1, 1, 2);
@@ -74,6 +81,7 @@ public:
 
         pushButton_Login = new QPushButton(login_ui);
         pushButton_Login->setObjectName(QString::fromUtf8("pushButton_Login"));
+        pushButton_Login->setFont(font);
 
         gridLayout->addWidget(pushButton_Login, 2, 1, 1, 1);
 
@@ -83,6 +91,7 @@ public:
 
         label = new QLabel(login_ui);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 

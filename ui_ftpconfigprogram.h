@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ftpconfigprogram.ui'
 **
-** Created: Mon 1. Jun 16:25:00 2015
-**      by: Qt User Interface Compiler version 4.7.3
+** Created: Sat 11. Jun 15:26:29 2016
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -27,7 +27,7 @@ QT_BEGIN_NAMESPACE
 class Ui_ftpconfigprogram
 {
 public:
-    QWidget *gridLayoutWidget;
+    QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
     QLabel *label;
     QLabel *label_2;
@@ -47,69 +47,80 @@ public:
     {
         if (ftpconfigprogram->objectName().isEmpty())
             ftpconfigprogram->setObjectName(QString::fromUtf8("ftpconfigprogram"));
-        ftpconfigprogram->resize(282, 183);
+        ftpconfigprogram->resize(289, 208);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/1349716435_cog.png"), QSize(), QIcon::Normal, QIcon::Off);
         ftpconfigprogram->setWindowIcon(icon);
-        gridLayoutWidget = new QWidget(ftpconfigprogram);
-        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(10, 10, 261, 161));
-        gridLayout = new QGridLayout(gridLayoutWidget);
+        gridLayout_2 = new QGridLayout(ftpconfigprogram);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout = new QGridLayout();
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(gridLayoutWidget);
+        label = new QLabel(ftpconfigprogram);
         label->setObjectName(QString::fromUtf8("label"));
+        QFont font;
+        font.setPointSize(12);
+        label->setFont(font);
 
         gridLayout->addWidget(label, 0, 0, 1, 4);
 
-        label_2 = new QLabel(gridLayoutWidget);
+        label_2 = new QLabel(ftpconfigprogram);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         gridLayout->addWidget(label_2, 1, 0, 1, 2);
 
-        lineEdit_ftp_host = new QLineEdit(gridLayoutWidget);
+        lineEdit_ftp_host = new QLineEdit(ftpconfigprogram);
         lineEdit_ftp_host->setObjectName(QString::fromUtf8("lineEdit_ftp_host"));
+        lineEdit_ftp_host->setFont(font);
 
         gridLayout->addWidget(lineEdit_ftp_host, 1, 2, 1, 2);
 
-        label_3 = new QLabel(gridLayoutWidget);
+        label_3 = new QLabel(ftpconfigprogram);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         gridLayout->addWidget(label_3, 2, 0, 1, 2);
 
-        label_4 = new QLabel(gridLayoutWidget);
+        label_4 = new QLabel(ftpconfigprogram);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         gridLayout->addWidget(label_4, 3, 0, 1, 2);
 
-        label_5 = new QLabel(gridLayoutWidget);
+        label_5 = new QLabel(ftpconfigprogram);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setFont(font);
 
         gridLayout->addWidget(label_5, 4, 0, 1, 2);
 
-        lineEdit_ftp_user = new QLineEdit(gridLayoutWidget);
+        lineEdit_ftp_user = new QLineEdit(ftpconfigprogram);
         lineEdit_ftp_user->setObjectName(QString::fromUtf8("lineEdit_ftp_user"));
+        lineEdit_ftp_user->setFont(font);
 
         gridLayout->addWidget(lineEdit_ftp_user, 2, 2, 1, 2);
 
-        lineEdit_ftp_pass = new QLineEdit(gridLayoutWidget);
+        lineEdit_ftp_pass = new QLineEdit(ftpconfigprogram);
         lineEdit_ftp_pass->setObjectName(QString::fromUtf8("lineEdit_ftp_pass"));
+        lineEdit_ftp_pass->setFont(font);
         lineEdit_ftp_pass->setEchoMode(QLineEdit::Password);
 
         gridLayout->addWidget(lineEdit_ftp_pass, 3, 2, 1, 2);
 
-        lineEdit_ftp_port = new QLineEdit(gridLayoutWidget);
+        lineEdit_ftp_port = new QLineEdit(ftpconfigprogram);
         lineEdit_ftp_port->setObjectName(QString::fromUtf8("lineEdit_ftp_port"));
+        lineEdit_ftp_port->setFont(font);
 
         gridLayout->addWidget(lineEdit_ftp_port, 4, 2, 1, 2);
 
-        pushButton = new QPushButton(gridLayoutWidget);
+        pushButton = new QPushButton(ftpconfigprogram);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setFont(font);
 
         gridLayout->addWidget(pushButton, 5, 1, 1, 1);
 
-        pushButton_2 = new QPushButton(gridLayoutWidget);
+        pushButton_2 = new QPushButton(ftpconfigprogram);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setFont(font);
 
         gridLayout->addWidget(pushButton_2, 5, 2, 1, 1);
 
@@ -120,6 +131,9 @@ public:
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout->addItem(horizontalSpacer_2, 5, 0, 1, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
 
         QWidget::setTabOrder(lineEdit_ftp_host, lineEdit_ftp_user);
         QWidget::setTabOrder(lineEdit_ftp_user, lineEdit_ftp_pass);
